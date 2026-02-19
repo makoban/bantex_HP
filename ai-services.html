@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AIサービス一覧 | 株式会社バンテックス</title>
-  <meta name="description" content="株式会社バンテックスが提供するAIサービスの一覧です。OnePage-FlashをはじめとするAIソリューションで、ビジネスのデジタル化を支援します。">
+  <meta name="description" content="株式会社バンテックスが提供するAIサービスの一覧です。OnePage-Flash、KUROKO PLUSをはじめ、ビジネスのデジタル化を支援するAIソリューションを展開中。">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://bantex.jp/ai-services.html">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bantex.jp/ai-services.html">
   <meta property="og:title" content="AIサービス一覧 | 株式会社バンテックス">
-  <meta property="og:description" content="OnePage-FlashをはじめとするAIソリューション。ビジネスのデジタル化を支援します。">
+  <meta property="og:description" content="OnePage-Flash、KUROKO PLUSをはじめとするAIソリューション。ビジネスのデジタル化を支援します。">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +21,18 @@
 <body>
 
   <a class="skip-nav" href="#main-content">本文へスキップ</a>
+  <input type="checkbox" id="nav-toggle-sub" style="display:none;">
+
+  <!-- Mobile drawer -->
+  <nav class="mobile-nav-sub" aria-label="モバイルナビゲーション">
+    <ul>
+      <li><a href="index.html" onclick="document.getElementById('nav-toggle-sub').checked=false;">トップ</a></li>
+      <li><a href="index.html#services" onclick="document.getElementById('nav-toggle-sub').checked=false;">事業内容</a></li>
+      <li><a href="index.html#about" onclick="document.getElementById('nav-toggle-sub').checked=false;">会社概要</a></li>
+      <li><a href="index.html#contact" onclick="document.getElementById('nav-toggle-sub').checked=false;">お問い合わせ</a></li>
+    </ul>
+  </nav>
+  <label class="nav-overlay-sub" for="nav-toggle-sub" aria-hidden="true"></label>
 
   <!-- ── Header ── -->
   <header class="site-header scrolled" id="site-header">
@@ -34,8 +46,6 @@
             <li><a href="index.html#contact">お問い合わせ</a></li>
           </ul>
         </nav>
-        <!-- Mobile hamburger -->
-        <input type="checkbox" id="nav-toggle-sub" style="display:none;">
         <label class="nav-toggle-label" for="nav-toggle-sub" aria-label="メニューを開く">
           <span></span><span></span><span></span>
         </label>
@@ -43,20 +53,16 @@
     </div>
   </header>
 
-  <!-- Mobile drawer -->
-  <nav class="mobile-nav-sub" aria-label="モバイルナビゲーション" style="position:fixed;top:0;right:-100%;width:min(300px,80vw);height:100dvh;background:var(--color-primary);z-index:1050;display:flex;flex-direction:column;justify-content:center;padding:4rem;transition:right 0.28s cubic-bezier(0.4,0,0.2,1);box-shadow:-4px 0 24px rgba(0,0,0,0.3);">
-    <ul style="display:flex;flex-direction:column;gap:2rem;list-style:none;">
-      <li><a href="index.html" style="font-size:1.125rem;font-weight:700;color:#fff;letter-spacing:0.06em;">トップ</a></li>
-      <li><a href="index.html#services" style="font-size:1.125rem;font-weight:700;color:#fff;letter-spacing:0.06em;">事業内容</a></li>
-      <li><a href="index.html#about" style="font-size:1.125rem;font-weight:700;color:#fff;letter-spacing:0.06em;">会社概要</a></li>
-      <li><a href="index.html#contact" style="font-size:1.125rem;font-weight:700;color:#fff;letter-spacing:0.06em;">お問い合わせ</a></li>
-    </ul>
-  </nav>
   <style>
+    .mobile-nav-sub{position:fixed;top:0;right:-100%;width:min(300px,80vw);height:100dvh;background:var(--color-primary);z-index:1050;display:flex;flex-direction:column;justify-content:center;padding:4rem;transition:right .28s cubic-bezier(.4,0,.2,1);box-shadow:-4px 0 24px rgba(0,0,0,.3);}
+    .mobile-nav-sub ul{display:flex;flex-direction:column;gap:2rem;list-style:none;}
+    .mobile-nav-sub a{font-size:1.125rem;font-weight:700;color:#fff;letter-spacing:.06em;}
+    .nav-overlay-sub{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1040;}
+    #nav-toggle-sub:checked ~ .mobile-nav-sub{right:0;}
+    #nav-toggle-sub:checked ~ .nav-overlay-sub{display:block;}
     #nav-toggle-sub:checked ~ .site-header .nav-toggle-label span:nth-child(1){transform:translateY(7px) rotate(45deg);}
     #nav-toggle-sub:checked ~ .site-header .nav-toggle-label span:nth-child(2){opacity:0;transform:scaleX(0);}
     #nav-toggle-sub:checked ~ .site-header .nav-toggle-label span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-    #nav-toggle-sub:checked ~ .mobile-nav-sub{right:0;}
   </style>
 
   <!-- ── Main ── -->
@@ -71,214 +77,81 @@
         </a>
         <p class="section-label">AI Services</p>
         <h1 class="section-heading" id="ai-heading">AIサービス一覧</h1>
-        <p class="page-hero-desc">バンテックスが提供するAIソリューション。<br>今後もサービスを拡充していきます。</p>
+        <p class="page-hero-desc">バンテックスが提供するAIソリューション。続々追加中。</p>
       </div>
     </section>
 
-    <!-- ── OnePage-Flash ── -->
-    <section class="ai-service-detail" id="onepage-flash" aria-labelledby="opf-heading">
+    <!-- ── Service Card Grid ── -->
+    <section class="ai-catalog" aria-label="サービス一覧">
       <div class="container">
+        <div class="ai-catalog-grid">
 
-        <div class="ai-service-header">
-          <div class="ai-service-badge">SERVICE 01</div>
-          <h2 class="ai-service-name" id="opf-heading">OnePage-Flash</h2>
-          <p class="ai-service-catch">10分でホームページが完成。</p>
-          <p class="ai-service-desc">テキストを打ち込むだけ。AIが美しいホームページを自動生成します。<br>個人事業主・フリーランス・店舗オーナー・イベント主催者に最適。</p>
-        </div>
-
-        <!-- 3 Features -->
-        <div class="ai-features-grid">
-          <div class="ai-feature-card">
-            <div class="ai-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M13 7v6l4 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <!-- OnePage-Flash -->
+          <a href="https://oneflash.bantex.jp/" target="_blank" rel="noopener noreferrer" class="ai-card">
+            <div class="ai-card-head">
+              <div class="ai-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 26 26" fill="none"><path d="M14 3L6 15h6l-2 8 8-12h-6l2-8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="ai-card-badge">HP自動生成</span>
             </div>
-            <h3 class="ai-feature-title">10分で完成</h3>
-            <p class="ai-feature-desc">質問に答えるだけで、AIが自動でプロ品質のホームページを生成。決済前にプレビューで確認できます。</p>
-          </div>
-          <div class="ai-feature-card">
-            <div class="ai-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 26 26" fill="none"><rect x="3" y="3" width="8" height="20" rx="2" stroke="currentColor" stroke-width="1.8"/><rect x="15" y="3" width="8" height="20" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M5 8h4M17 8h4M5 12h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            <h2 class="ai-card-name">OnePage-Flash</h2>
+            <p class="ai-card-catch">10分でホームページが完成。</p>
+            <p class="ai-card-desc">テキストを打ち込むだけでAIが美しいHPを自動生成。個人事業主・フリーランス・店舗オーナーに最適。</p>
+            <div class="ai-card-meta">
+              <span class="ai-card-price">初期 &yen;1,980 / 月額 &yen;380</span>
             </div>
-            <h3 class="ai-feature-title">デザイン3択</h3>
-            <p class="ai-feature-desc">ミニマル・ビジネス・カジュアルの3テーマから選択。イメージに合わなければ再生成も10回まで対応。</p>
-          </div>
-          <div class="ai-feature-card">
-            <div class="ai-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 26 26" fill="none"><path d="M15.5 4.5l6 6-12 12H3.5v-6l12-12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M13 7l6 6" stroke="currentColor" stroke-width="1.8"/></svg>
-            </div>
-            <h3 class="ai-feature-title">月2回の修正</h3>
-            <p class="ai-feature-desc">修正指示を送るだけでAIが即座に反映。月額プランに含まれるので追加費用なし。</p>
-          </div>
-        </div>
-
-        <!-- How it works -->
-        <div class="ai-steps">
-          <h3 class="ai-steps-title">ご利用の流れ</h3>
-          <div class="ai-steps-grid">
-            <div class="ai-step">
-              <div class="ai-step-num" aria-hidden="true">1</div>
-              <p class="ai-step-label">質問に回答</p>
-              <p class="ai-step-desc">業種やイメージなど簡単な質問に答えます</p>
-            </div>
-            <div class="ai-step-arrow" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <div class="ai-step">
-              <div class="ai-step-num" aria-hidden="true">2</div>
-              <p class="ai-step-label">AIが自動生成</p>
-              <p class="ai-step-desc">AIがデザイン・構成・テキストを自動作成</p>
-            </div>
-            <div class="ai-step-arrow" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <div class="ai-step">
-              <div class="ai-step-num" aria-hidden="true">3</div>
-              <p class="ai-step-label">決済・即公開</p>
-              <p class="ai-step-desc">プレビュー確認後、決済で独自URLに公開</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pricing -->
-        <div class="ai-pricing">
-          <h3 class="ai-pricing-title">料金プラン</h3>
-          <div class="ai-pricing-card">
-            <div class="ai-pricing-row">
-              <span class="ai-pricing-label">初期費用</span>
-              <span class="ai-pricing-value"><span class="ai-pricing-yen">&yen;</span>1,980</span>
-            </div>
-            <div class="ai-pricing-divider"></div>
-            <div class="ai-pricing-row">
-              <span class="ai-pricing-label">月額</span>
-              <span class="ai-pricing-value"><span class="ai-pricing-yen">&yen;</span>380<span class="ai-pricing-unit">/月</span></span>
-            </div>
-            <ul class="ai-pricing-includes">
-              <li>AI自動生成ホームページ</li>
-              <li>プレビュー確認機能</li>
-              <li>独自サブドメインで即時公開</li>
-              <li>月2回の修正対応</li>
-              <li>いつでも解約可能</li>
-              <li>解約後の再開時も即復旧</li>
-            </ul>
-            <a href="https://oneflash.bantex.jp/" target="_blank" rel="noopener noreferrer" class="btn-contact-primary" style="margin-top:1.5rem;max-width:100%;text-align:center;">
-              OnePage-Flash を始める
-              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ── KUROKO PLUS ── -->
-    <section class="ai-service-detail" id="kuroko-plus" style="background:var(--color-surface);" aria-labelledby="kp-heading">
-      <div class="container">
-
-        <div class="ai-service-header">
-          <div class="ai-service-badge">SERVICE 02</div>
-          <h2 class="ai-service-name" id="kp-heading">KUROKO PLUS</h2>
-          <p class="ai-service-catch">会話に寄り添う、あなただけのAI相棒。</p>
-          <p class="ai-service-desc">まわりの会話をそっと聞いて、あなただけに情報を届ける会話支援AI。<br>雑談から会議まで、会話の空気を壊さずサポートする「ステルス知能」です。</p>
-        </div>
-
-        <!-- 7 Features -->
-        <div class="ai-features-grid kuroko-grid">
-          <div class="ai-feature-card">
-            <div class="ai-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 26 26" fill="none"><rect x="3" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M7 10h12M7 14h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="ai-feature-title">都度要約</h3>
-            <p class="ai-feature-desc">会話の流れを自動で要約。長い打ち合わせでも要点を逃しません。</p>
-          </div>
-          <div class="ai-feature-card">
-            <div class="ai-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M13 9v4l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M10 17h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="ai-feature-title">瞬間用語解説</h3>
-            <p class="ai-feature-desc">難しい用語をその場で一言解説。知ったかぶり不要。</p>
-          </div>
-          <div class="ai-feature-card">
-            <div class="ai-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M13 18v4M9 25h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M10 11l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3 class="ai-feature-title">ネット検索連携</h3>
-            <p class="ai-feature-desc">会話中のキーワードを自動検索し、関連情報をリアルタイム表示。</p>
-          </div>
-          <div class="ai-feature-card">
-            <div class="ai-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 26 26" fill="none"><path d="M4 6h18M4 13h18M4 20h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="21" cy="20" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
-            </div>
-            <h3 class="ai-feature-title">ベスト質問&amp;回答提示</h3>
-            <p class="ai-feature-desc">適切な質問や回答例をリアルタイムで提案。会話をスムーズに。</p>
-          </div>
-          <div class="ai-feature-card">
-            <div class="ai-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 26 26" fill="none"><circle cx="9" cy="10" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="10" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M5 22c0-3 2-5 4-5h2M15 22c0-3 2-5 4-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="ai-feature-title">声色分析&amp;人物識別</h3>
-            <p class="ai-feature-desc">話者を自動識別し、性格傾向まで分析。誰が何を言ったか明確に。</p>
-          </div>
-          <div class="ai-feature-card">
-            <div class="ai-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 26 26" fill="none"><path d="M5 4h16v18H5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9h8M9 13h6M9 17h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="ai-feature-title">主観的レポート生成</h3>
-            <p class="ai-feature-desc">会話をあなた目線でマイノート感覚にまとめ。後から振り返りやすい。</p>
-          </div>
-          <div class="ai-feature-card" style="border-top:3px solid var(--color-accent);">
-            <div class="ai-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 26 26" fill="none"><path d="M3 13l4 4 6-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 9l4-4M15 5l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14 17h8M14 21h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="ai-feature-title">矛盾検知&amp;公平記録 <span style="font-size:0.65em;background:var(--color-accent);color:#fff;padding:0.15em 0.5em;border-radius:99px;vertical-align:middle;margin-left:0.25em;">NEW</span></h3>
-            <p class="ai-feature-desc">発言の矛盾や信頼度を可視化。「言った言わない問題」を解決します。</p>
-          </div>
-        </div>
-
-        <!-- Use Cases -->
-        <div class="ai-steps">
-          <h3 class="ai-steps-title">こんなシーンで活躍</h3>
-          <div class="ai-usecases">
-            <div class="ai-usecase">
-              <span class="ai-usecase-icon" aria-hidden="true">&#x1f3e2;</span>
-              <span class="ai-usecase-label">オンライン会議</span>
-            </div>
-            <div class="ai-usecase">
-              <span class="ai-usecase-icon" aria-hidden="true">&#x2615;</span>
-              <span class="ai-usecase-label">カフェでの商談</span>
-            </div>
-            <div class="ai-usecase">
-              <span class="ai-usecase-icon" aria-hidden="true">&#x1f393;</span>
-              <span class="ai-usecase-label">学校の勉強</span>
-            </div>
-            <div class="ai-usecase">
-              <span class="ai-usecase-icon" aria-hidden="true">&#x1f91d;</span>
-              <span class="ai-usecase-label">お客様対応</span>
-            </div>
-            <div class="ai-usecase">
-              <span class="ai-usecase-icon" aria-hidden="true">&#x1f3e0;</span>
-              <span class="ai-usecase-label">家族の会話</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- CTA -->
-        <div style="text-align:center;margin-top:var(--sp-md);">
-          <a href="https://kuroko.bantex.jp/" target="_blank" rel="noopener noreferrer" class="btn-contact-primary" style="max-width:340px;">
-            KUROKO PLUS を詳しく見る
-            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="ai-card-link">詳しく見る <span aria-hidden="true">&rarr;</span></span>
           </a>
-        </div>
 
+          <!-- KUROKO PLUS -->
+          <a href="https://kuroko.bantex.jp/" target="_blank" rel="noopener noreferrer" class="ai-card">
+            <div class="ai-card-head">
+              <div class="ai-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M13 3v3M13 20v3M3 13h3M20 13h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M6.2 6.2l2.1 2.1M17.7 17.7l2.1 2.1M6.2 19.8l2.1-2.1M17.7 8.3l2.1-2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <span class="ai-card-badge">会話支援AI</span>
+            </div>
+            <h2 class="ai-card-name">KUROKO PLUS</h2>
+            <p class="ai-card-catch">会話に寄り添う、あなただけのAI相棒。</p>
+            <p class="ai-card-desc">会話をリアルタイムで要約・用語解説・検索連携。矛盾検知や声色分析など7つの機能で会話をサポート。</p>
+            <div class="ai-card-meta">
+              <span class="ai-card-price">詳細はサービスページへ</span>
+            </div>
+            <span class="ai-card-link">詳しく見る <span aria-hidden="true">&rarr;</span></span>
+          </a>
+
+          <!-- ======================================================
+               今後追加するサービスはここにコピペ:
+
+          <a href="[サービスURL]" target="_blank" rel="noopener noreferrer" class="ai-card">
+            <div class="ai-card-head">
+              <div class="ai-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 26 26" fill="none">[アイコンSVG]</svg>
+              </div>
+              <span class="ai-card-badge">[カテゴリ]</span>
+            </div>
+            <h2 class="ai-card-name">[サービス名]</h2>
+            <p class="ai-card-catch">[キャッチコピー]</p>
+            <p class="ai-card-desc">[1〜2行の説明]</p>
+            <div class="ai-card-meta">
+              <span class="ai-card-price">[料金情報]</span>
+            </div>
+            <span class="ai-card-link">詳しく見る <span aria-hidden="true">&rarr;</span></span>
+          </a>
+
+          ====================================================== -->
+
+        </div>
       </div>
     </section>
 
-    <!-- ── Coming Soon ── -->
-    <section class="ai-coming-soon" aria-label="今後のサービス">
+    <!-- ── CTA ── -->
+    <section class="ai-coming-soon" aria-label="お問い合わせ">
       <div class="container">
         <div class="ai-coming-inner">
-          <p class="ai-coming-label">Coming Soon</p>
-          <h3 class="ai-coming-title">新しいAIサービスを準備中です</h3>
-          <p class="ai-coming-desc">バンテックスでは、業務効率化・自動化・情報発信など、<br>様々な領域のAIサービスを順次リリースしていきます。</p>
+          <p class="ai-coming-label">Growing</p>
+          <h3 class="ai-coming-title">AIサービスを続々リリース中</h3>
+          <p class="ai-coming-desc">業務効率化・自動化・情報発信など、様々な領域のAIサービスを順次追加していきます。</p>
           <a href="index.html#contact" class="btn-contact-secondary" style="max-width:280px;">お問い合わせ</a>
         </div>
       </div>
@@ -293,8 +166,7 @@
         <div class="footer-brand">
           <span class="footer-logo">BANTEX</span>
           <address class="footer-address">
-            〒468-0015<br>
-            愛知県名古屋市天白区原3丁目304番1号<br>
+            〒468-0015<br>愛知県名古屋市天白区原3丁目304番1号<br>
             TEL: <a href="tel:052-847-7501" style="color:rgba(255,255,255,0.55);">052-847-7501</a>
           </address>
         </div>
