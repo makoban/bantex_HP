@@ -1123,6 +1123,190 @@ button {
 }
 
 /* ============================================================
+   RESPONSIVE — MOBILE (max-width: 767px)
+   ============================================================ */
+@media (max-width: 767px) {
+
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* Smaller base font */
+  body {
+    font-size: 13.5px;
+  }
+
+  /* Reduce section padding */
+  .services,
+  .about,
+  .contact {
+    padding: var(--sp-lg) 0;
+  }
+
+  /* Hero adjustments */
+  .hero-brand {
+    font-size: clamp(2.5rem, 14vw, 4rem);
+    letter-spacing: 0.1em;
+  }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+    padding-inline: 0.5rem;
+  }
+
+  .hero-sub {
+    font-size: 0.8125rem;
+    padding-inline: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-sub br {
+    display: none;
+  }
+
+  .hero-scroll {
+    margin-top: 2rem;
+  }
+
+  /* Section headings */
+  .section-heading {
+    font-size: 1.25rem;
+  }
+
+  .section-label {
+    font-size: 0.6875rem;
+  }
+
+  /* Service cards */
+  .service-card {
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+  }
+
+  .card-icon {
+    margin-inline: auto;
+  }
+
+  .card-number {
+    font-size: 2.25rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-catch {
+    font-size: 0.75rem;
+  }
+
+  .card-desc {
+    font-size: 0.8125rem;
+    text-align: left;
+  }
+
+  .card-tags {
+    justify-content: center;
+  }
+
+  .card-tag {
+    font-size: 0.625rem;
+  }
+
+  /* Company table */
+  .company-table {
+    font-size: 0.8125rem;
+  }
+
+  .company-table th {
+    font-size: 0.75rem;
+    padding: 0.75rem 0.625rem;
+    white-space: normal;
+    width: 30%;
+  }
+
+  .company-table td {
+    padding: 0.75rem 0.625rem;
+    word-break: break-all;
+  }
+
+  /* About deco panel */
+  .about-deco {
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+  }
+
+  .about-deco-title {
+    font-size: 1.05rem;
+  }
+
+  .about-deco-body {
+    font-size: 0.8125rem;
+  }
+
+  .about-stat {
+    align-items: center;
+  }
+
+  /* Contact section */
+  .contact-lead {
+    font-size: 0.9375rem;
+  }
+
+  .contact-sub {
+    font-size: 0.8125rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .contact-btns {
+    padding-inline: 1rem;
+  }
+
+  .btn-contact-primary,
+  .btn-contact-line,
+  .btn-contact-secondary {
+    font-size: 0.8125rem;
+    padding: 0.875rem 1.5rem;
+    max-width: 100%;
+  }
+
+  .contact-info-strip {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .contact-info-item {
+    font-size: 0.75rem;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: var(--sp-md) 0 var(--sp-sm);
+    text-align: center;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+
+  .footer-nav ul {
+    align-items: center;
+  }
+
+  .footer-bottom {
+    align-items: center;
+  }
+
+  .footer-copy {
+    font-size: 0.6875rem;
+  }
+}
+
+/* ============================================================
    RESPONSIVE — 768px+
    ============================================================ */
 @media (min-width: 768px) {
