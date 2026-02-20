@@ -1444,6 +1444,32 @@ button {
   color: inherit;
   /* カード高さを揃える */
   min-height: 160px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── リボンバッジ（人気・おすすめ） ── */
+.ai-card-ribbon {
+  position: absolute;
+  top: 8px;
+  right: -28px;
+  width: 110px;
+  text-align: center;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 3px 0;
+  transform: rotate(45deg);
+  z-index: 1;
+  line-height: 1.3;
+}
+.ai-card-ribbon.popular {
+  background: #E53E3E;
+  color: #fff;
+}
+.ai-card-ribbon.recommend {
+  background: var(--color-accent);
+  color: #fff;
 }
 
 .ai-card:hover {
