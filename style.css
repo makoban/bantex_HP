@@ -1471,6 +1471,10 @@ button {
   background: var(--color-accent);
   color: #fff;
 }
+.ai-card-ribbon.new-service {
+  background: #38A169;
+  color: #fff;
+}
 
 .ai-card:hover {
   border-left-color: var(--color-accent);
