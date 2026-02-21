@@ -33,7 +33,7 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Structured Data -->
+  <!-- Structured Data: Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,6 +44,7 @@
     "description": "パイプベンダー販売・AI導入支援・デジタルサイネージ販売の3分野を横断する総合プロデュースカンパニー",
     "address": {
       "@type": "PostalAddress",
+      "postalCode": "468-0015",
       "streetAddress": "原3丁目304番1号",
       "addressLocality": "名古屋市天白区",
       "addressRegion": "愛知県",
@@ -51,7 +52,114 @@
     },
     "telephone": "+81-52-847-7501",
     "faxNumber": "+81-52-847-7501",
-    "email": "info@bantex.jp"
+    "email": "info@bantex.jp",
+    "areaServed": {
+      "@type": "Country",
+      "name": "JP"
+    },
+    "knowsAbout": ["パイプベンダー", "パイプ加工機械", "AI導入支援", "AIソリューション", "デジタルサイネージ", "DX推進", "LINE AI自動応答", "HP自動生成", "不動産市場分析", "商圏分析"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AIサービス一覧",
+      "url": "https://bantex.jp/ai-services.html",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "ココトモ カスタマー",
+            "description": "LINE×AIで顧客対応を24時間自動化。LINE友達登録だけでAIが自動対応。",
+            "url": "https://kokotomodashboard.bantex.jp/lp/",
+            "category": "LINE×AI"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "事業立ち上げパック",
+            "description": "事業計画・HP・ロゴ・SNS戦略を一括サポート。最短1週間で納品。",
+            "url": "https://jigyo.bantex.jp/",
+            "category": "事業立ち上げ支援"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI不動産市場レポート",
+            "description": "エリア名入力で政府統計データをもとに不動産市場レポートを自動生成。全国1,892エリア対応。",
+            "url": "https://ai-fudosan.bantex.jp/",
+            "category": "不動産市場分析"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI出店商圏レポート",
+            "description": "エリア名入力で政府統計データをもとに商圏レポートを自動生成。人口・競合・消費力をAI分析。全国1,892エリア対応。",
+            "url": "https://ai-shoken.bantex.jp/",
+            "category": "商圏分析"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "OnePage-Flash",
+            "description": "テキストを入力するだけでAIがホームページを自動生成。個人・店舗向け。",
+            "url": "https://oneflash.bantex.jp/",
+            "category": "HP自動生成"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "KUROKO PLUS",
+            "description": "リアルタイム要約・用語解説・矛盾検知など7機能で会話をサポートする会話支援AI。",
+            "url": "https://kuroko.bantex.jp/",
+            "category": "会話支援AI"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Structured Data: WebSite (サイト内検索認識用) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "株式会社バンテックス",
+    "alternateName": "BANTEX",
+    "url": "https://bantex.jp/"
+  }
+  </script>
+
+  <!-- Structured Data: LocalBusiness (Google Maps / ローカル検索用) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "株式会社バンテックス",
+    "alternateName": "BANTEX Inc.",
+    "url": "https://bantex.jp/",
+    "telephone": "+81-52-847-7500",
+    "email": "info@bantex.jp",
+    "address": {
+      "@type": "PostalAddress",
+      "postalCode": "468-0015",
+      "streetAddress": "原3丁目304番1号",
+      "addressLocality": "名古屋市天白区",
+      "addressRegion": "愛知県",
+      "addressCountry": "JP"
+    },
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "priceRange": "$$",
+    "description": "パイプベンダー販売・AIサービス・デジタルサイネージ販売の総合プロデュースカンパニー。名古屋市天白区。"
   }
   </script>
 </head>
