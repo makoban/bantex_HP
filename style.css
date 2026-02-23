@@ -1475,6 +1475,10 @@ button {
   background: #38A169;
   color: #fff;
 }
+.ai-card-ribbon.useful {
+  background: #D69E2E;
+  color: #fff;
+}
 
 .ai-card:hover {
   border-left-color: var(--color-accent);
