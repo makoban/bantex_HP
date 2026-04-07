@@ -1,0 +1,187 @@
+{
+  "patterns": [
+    {
+      "slug": "ai-hp",
+      "label": "HP作成",
+      "title_template": "{業種}のホームページ作成｜AIで10分で完成",
+      "purpose": "業種特化のHP作成ニーズにOnePage-Flashを提案",
+      "primary_service": "oneflash"
+    },
+    {
+      "slug": "ai-sns",
+      "label": "SNS運用",
+      "title_template": "{業種}のX(Twitter)運用・SNS集客をAIで自動化",
+      "purpose": "業種特化のSNS運用課題にX自動投稿サービスを提案",
+      "primary_service": "tweet"
+    },
+    {
+      "slug": "ai-shuukyaku",
+      "label": "集客",
+      "title_template": "{業種}の集客方法｜AIを活用した最新集客術",
+      "purpose": "業種特化の集客課題に複合的なAIサービスを提案",
+      "primary_service": "multiple"
+    },
+    {
+      "slug": "ai-gyoumu",
+      "label": "業務効率化",
+      "title_template": "{業種}の業務効率化｜AI導入で変わる仕事のやり方",
+      "purpose": "業種特化の業務効率化ニーズにAIサービス群を提案",
+      "primary_service": "multiple"
+    },
+    {
+      "slug": "ai-kokyaku",
+      "label": "顧客対応",
+      "title_template": "{業種}の顧客対応をAIで自動化｜LINE×AI活用術",
+      "purpose": "業種特化の顧客対応課題にココトモカスタマーを提案",
+      "primary_service": "kokotomo"
+    }
+  ],
+  "industries": [
+    {"name": "美容室", "relevant_services": ["hp", "sns", "line", "jigyou"], "search_volume": "high"},
+    {"name": "エステサロン", "relevant_services": ["hp", "sns", "line", "jigyou"], "search_volume": "high"},
+    {"name": "ネイルサロン", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "まつげサロン", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "整骨院", "relevant_services": ["hp", "sns", "line", "jigyou"], "search_volume": "high"},
+    {"name": "整体院", "relevant_services": ["hp", "sns", "line"], "search_volume": "high"},
+    {"name": "鍼灸院", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "歯科医院", "relevant_services": ["hp", "sns", "line"], "search_volume": "high"},
+    {"name": "クリニック", "relevant_services": ["hp", "sns", "line"], "search_volume": "high"},
+    {"name": "内科", "relevant_services": ["hp", "line"], "search_volume": "medium"},
+    {"name": "眼科", "relevant_services": ["hp", "line"], "search_volume": "medium"},
+    {"name": "皮膚科", "relevant_services": ["hp", "line"], "search_volume": "medium"},
+    {"name": "動物病院", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "薬局", "relevant_services": ["hp", "line"], "search_volume": "medium"},
+    {"name": "介護施設", "relevant_services": ["hp", "koubo", "line"], "search_volume": "medium"},
+    {"name": "デイサービス", "relevant_services": ["hp", "koubo", "line"], "search_volume": "medium"},
+    {"name": "税理士事務所", "relevant_services": ["hp", "sns", "shigyo", "dm", "jigyou"], "search_volume": "high"},
+    {"name": "弁護士事務所", "relevant_services": ["hp", "sns", "shigyo", "jigyou"], "search_volume": "high"},
+    {"name": "社労士事務所", "relevant_services": ["hp", "sns", "shigyo", "dm"], "search_volume": "medium"},
+    {"name": "行政書士事務所", "relevant_services": ["hp", "sns", "shigyo", "dm"], "search_volume": "medium"},
+    {"name": "司法書士事務所", "relevant_services": ["hp", "sns", "shigyo"], "search_volume": "medium"},
+    {"name": "会計事務所", "relevant_services": ["hp", "sns", "shigyo", "dm"], "search_volume": "medium"},
+    {"name": "飲食店", "relevant_services": ["hp", "sns", "line", "shoken", "jigyou"], "search_volume": "high"},
+    {"name": "カフェ", "relevant_services": ["hp", "sns", "line", "jigyou"], "search_volume": "high"},
+    {"name": "居酒屋", "relevant_services": ["hp", "sns", "line"], "search_volume": "high"},
+    {"name": "ラーメン店", "relevant_services": ["hp", "sns"], "search_volume": "medium"},
+    {"name": "パン屋", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "ケーキ屋", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "テイクアウト専門店", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "不動産会社", "relevant_services": ["hp", "sns", "fudousan", "dm", "jigyou"], "search_volume": "high"},
+    {"name": "不動産管理会社", "relevant_services": ["hp", "fudousan", "dm"], "search_volume": "medium"},
+    {"name": "建設会社", "relevant_services": ["hp", "sns", "koubo", "jigyou"], "search_volume": "high"},
+    {"name": "リフォーム会社", "relevant_services": ["hp", "sns", "line", "jigyou"], "search_volume": "high"},
+    {"name": "塗装会社", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "電気工事会社", "relevant_services": ["hp", "koubo"], "search_volume": "medium"},
+    {"name": "設備工事会社", "relevant_services": ["hp", "koubo"], "search_volume": "medium"},
+    {"name": "解体業者", "relevant_services": ["hp", "koubo"], "search_volume": "medium"},
+    {"name": "学習塾", "relevant_services": ["hp", "sns", "line", "jigyou"], "search_volume": "high"},
+    {"name": "英会話教室", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "プログラミング教室", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "ピアノ教室", "relevant_services": ["hp", "sns"], "search_volume": "medium"},
+    {"name": "ヨガスタジオ", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "ダンススタジオ", "relevant_services": ["hp", "sns"], "search_volume": "low"},
+    {"name": "フィットネスジム", "relevant_services": ["hp", "sns", "line"], "search_volume": "high"},
+    {"name": "スポーツクラブ", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "写真館", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "花屋", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "ペットショップ", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "トリミングサロン", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "自動車整備工場", "relevant_services": ["hp", "line"], "search_volume": "medium"},
+    {"name": "中古車販売店", "relevant_services": ["hp", "sns"], "search_volume": "medium"},
+    {"name": "バイクショップ", "relevant_services": ["hp", "sns"], "search_volume": "low"},
+    {"name": "クリーニング店", "relevant_services": ["hp", "line"], "search_volume": "medium"},
+    {"name": "コインランドリー", "relevant_services": ["hp", "shoken"], "search_volume": "medium"},
+    {"name": "印刷会社", "relevant_services": ["hp", "sns", "dm"], "search_volume": "low"},
+    {"name": "デザイン事務所", "relevant_services": ["hp", "sns"], "search_volume": "low"},
+    {"name": "IT企業", "relevant_services": ["hp", "sns", "dm"], "search_volume": "medium"},
+    {"name": "Webデザイン会社", "relevant_services": ["hp", "sns"], "search_volume": "low"},
+    {"name": "人材派遣会社", "relevant_services": ["hp", "sns", "dm", "jigyou"], "search_volume": "medium"},
+    {"name": "結婚相談所", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "葬儀社", "relevant_services": ["hp", "line"], "search_volume": "medium"},
+    {"name": "旅館", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "民宿", "relevant_services": ["hp", "sns"], "search_volume": "low"},
+    {"name": "レンタルスペース", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "コワーキングスペース", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "農家", "relevant_services": ["hp", "sns", "koubo"], "search_volume": "low"},
+    {"name": "酒蔵", "relevant_services": ["hp", "sns"], "search_volume": "low"},
+    {"name": "製造業", "relevant_services": ["hp", "koubo", "dm"], "search_volume": "medium"},
+    {"name": "運送会社", "relevant_services": ["hp", "dm"], "search_volume": "medium"},
+    {"name": "タクシー会社", "relevant_services": ["hp", "line"], "search_volume": "low"},
+    {"name": "保険代理店", "relevant_services": ["hp", "sns", "dm", "line"], "search_volume": "medium"},
+    {"name": "アパレルショップ", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "雑貨店", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "古着屋", "relevant_services": ["hp", "sns"], "search_volume": "medium"},
+    {"name": "リサイクルショップ", "relevant_services": ["hp", "sns"], "search_volume": "medium"},
+    {"name": "パーソナルトレーナー", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "占い師", "relevant_services": ["hp", "sns", "line"], "search_volume": "low"},
+    {"name": "カメラマン", "relevant_services": ["hp", "sns"], "search_volume": "medium"},
+    {"name": "コンサルタント", "relevant_services": ["hp", "sns", "dm", "jigyou"], "search_volume": "medium"},
+    {"name": "理容室", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
+    {"name": "音楽スタジオ", "relevant_services": ["hp", "sns"], "search_volume": "low"}
+  ],
+  "services": [
+    {
+      "name": "OnePage-Flash（HP自動生成）",
+      "url": "https://oneflash.bantex.jp/",
+      "price": "初期3,980円 + 月額480円",
+      "description": "テキスト入力だけでAIがプロ品質のHPを10分で自動生成。12種類のデザインテーマ対応。",
+      "tags": ["hp"]
+    },
+    {
+      "name": "X（旧Twitter）AI自動投稿",
+      "url": "https://tweet.bantex.jp/",
+      "price": "月額9,800円（7日間無料トライアル）",
+      "description": "HPのURLを登録するだけで毎日2回、年730投稿を完全自動化。AIが業種に合った投稿を生成。",
+      "tags": ["sns"]
+    },
+    {
+      "name": "公募ナビAI",
+      "url": "https://koubo-navi.bantex.jp/",
+      "price": "月額3,980円（7日間無料トライアル）",
+      "description": "全国の行政案件・公募・入札情報をAIが自動検索。事業にマッチする案件を毎朝メールでお届け。",
+      "tags": ["koubo"]
+    },
+    {
+      "name": "ココトモ カスタマー（LINE×AI）",
+      "url": "https://kokotomodashboard.bantex.jp/lp/",
+      "price": "お問い合わせ",
+      "description": "LINE×AIで顧客対応を24時間自動化。LINE友達登録だけでAIが自動対応。",
+      "tags": ["line"]
+    },
+    {
+      "name": "事業立ち上げパック",
+      "url": "https://jigyo.bantex.jp/",
+      "price": "基本パック300,000円〜",
+      "description": "事業計画・HP・ロゴ・SNS戦略を一括サポート。最短1週間で納品。",
+      "tags": ["jigyou"]
+    },
+    {
+      "name": "AI不動産市場レポート",
+      "url": "https://ai-fudosan.bantex.jp/",
+      "price": "1エリア300円（税込）",
+      "description": "エリア名入力で政府統計データから不動産市場レポートを自動生成。全国1,892エリア対応。",
+      "tags": ["fudousan"]
+    },
+    {
+      "name": "AI出店商圏レポート",
+      "url": "https://ai-shoken.bantex.jp/",
+      "price": "1エリア300円（税込）",
+      "description": "エリアの人口・競合・消費力をAI分析。出店判断を支える商圏レポートを自動生成。",
+      "tags": ["shoken"]
+    },
+    {
+      "name": "AI士業商圏レポート",
+      "url": "https://ai-shigyo.bantex.jp/",
+      "price": "1エリア300円（税込）",
+      "description": "税理士・弁護士・社労士など6種類の士業向け商圏レポート。同業事務所数・開業適性スコア分析。",
+      "tags": ["shigyo"]
+    },
+    {
+      "name": "起業サーチDM営業",
+      "url": "https://kigyo-dm.bantex.jp/",
+      "price": "1通380円（税込）",
+      "description": "新設法人へのDM自動発送。国税庁データから新規企業を検出し商圏レポート付きDMを自動郵送。",
+      "tags": ["dm"]
+    }
+  ]
+}
