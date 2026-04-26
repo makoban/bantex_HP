@@ -32,6 +32,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
+  <link rel="preload" as="image" href="assets/bantex-hero-ai-industrial.jpg">
   <link rel="stylesheet" href="style.css">
 
   <!-- Structured Data: Organization -->
@@ -58,12 +59,72 @@
       "@type": "Country",
       "name": "JP"
     },
-    "knowsAbout": ["パイプベンダー", "パイプ加工機械", "AI導入支援", "AIソリューション", "デジタルサイネージ", "DX推進", "X（旧Twitter）AI自動投稿", "公募・入札案件検索", "LINE AI自動応答", "HP自動生成", "不動産市場分析", "商圏分析", "士業商圏分析"],
+    "knowsAbout": [
+      "パイプベンダー",
+      "パイプ加工機械",
+      "AI導入支援",
+      "AIソリューション",
+      "デジタルサイネージ",
+      "DX推進",
+      "X（旧Twitter）AI自動投稿",
+      "公募・入札案件検索",
+      "LINE AI自動応答",
+      "HP自動生成",
+      "不動産市場分析",
+      "商圏分析",
+      "士業商圏分析",
+      "AI映像制作",
+      "AI社員",
+      "漢字アプリ",
+      "Kanji Compass",
+      "3D物理シミュレーター",
+      "クルーン検証アプリ"
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "AIサービス一覧",
       "url": "https://bantex.jp/ai-services.html",
       "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI映像制作",
+            "description": "テキスト指示や画像1枚からCM・SNS動画・企業PVを自動生成。撮影・モデル・スタジオ不要。",
+            "url": "https://aimovie.bantex.jp/",
+            "category": "AI映像制作"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Kanji Compass",
+            "description": "生年月日と方位をもとに、今日の漢字、ラッキー方位、壁紙、タトゥー候補を提案するiPhoneアプリ。",
+            "url": "https://kanjicompass.bantex.jp/kanji-compass",
+            "category": "漢字・方位アプリ"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "クルーン検証アプリ",
+            "description": "クルーン皿と玉の動きを3Dで観察できるiPhone向け物理シミュレーター。穴の配置、皿の形、摩擦、反発などを調整して挙動を検証できます。",
+            "url": "https://kuroon.bantex.jp/",
+            "category": "3D物理シミュレーター"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI社員を作りませんか？",
+            "description": "あなたの会社専用のAI社員を作成。24時間働くAI社員が業務を自動化。御社専用にカスタマイズ。",
+            "url": "https://koala.bantex.jp/",
+            "category": "AI社員"
+          }
+        },
         {
           "@type": "Offer",
           "itemOffered": {
@@ -209,7 +270,7 @@
         "name": "株式会社バンテックスはどのような会社ですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "株式会社バンテックスは愛知県名古屋市天白区を拠点とする総合プロデュースカンパニーです。パイプベンダー（産業機器・工作機械）の販売、AIサービス各種（OnePage-Flash、X自動投稿、公募ナビAI等9種類）、小型デジタルサイネージ販売の3事業を展開しています。"
+          "text": "株式会社バンテックスは愛知県名古屋市天白区を拠点とする総合プロデュースカンパニーです。パイプベンダー（産業機器・工作機械）の販売、AIサービス各種（AI映像制作、Kanji Compass、クルーン検証アプリ、ゲキッチャ、X自動投稿、公募ナビAI等13種類）、小型デジタルサイネージ販売の3事業を展開しています。"
         }
       },
       {
@@ -225,7 +286,7 @@
         "name": "バンテックスのAIサービスにはどのようなものがありますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "X（旧Twitter）AI自動投稿、公募ナビAI、OnePage-Flash（HP自動生成）、ココトモカスタマー（LINE×AI自動応答）、事業立ち上げパック、AI不動産市場レポート、AI出店商圏レポート、AI士業商圏レポートの8種類を提供しています。詳細はai-services.htmlをご覧ください。"
+          "text": "AI映像制作、Kanji Compass、クルーン検証アプリ、ゲキッチャ、AI社員作成、X（旧Twitter）AI自動投稿、公募ナビAI、OnePage-Flash（HP自動生成）、ココトモカスタマー（LINE×AI自動応答）、事業立ち上げパック、AI不動産市場レポート、AI出店商圏レポート、AI士業商圏レポートなど13種類を提供しています。詳細はai-services.htmlをご覧ください。"
         }
       }
     ]
@@ -291,24 +352,66 @@
       <div class="hero-deco" aria-hidden="true"></div>
 
       <div class="hero-inner">
-        <p class="hero-brand" aria-label="BANTEX">BANTEX</p>
-        <div class="hero-accent-line" aria-hidden="true"></div>
-        <h1 class="hero-tagline">産業の力を、デジタルで加速する。</h1>
-        <p class="hero-sub">
-          名古屋から全国へ。パイプ加工機器・AI・デジタルサイネージの<br>
-          3分野を横断する、総合プロデュースカンパニー。
-        </p>
-        <a href="#services" class="btn-cta">
-          事業内容を見る
-          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 3v10M3 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
+        <div class="hero-copy">
+          <p class="hero-kicker">Nagoya based B2B technology partner</p>
+          <p class="hero-brand" aria-label="BANTEX">BANTEX</p>
+          <div class="hero-accent-line" aria-hidden="true"></div>
+          <h1 class="hero-tagline">産業機器とAIを、現場で使える力へ。</h1>
+          <p class="hero-sub">
+            パイプベンダー販売、AIサービス、デジタルサイネージを横断し、事業の立ち上げから運用改善まで一気通貫で支援します。
+          </p>
+          <div class="hero-actions">
+            <a href="#services" class="btn-cta">
+              事業内容を見る
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 3v10M3 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn-cta-secondary">相談する</a>
+          </div>
+          <div class="hero-metrics" aria-label="提供領域">
+            <div>
+              <strong>3</strong>
+              <span>Business areas</span>
+            </div>
+            <div>
+              <strong>10+</strong>
+              <span>AI services</span>
+            </div>
+            <div>
+              <strong>81</strong>
+              <span>Industry guides</span>
+            </div>
+          </div>
+        </div>
 
-        <!-- Scroll hint -->
-        <div class="hero-scroll" aria-hidden="true">
-          <div class="hero-scroll-line"></div>
-          <span class="hero-scroll-text">scroll</span>
+        <figure class="hero-visual">
+          <img src="assets/bantex-hero-ai-industrial.jpg" alt="AIダッシュボード、産業機器、デジタルサイネージを組み合わせたBANTEXの事業イメージ" width="1672" height="941">
+          <figcaption>
+            <span>AI / INDUSTRIAL / SIGNAGE</span>
+            <strong>3領域を横断して、導入から運用まで支援</strong>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ── Value Strip ──────────────────────────────────── -->
+    <section class="lp-proof-strip" aria-label="バンテックスの提供価値">
+      <div class="container">
+        <div class="proof-item">
+          <span>01</span>
+          <strong>機械販売だけで終わらない</strong>
+          <p>導入後の運用、販促、デジタル化までまとめて相談できます。</p>
+        </div>
+        <div class="proof-item">
+          <span>02</span>
+          <strong>AIサービスをすぐ使える形で</strong>
+          <p>SNS、HP、商圏分析、映像制作など実務に直結するサービスを展開。</p>
+        </div>
+        <div class="proof-item">
+          <span>03</span>
+          <strong>名古屋から全国対応</strong>
+          <p>小規模事業者から法人まで、必要な範囲から段階的に支援します。</p>
         </div>
       </div>
     </section>
@@ -396,6 +499,33 @@
             <a href="https://visioncreative.bantex.jp/" target="_blank" rel="noopener noreferrer" class="card-link">詳しく見る &rarr;</a>
           </article>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LP Flow ──────────────────────────────────────── -->
+    <section class="lp-flow" aria-labelledby="flow-heading">
+      <div class="container">
+        <div class="section-intro section-heading-wrap">
+          <p class="section-label">How We Work</p>
+          <h2 class="section-heading" id="flow-heading">相談から導入までをシンプルに</h2>
+        </div>
+        <div class="flow-grid">
+          <div class="flow-card">
+            <span>STEP 1</span>
+            <h3>課題を整理</h3>
+            <p>現場、集客、業務自動化、情報発信のどこを改善したいかを確認します。</p>
+          </div>
+          <div class="flow-card">
+            <span>STEP 2</span>
+            <h3>最適な構成を提案</h3>
+            <p>パイプベンダー、AIサービス、サイネージを必要な分だけ組み合わせます。</p>
+          </div>
+          <div class="flow-card">
+            <span>STEP 3</span>
+            <h3>導入後も改善</h3>
+            <p>使い始めてからの調整や追加施策まで、実務に合わせて伴走します。</p>
+          </div>
         </div>
       </div>
     </section>
