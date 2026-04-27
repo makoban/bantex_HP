@@ -32,7 +32,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="preload" as="image" href="assets/bantex-hero-ai-industrial.jpg">
+  <link rel="preload" as="image" href="assets/service-thumbs/ai-movie.jpg">
   <link rel="stylesheet" href="style.css">
 
   <!-- Structured Data: Organization -->
@@ -78,7 +78,8 @@
       "漢字アプリ",
       "Kanji Compass",
       "3D物理シミュレーター",
-      "クルーン検証アプリ"
+      "クルーン検証アプリ",
+      "ゲキッチャ"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -113,6 +114,16 @@
             "description": "クルーン皿と玉の動きを3Dで観察できるiPhone向け物理シミュレーター。穴の配置、皿の形、摩擦、反発などを調整して挙動を検証できます。",
             "url": "https://kuroon.bantex.jp/",
             "category": "3D物理シミュレーター"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "ゲキッチャ",
+            "description": "飲食店向けのメニュー・店舗情報発信を支援するBANTEXのAIサービス。",
+            "url": "https://makoban.github.io/gekicha/",
+            "category": "飲食店向けAIサービス"
           }
         },
         {
@@ -353,12 +364,12 @@
 
       <div class="hero-inner">
         <div class="hero-copy">
-          <p class="hero-kicker">Nagoya based B2B technology partner</p>
+          <p class="hero-kicker">Business design and AI operations</p>
           <p class="hero-brand" aria-label="BANTEX">BANTEX</p>
           <div class="hero-accent-line" aria-hidden="true"></div>
-          <h1 class="hero-tagline">産業機器とAIを、現場で使える力へ。</h1>
+          <h1 class="hero-tagline">現場と事業を、AIで前に進める。</h1>
           <p class="hero-sub">
-            パイプベンダー販売、AIサービス、デジタルサイネージを横断し、事業の立ち上げから運用改善まで一気通貫で支援します。
+            パイプベンダー、AIサービス、デジタルサイネージを横断し、作って終わりではなく、使われるところまで整える会社です。
           </p>
           <div class="hero-actions">
             <a href="#services" class="btn-cta">
@@ -375,7 +386,7 @@
               <span>Business areas</span>
             </div>
             <div>
-              <strong>10+</strong>
+              <strong>13</strong>
               <span>AI services</span>
             </div>
             <div>
@@ -385,13 +396,48 @@
           </div>
         </div>
 
-        <figure class="hero-visual">
-          <img src="assets/bantex-hero-ai-industrial.jpg" alt="AIダッシュボード、産業機器、デジタルサイネージを組み合わせたBANTEXの事業イメージ" width="1672" height="941">
-          <figcaption>
-            <span>AI / INDUSTRIAL / SIGNAGE</span>
-            <strong>3領域を横断して、導入から運用まで支援</strong>
-          </figcaption>
-        </figure>
+        <div class="hero-showcase" aria-label="BANTEXの事業ポートフォリオ">
+          <div class="showcase-main">
+            <img src="assets/service-thumbs/ai-movie.jpg" alt="AI映像制作サービスの画面サムネイル" width="1600" height="900">
+            <div class="showcase-main-caption">
+              <span>AI Service Portfolio</span>
+              <strong>用途別AIサービスを、実務で使える状態へ</strong>
+            </div>
+          </div>
+
+          <div class="showcase-stack" aria-label="主要AIサービス">
+            <a href="https://makoban.github.io/gekicha/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/service-thumbs/gekicha.jpg" alt="ゲキッチャの画面サムネイル" width="1600" height="900">
+              <span>ゲキッチャ</span>
+            </a>
+            <a href="https://oneflash.bantex.jp/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/service-thumbs/oneflash.jpg" alt="OnePage-Flashの画面サムネイル" width="1600" height="900">
+              <span>OnePage-Flash</span>
+            </a>
+            <a href="https://kanjicompass.bantex.jp/kanji-compass" target="_blank" rel="noopener noreferrer">
+              <img src="assets/service-thumbs/kanji-compass.jpg" alt="Kanji Compassの画面サムネイル" width="1600" height="900">
+              <span>Kanji Compass</span>
+            </a>
+          </div>
+
+          <div class="showcase-lanes" aria-label="事業領域">
+            <div>
+              <span>01</span>
+              <strong>Industrial</strong>
+              <small>パイプベンダー / 工作機械</small>
+            </div>
+            <div>
+              <span>02</span>
+              <strong>AI Services</strong>
+              <small>業務効率化 / 集客 / 分析</small>
+            </div>
+            <div>
+              <span>03</span>
+              <strong>Signage</strong>
+              <small>小型サイネージ / 情報発信</small>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -412,6 +458,87 @@
           <span>03</span>
           <strong>名古屋から全国対応</strong>
           <p>小規模事業者から法人まで、必要な範囲から段階的に支援します。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Featured AI Services ─────────────────────────── -->
+    <section class="featured-ai" aria-labelledby="featured-ai-heading">
+      <div class="container">
+        <div class="featured-ai-head">
+          <div class="section-intro section-heading-wrap">
+            <p class="section-label">Featured AI Services</p>
+            <h2 class="section-heading" id="featured-ai-heading">実際のサービス画面で見る、BANTEXのAI</h2>
+          </div>
+          <a href="ai-services.html" class="featured-ai-link">AIサービス一覧へ</a>
+        </div>
+
+        <div class="featured-ai-track" aria-label="AIサービス全13件">
+          <a class="featured-ai-card" href="https://aimovie.bantex.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/service-thumbs/ai-movie.jpg" alt="AI映像制作のサービス画面" width="1600" height="900">
+            <span>AI映像制作</span>
+            <strong>動画・広告・SNS素材をAIで制作</strong>
+          </a>
+          <a class="featured-ai-card" href="https://kanjicompass.bantex.jp/kanji-compass" target="_blank" rel="noopener noreferrer">
+            <img src="assets/service-thumbs/kanji-compass.jpg" alt="Kanji Compassのサービス画面" width="1600" height="900">
+            <span>Kanji Compass</span>
+            <strong>漢字と方位を毎日の体験にする</strong>
+          </a>
+          <a class="featured-ai-card" href="http://kuroon.bantex.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/service-thumbs/kuroon.jpg" alt="クルーン検証アプリのサービス画面" width="1600" height="900">
+            <span>クルーン検証アプリ</span>
+            <strong>3D物理シミュレーターで挙動を確認</strong>
+          </a>
+          <a class="featured-ai-card" href="https://makoban.github.io/gekicha/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/service-thumbs/gekicha.jpg" alt="ゲキッチャのサービス画面" width="1600" height="900">
+            <span>ゲキッチャ</span>
+            <strong>回答から抽選参加まで楽しく演出</strong>
+          </a>
+          <a class="featured-ai-card" href="https://koala.bantex.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/service-thumbs/ai-worker.jpg" alt="AI社員サービスの画面" width="1600" height="900">
+            <span>AI社員</span>
+            <strong>会社専用のAI社員で業務を自動化</strong>
+          </a>
+          <a class="featured-ai-card" href="https://tweet.bantex.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/service-thumbs/x-auto-post.jpg" alt="X AI自動投稿のサービス画面" width="1600" height="900">
+            <span>X AI自動投稿</span>
+            <strong>ホームページを読んで毎日自動投稿</strong>
+          </a>
+          <a class="featured-ai-card" href="https://koubo-navi.bantex.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/service-thumbs/koubo-navi.jpg" alt="公募ナビAIのサービス画面" width="1600" height="900">
+            <span>公募ナビAI</span>
+            <strong>合う公募・入札案件を毎朝届ける</strong>
+          </a>
+          <a class="featured-ai-card" href="https://oneflash.bantex.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/service-thumbs/oneflash.jpg" alt="OnePage-Flashのサービス画面" width="1600" height="900">
+            <span>OnePage-Flash</span>
+            <strong>入力からLP制作までを短時間化</strong>
+          </a>
+          <a class="featured-ai-card" href="https://kokotomodashboard.bantex.jp/lp/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/service-thumbs/kokotomo.jpg" alt="ココトモ カスタマーのサービス画面" width="1600" height="900">
+            <span>ココトモ カスタマー</span>
+            <strong>LINE対応を24時間AIで自動化</strong>
+          </a>
+          <a class="featured-ai-card" href="https://jigyo.bantex.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/service-thumbs/jigyo-startup.jpg" alt="事業立ち上げパックのサービス画面" width="1600" height="900">
+            <span>事業立ち上げパック</span>
+            <strong>事業計画からHP・SNSまでまとめる</strong>
+          </a>
+          <a class="featured-ai-card" href="https://ai-fudosan.bantex.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/service-thumbs/ai-fudosan.jpg" alt="AI不動産市場レポートのサービス画面" width="1600" height="900">
+            <span>AI不動産市場レポート</span>
+            <strong>エリア分析をレポート化</strong>
+          </a>
+          <a class="featured-ai-card" href="https://ai-shoken.bantex.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/service-thumbs/ai-shoken.jpg" alt="AI出店商圏レポートのサービス画面" width="1600" height="900">
+            <span>AI出店商圏レポート</span>
+            <strong>人口・競合・消費力をAIで分析</strong>
+          </a>
+          <a class="featured-ai-card" href="https://ai-shigyo.bantex.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/service-thumbs/ai-shigyo.jpg" alt="AI士業商圏レポートのサービス画面" width="1600" height="900">
+            <span>AI士業商圏レポート</span>
+            <strong>士業の開業適性と競合を見える化</strong>
+          </a>
         </div>
       </div>
     </section>
@@ -440,6 +567,11 @@
               </svg>
             </div>
             <h3 class="card-title">パイプベンダー販売</h3>
+            <div class="service-card-visual service-card-visual--industrial" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
             <p class="card-catch">現場を支える、確かな機械。</p>
             <p class="card-desc">
               産業現場の配管・加工ニーズに応える、高精度パイプベンダーおよび工作機械の販売・導入支援を行います。豊富な機種ラインナップと専門的な技術サポートで、製造現場の生産性向上を実現します。
@@ -463,6 +595,11 @@
               </svg>
             </div>
             <h3 class="card-title">AIサービス各種</h3>
+            <div class="service-card-visual service-card-visual--ai" aria-label="AIサービスの画面サムネイル">
+              <img src="assets/service-thumbs/ai-worker.jpg" alt="AI社員サービスの画面サムネイル" width="1600" height="900">
+              <img src="assets/service-thumbs/koubo-navi.jpg" alt="公募ナビAIの画面サムネイル" width="1600" height="900">
+              <img src="assets/service-thumbs/x-auto-post.jpg" alt="X自動投稿サービスの画面サムネイル" width="1600" height="900">
+            </div>
             <p class="card-catch">業務を変える、賢い仕組み。</p>
             <p class="card-desc">
               最新AI技術の導入支援からカスタムAIソリューションの開発・実装まで、企業のデジタルトランスフォーメーションを包括的にサポート。OnePage-Flashをはじめ、様々なAIサービスを展開中。
@@ -487,6 +624,10 @@
               </svg>
             </div>
             <h3 class="card-title">デジタルサイネージ販売</h3>
+            <div class="service-card-visual service-card-visual--signage" aria-hidden="true">
+              <span>DISPLAY</span>
+              <strong>STORE / OFFICE / EVENT</strong>
+            </div>
             <p class="card-catch">空間を活かす、伝わる表示。</p>
             <p class="card-desc">
               店舗・オフィス・施設など様々なシーンで活躍する小型デジタルサイネージの販売・設置サポートを提供。省スペースながら高い訴求力を持つソリューションで、情報発信・ブランディングを効果的に実現します。
