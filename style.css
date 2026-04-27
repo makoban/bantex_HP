@@ -3392,7 +3392,7 @@ body {
 .featured-ai-card {
   position: relative;
   display: grid;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto auto auto;
   scroll-snap-align: start;
   overflow: hidden;
   border: 1px solid rgba(15, 23, 42, 0.08);
@@ -3433,6 +3433,29 @@ body {
   display: none;
 }
 
+.featured-ai-card-app::before {
+  display: none;
+}
+
+.featured-ai-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0.28rem 0.68rem;
+  border-radius: 999px;
+  background: rgba(22, 163, 74, 0.92);
+  color: #ffffff;
+  font-style: normal;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.24);
+}
+
 .featured-ai-card span,
 .featured-ai-card strong {
   position: static;
@@ -3453,6 +3476,33 @@ body {
   font-size: clamp(0.96rem, 1vw, 1.06rem);
   line-height: 1.5;
   padding: 0 1.05rem 1.05rem;
+}
+
+.featured-ai-card-app strong {
+  min-height: 3.35rem;
+  padding-bottom: 0.55rem;
+}
+
+.featured-ai-card-link {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 30px;
+  margin: -0.25rem 1.05rem 1.05rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.iphone-app-badge {
+  color: #15803d;
+  background: rgba(22, 163, 74, 0.14);
 }
 
 .service-card {
@@ -3685,6 +3735,15 @@ body {
     font-size: 0.98rem;
     line-height: 1.55;
     padding: 0 0.95rem 0.95rem;
+  }
+
+  .featured-ai-card-app strong {
+    min-height: 3.55rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .featured-ai-card-link {
+    margin: -0.25rem 0.95rem 0.95rem;
   }
 
   .featured-ai-card:hover {
