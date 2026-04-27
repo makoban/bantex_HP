@@ -3433,6 +3433,29 @@ body {
   pointer-events: none;
 }
 
+.featured-ai-card-app::before {
+  min-height: 8.65rem;
+}
+
+.featured-ai-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0.28rem 0.68rem;
+  border-radius: 999px;
+  background: rgba(22, 163, 74, 0.92);
+  color: #ffffff;
+  font-style: normal;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.24);
+}
+
 .featured-ai-card span,
 .featured-ai-card strong {
   position: absolute;
@@ -3453,6 +3476,34 @@ body {
   bottom: 1.35rem;
   font-size: clamp(0.96rem, 1vw, 1.06rem);
   line-height: 1.5;
+}
+
+.featured-ai-card-app strong {
+  bottom: 2.82rem;
+}
+
+.featured-ai-card-link {
+  position: absolute;
+  left: 1.35rem;
+  bottom: 1.15rem;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 30px;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.iphone-app-badge {
+  color: #15803d;
+  background: rgba(22, 163, 74, 0.14);
 }
 
 .service-card {
@@ -3688,6 +3739,10 @@ body {
     min-height: 7.85rem;
   }
 
+  .featured-ai-card-app::before {
+    min-height: 9rem;
+  }
+
   .featured-ai-card span,
   .featured-ai-card strong {
     left: 1.15rem;
@@ -3702,6 +3757,15 @@ body {
     bottom: 1.25rem;
     font-size: 0.98rem;
     line-height: 1.55;
+  }
+
+  .featured-ai-card-app strong {
+    bottom: 2.85rem;
+  }
+
+  .featured-ai-card-link {
+    left: 1.15rem;
+    bottom: 1.05rem;
   }
 
   .featured-ai-card:hover {
