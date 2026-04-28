@@ -3521,47 +3521,18 @@ body {
 }
 
 .service-card-visual--industrial {
-  background:
-    linear-gradient(90deg, rgba(17, 24, 39, 0.08) 0 1px, transparent 1px 34px),
-    linear-gradient(0deg, rgba(17, 24, 39, 0.08) 0 1px, transparent 1px 34px),
-    linear-gradient(135deg, #f8fafc, #dbe6f2);
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  background: #e8eff7;
 }
 
-.service-card-visual--industrial span {
-  position: absolute;
+.service-card-visual--industrial img,
+.service-card-visual--signage img {
+  width: 100%;
+  height: 100%;
   display: block;
-  border: 12px solid #1f2937;
-  border-left-color: transparent;
-  border-bottom-color: transparent;
-  border-radius: 999px;
-}
-
-.service-card-visual--industrial span:nth-child(1) {
-  width: 160px;
-  height: 160px;
-  left: 42px;
-  top: 38px;
-  transform: rotate(-18deg);
-}
-
-.service-card-visual--industrial span:nth-child(2) {
-  width: 78px;
-  height: 78px;
-  right: 48px;
-  top: 32px;
-  border-width: 10px;
-  opacity: 0.62;
-  transform: rotate(18deg);
-}
-
-.service-card-visual--industrial span:nth-child(3) {
-  width: 54%;
-  height: 10px;
-  left: 24px;
-  bottom: 28px;
-  border: 0;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #2563eb, #0891b2);
+  object-fit: cover;
 }
 
 .service-card-visual--ai {
@@ -3590,13 +3561,6 @@ body {
 
 .service-card-visual--signage::before {
   display: none;
-}
-
-.service-card-visual--signage img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 @media (min-width: 960px) {
