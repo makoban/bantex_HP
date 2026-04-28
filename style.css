@@ -827,6 +827,45 @@ button {
 }
 
 /* ============================================================
+   FAQ SECTION
+   ============================================================ */
+.faq-section {
+  padding: var(--sp-xl) 0;
+  background: var(--color-bg);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.faq-item {
+  min-height: 100%;
+  padding: 1.35rem;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.06);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  color: var(--color-primary);
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.faq-item p {
+  margin-top: 0.85rem;
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+
+/* ============================================================
    CONTACT SECTION
    ============================================================ */
 .contact {
@@ -1156,6 +1195,7 @@ button {
   /* Reduce section padding */
   .services,
   .about,
+  .faq-section,
   .contact {
     padding: var(--sp-lg) 0;
   }
@@ -1262,6 +1302,24 @@ button {
 
   .about-stat {
     align-items: center;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .faq-item {
+    padding: 1.1rem;
+  }
+
+  .faq-item summary {
+    font-size: 0.9rem;
+  }
+
+  .faq-item p {
+    font-size: 0.82rem;
+    line-height: 1.85;
   }
 
   /* Contact section */

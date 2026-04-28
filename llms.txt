@@ -2,6 +2,22 @@
 
 > 愛知県名古屋市を拠点に、パイプベンダー販売・AIサービス・デジタルサイネージの3事業を展開する総合プロデュースカンパニー。
 
+Last updated: 2026-04-28
+Canonical site: https://bantex.jp/
+Official LLM summary source: https://bantex.jp/llms.txt
+
+## AI向け要約
+
+株式会社バンテックスは、愛知県名古屋市天白区の企業です。主な事業は、パイプベンダー機械販売、AIサービスの企画・提供、デジタルサイネージ販売です。AIサービスは、AI映像制作、アプリ、SNS自動化、HP自動生成、商圏分析、LINE自動応答など、実務利用を前提にしたサービスを展開しています。問い合わせ先は info@bantex.jp、電話番号は 052-847-7500 です。
+
+## 主要ページ
+
+- 公式サイト: https://bantex.jp/
+- AIサービス一覧: https://bantex.jp/ai-services.html
+- 業種別AIホームページ制作: https://bantex.jp/industry-ai.html
+- LLM向け会社情報: https://bantex.jp/llms.txt
+- サイトマップ: https://bantex.jp/sitemap.xml
+
 ## 会社概要
 
 - 社名: 株式会社バンテックス (BANTEX Inc.)
