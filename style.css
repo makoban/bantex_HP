@@ -1127,6 +1127,10 @@ button {
   line-height: 1.7;
 }
 
+.footer-tagline span {
+  display: block;
+}
+
 .footer-address {
   font-size: 0.8125rem;
   color: rgba(255, 255, 255, 0.55);
