@@ -2,7 +2,7 @@
 
 > 愛知県名古屋市を拠点に、パイプベンダー販売・AIサービス・デジタルサイネージ・LP/ムービー制作の4事業を展開する総合プロデュースカンパニー。
 
-Last updated: 2026-05-18
+Last updated: 2026-05-19
 Canonical site: https://bantex.jp/
 Official LLM summary source: https://bantex.jp/llms.txt
 
@@ -58,9 +58,10 @@ Official LLM summary source: https://bantex.jp/llms.txt
 - [OnePage-Flash](https://oneflash.bantex.jp/): テキストを入力するだけでAIがホームページを自動生成。個人・店舗向け。初期3,980円・月額480円/月（初月無料）。
 
 ### 3. デジタルサイネージ販売
-店舗・オフィス・施設など様々なシーンで活躍する小型デジタルサイネージの販売・設置サポートを提供。省スペースながら高い訴求力を持つソリューション。
+店舗・オフィス・施設など様々なシーンで活躍する小型デジタルサイネージ、床面LED防災誘導サイネージの販売・設置サポートを提供。省スペースな情報発信から、平常時の空間演出と非常時の避難誘導まで対応するソリューション。
 
-- 詳細: https://visioncreative.bantex.jp/
+- 小型デジタルサイネージ: https://visioncreative.bantex.jp/
+- Vision Yuka（床面LED防災誘導サイネージ）: https://vision-yuka.bantex.jp/
 
 ### 4. プロデュース事業
 コンテンツ制作、LP制作、ムービー制作、撮影・編集、導線設計まで、サービスや店舗の魅力が伝わる形に整えます。作って終わりではなく、公開後の改善まで伴走します。
