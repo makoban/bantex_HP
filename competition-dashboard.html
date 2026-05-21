@@ -150,9 +150,9 @@
   <header>
     <div class="wrap">
       <h1>Competition Production View</h1>
-      <div class="meta">updated: 2026-05-21 12:25 JST / view only / noindex</div>
+      <div class="meta">updated: 2026-05-21 12:45 JST / view only / noindex / auto submit disabled</div>
       <div class="notice">
-        このページは外出中の確認用です。送信ボタンはありません。状態は「Windows前工程」「Mac後工程」「確認待ち」「提案済み」で見ます。
+        このページは外出中の確認用です。送信ボタンはありません。Mac側でも自動送信は絶対にしません。状態は「Windows前工程」「Mac後工程」「確認待ち」「提案済み」で見ます。
       </div>
     </div>
   </header>
@@ -189,12 +189,12 @@
             <td data-label="表示"><span class="badge review">確認待ち</span></td>
             <td data-label="担当">ユーザー確認</td>
             <td data-label="意味">提出候補として見せられる状態。ユーザーはVIEWで確認するだけ。</td>
-            <td data-label="次の動き">OK後、Mac側の提出工程で送信。NGなら修正指示をMac/Windowsへ戻す。</td>
+            <td data-label="次の動き">OK後でも自動送信なし。Mac側は送信直前チェックリストを作って止まる。NGなら修正指示をMac/Windowsへ戻す。</td>
           </tr>
           <tr>
             <td data-label="表示"><span class="badge submitted">提案済み</span></td>
-            <td data-label="担当">Mac提出工程</td>
-            <td data-label="意味">すでにCrowdWorks/Lancersへ送信済み。Windowsは同一IDを作らない。</td>
+            <td data-label="担当">ユーザー手動送信 / Mac記録</td>
+            <td data-label="意味">ユーザーが実際の送信完了画面を確認済み。Windowsは同一IDを作らない。</td>
             <td data-label="次の動き">重複防止リストに残し、再提案が必要な時だけ別管理にする。</td>
           </tr>
         </tbody>
@@ -218,7 +218,7 @@
           <tr>
             <td data-label="状態"><span class="badge submitted">提案済み</span></td>
             <td data-label="案件">Lancers 5544971 / wiw Thai logo</td>
-            <td data-label="更新元">Mac提出工程</td>
+            <td data-label="更新元">ユーザー手動送信確認</td>
             <td data-label="最終更新">2026-05-21</td>
             <td data-label="次アクション">なし。提出済みとして重複防止。</td>
             <td data-label="メモ">現在ブラウザは提出完了ページ。</td>
@@ -284,7 +284,7 @@
           <tr>
             <td data-label="項目">送信承認</td>
             <td data-label="状態"><span class="badge info">VIEWのみ</span></td>
-            <td data-label="メモ">静的HTMLなので承認ボタンなし。送信OKは別途Mac側で処理。</td>
+            <td data-label="メモ">静的HTMLなので承認ボタンなし。今後ボタンを作っても自動送信はしない。</td>
           </tr>
         </tbody>
       </table>
@@ -297,12 +297,12 @@
           <tr><th>媒体</th><th>案件ID</th><th>案件</th><th>状態</th><th>更新元</th></tr>
         </thead>
         <tbody>
-          <tr><td data-label="媒体">CrowdWorks</td><td data-label="案件ID">13180856</td><td data-label="案件">天然だしパック</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">Mac提出工程</td></tr>
-          <tr><td data-label="媒体">CrowdWorks</td><td data-label="案件ID">13174652</td><td data-label="案件">相続無料相談チラシ</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">Mac提出工程</td></tr>
-          <tr><td data-label="媒体">Lancers</td><td data-label="案件ID">5545090</td><td data-label="案件">JUMP Do</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">Mac提出工程</td></tr>
-          <tr><td data-label="媒体">Lancers</td><td data-label="案件ID">5544968</td><td data-label="案件">HARUKA</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">Mac提出工程</td></tr>
-          <tr><td data-label="媒体">Lancers</td><td data-label="案件ID">5544489</td><td data-label="案件">ROKUYA</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">Mac提出工程</td></tr>
-          <tr><td data-label="媒体">Lancers</td><td data-label="案件ID">5544971</td><td data-label="案件">wiw Thai logo</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">Mac提出工程</td></tr>
+          <tr><td data-label="媒体">CrowdWorks</td><td data-label="案件ID">13180856</td><td data-label="案件">天然だしパック</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">ユーザー手動送信確認</td></tr>
+          <tr><td data-label="媒体">CrowdWorks</td><td data-label="案件ID">13174652</td><td data-label="案件">相続無料相談チラシ</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">ユーザー手動送信確認</td></tr>
+          <tr><td data-label="媒体">Lancers</td><td data-label="案件ID">5545090</td><td data-label="案件">JUMP Do</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">ユーザー手動送信確認</td></tr>
+          <tr><td data-label="媒体">Lancers</td><td data-label="案件ID">5544968</td><td data-label="案件">HARUKA</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">ユーザー手動送信確認</td></tr>
+          <tr><td data-label="媒体">Lancers</td><td data-label="案件ID">5544489</td><td data-label="案件">ROKUYA</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">ユーザー手動送信確認</td></tr>
+          <tr><td data-label="媒体">Lancers</td><td data-label="案件ID">5544971</td><td data-label="案件">wiw Thai logo</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">ユーザー手動送信確認</td></tr>
           <tr><td data-label="媒体">CrowdWorks</td><td data-label="案件ID">13182868</td><td data-label="案件">AS9100</td><td data-label="状態"><span class="badge risk">除外 82点</span></td><td data-label="更新元">Mac QA</td></tr>
           <tr><td data-label="媒体">Lancers</td><td data-label="案件ID">5544489</td><td data-label="案件">ROKUYA duplicate</td><td data-label="状態"><span class="badge risk">重複停止</span></td><td data-label="更新元">Windows前工程 / Mac確認</td></tr>
         </tbody>
@@ -323,12 +323,12 @@
           </tr>
           <tr>
             <td data-label="項目">status_source</td>
-            <td data-label="例">windows_preprocess / mac_postprocess / user_review / mac_submit</td>
+            <td data-label="例">windows_preprocess / mac_postprocess / user_review / user_confirmed_submit</td>
             <td data-label="表示先">更新元。</td>
           </tr>
           <tr>
             <td data-label="項目">next_action</td>
-            <td data-label="例">Macで合成待ち / ユーザー確認待ち / 提出済みのため停止</td>
+            <td data-label="例">Macで合成待ち / ユーザー確認待ち / 手動送信待ち / 提出済みのため停止</td>
             <td data-label="表示先">現在の作業ボード。</td>
           </tr>
           <tr>
