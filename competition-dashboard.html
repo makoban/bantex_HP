@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Competition Production View</title>
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --ink: #1d2733;
+      --muted: #657386;
+      --line: #dce3ec;
+      --panel: #ffffff;
+      --navy: #142033;
+      --blue: #2357d7;
+      --green: #126b3f;
+      --amber: #9a5b00;
+      --red: #a43120;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.62;
+    }
+    header {
+      background: linear-gradient(135deg, #111827, #24324a);
+      color: #fff;
+      padding: 22px 18px 18px;
+    }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    h1 { margin: 0 0 8px; font-size: clamp(22px, 4vw, 34px); line-height: 1.2; letter-spacing: 0; }
+    h2 { margin: 28px 0 12px; font-size: 20px; letter-spacing: 0; }
+    h3 { margin: 0 0 8px; font-size: 18px; letter-spacing: 0; }
+    p { margin: 0 0 10px; }
+    a { color: var(--blue); overflow-wrap: anywhere; }
+    main { padding: 18px; }
+    .meta { color: #d7deea; font-size: 13px; }
+    .notice {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,.22);
+      background: rgba(255,255,255,.08);
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .stat, .card, .section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 1px 2px rgba(16, 24, 40, .04);
+    }
+    .stat { padding: 14px; }
+    .stat strong { display: block; font-size: 22px; line-height: 1.2; }
+    .stat span { display: block; margin-top: 4px; color: var(--muted); font-size: 13px; }
+    .section { padding: 16px; margin-top: 16px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .card { padding: 16px; }
+    .row {
+      display: grid;
+      grid-template-columns: 112px 1fr;
+      gap: 10px;
+      padding: 7px 0;
+      border-top: 1px solid #eef2f6;
+      font-size: 14px;
+    }
+    .row:first-of-type { border-top: 0; }
+    .label { color: var(--muted); }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      border: 1px solid transparent;
+    }
+    .ok { color: var(--green); background: #eaf7ef; border-color: #bfe4cc; }
+    .warn { color: var(--amber); background: #fff4df; border-color: #f2d39a; }
+    .risk { color: var(--red); background: #fff0ed; border-color: #f3c3bb; }
+    .info { color: #234a8d; background: #edf4ff; border-color: #c9daf7; }
+    .muted { color: var(--muted); }
+    .list {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .list li { margin: 4px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #edf1f6;
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+    th { background: #eef3f8; color: #344051; }
+    tr:last-child td { border-bottom: 0; }
+    .footer {
+      padding: 24px 18px 36px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cards { grid-template-columns: 1fr; }
+      .row { grid-template-columns: 92px 1fr; }
+      table, thead, tbody, tr, th, td { display: block; }
+      thead { display: none; }
+      tr { border-bottom: 1px solid var(--line); }
+      td { border-bottom: 0; padding: 8px 12px; }
+      td::before {
+        content: attr(data-label);
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        margin-bottom: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Competition Production View</h1>
+      <div class="meta">updated: 2026-05-21 11:05 JST / view only / noindex</div>
+      <div class="notice">
+        このページは外出中の確認用です。送信ボタンはありません。承認・提出はMac側の確認フローで行います。
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+      <div class="stat"><strong>VIEW</strong><span>スマホ確認専用</span></div>
+      <div class="stat"><strong>1h</strong><span>候補探索の想定間隔</span></div>
+      <div class="stat"><strong>90+</strong><span>提出候補の最低点</span></div>
+      <div class="stat"><strong>AI OK</strong><span>AI使用可のみ対象</span></div>
+    </div>
+
+    <section class="section">
+      <h2>現在の運用方針</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>優先ジャンル</h3>
+          <p><span class="badge ok">優先</span> パンフレット、チラシ、パッケージ、バナー、メニュー、資料系。</p>
+          <p><span class="badge warn">低優先</span> ロゴは別タスクで走らせるため、このダッシュボードでは基本的に新規候補にしません。</p>
+        </div>
+        <div class="card">
+          <h3>生成ルール</h3>
+          <ul class="list">
+            <li>APIではなく、プラン内のgpt-image2のみ。</li>
+            <li>見える文字は原則gpt-image2生成パーツ。</li>
+            <li>文字単体ではなく、帯・枠・バッジ・装飾込みで生成。</li>
+            <li>支給画像をAIに読ませる必要がある案件は除外。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>同期状態</h2>
+      <table>
+        <thead>
+          <tr><th>項目</th><th>状態</th><th>メモ</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="項目">Dropbox双方向通信</td>
+            <td data-label="状態"><span class="badge ok">OK</span></td>
+            <td data-label="メモ">Windows側からWINDOWS_REPLY.md、Mac側からMAC_CONFIRM.mdを確認済み。</td>
+          </tr>
+          <tr>
+            <td data-label="項目">重複防止</td>
+            <td data-label="状態"><span class="badge ok">共有済み</span></td>
+            <td data-label="メモ">DO_NOT_DUPLICATE_JOBS.md、JOB_REGISTRY.json、SUBMITTED_IDS.mdをWindows側が読む運用。</td>
+          </tr>
+          <tr>
+            <td data-label="項目">送信承認</td>
+            <td data-label="状態"><span class="badge info">VIEWのみ</span></td>
+            <td data-label="メモ">静的HTMLなので承認ボタンなし。送信OKは別途Mac側で処理。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Windows側の初回候補</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>ROKUYA</h3>
+          <div class="row"><div class="label">案件ID</div><div>Lancers 5544489</div></div>
+          <div class="row"><div class="label">状態</div><div><span class="badge risk">重複停止</span></div></div>
+          <div class="row"><div class="label">理由</div><div>Mac側で既に提出済み。Windows側の重複フォルダはrejectedへ変更済み。</div></div>
+        </div>
+        <div class="card">
+          <h3>次に探すべき案件</h3>
+          <div class="row"><div class="label">狙い</div><div>パンフレット、チラシ、パッケージ、バナー、メニュー。</div></div>
+          <div class="row"><div class="label">条件</div><div>AI使用OK、支給素材AI読込不要、提案数が多すぎない、90点を狙える。</div></div>
+          <div class="row"><div class="label">除外</div><div>ロゴ単体、支給画像依存、QR/ロゴ/PDF読込必須、提出済みID。</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>提出済み・除外済み</h2>
+      <table>
+        <thead>
+          <tr><th>平台</th><th>案件ID</th><th>案件</th><th>状態</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="平台">CrowdWorks</td><td data-label="案件ID">13180856</td><td data-label="案件">天然だしパック</td><td data-label="状態"><span class="badge ok">submitted</span></td></tr>
+          <tr><td data-label="平台">CrowdWorks</td><td data-label="案件ID">13174652</td><td data-label="案件">相続無料相談チラシ</td><td data-label="状態"><span class="badge ok">submitted</span></td></tr>
+          <tr><td data-label="平台">Lancers</td><td data-label="案件ID">5545090</td><td data-label="案件">JUMP Do</td><td data-label="状態"><span class="badge ok">submitted</span></td></tr>
+          <tr><td data-label="平台">Lancers</td><td data-label="案件ID">5544968</td><td data-label="案件">HARUKA</td><td data-label="状態"><span class="badge ok">submitted</span></td></tr>
+          <tr><td data-label="平台">Lancers</td><td data-label="案件ID">5544489</td><td data-label="案件">ROKUYA</td><td data-label="状態"><span class="badge ok">submitted</span></td></tr>
+          <tr><td data-label="平台">Lancers</td><td data-label="案件ID">5544971</td><td data-label="案件">wiw Thai logo</td><td data-label="状態"><span class="badge ok">submitted</span></td></tr>
+          <tr><td data-label="平台">CrowdWorks</td><td data-label="案件ID">13182868</td><td data-label="案件">AS9100</td><td data-label="状態"><span class="badge risk">excluded 82点</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>次回更新で見る項目</h2>
+      <ul class="list">
+        <li>新規パンフレット・チラシ系候補が作られているか。</li>
+        <li>STATUS.mdが`ready_for_mac_review`になっているか。</li>
+        <li>gpt-image2生成パーツが実ファイルとして存在するか。</li>
+        <li>文字パーツが装飾込みで、単なるフォント配置になっていないか。</li>
+        <li>支給画像AI読込が必要な案件を除外しているか。</li>
+      </ul>
+    </section>
+  </main>
+
+  <div class="footer">
+    BANTEX internal competition production view. This page is public by URL but marked noindex.
+  </div>
+</body>
+</html>
