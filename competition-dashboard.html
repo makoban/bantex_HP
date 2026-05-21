@@ -150,7 +150,7 @@
   <header>
     <div class="wrap">
       <h1>Competition Production View</h1>
-      <div class="meta">updated: 2026-05-21 12:45 JST / view only / noindex / auto submit disabled</div>
+      <div class="meta">updated: 2026-05-21 13:05 JST / view only / noindex / auto submit disabled</div>
       <div class="notice">
         このページは外出中の確認用です。送信ボタンはありません。Mac側でも自動送信は絶対にしません。状態は「Windows前工程」「Mac後工程」「確認待ち」「提案済み」で見ます。
       </div>
@@ -237,7 +237,7 @@
             <td data-label="更新元">Windows前工程</td>
             <td data-label="最終更新">次回オートメーション</td>
             <td data-label="次アクション">候補化できたらこの表に「Windows前工程」として追加。</td>
-            <td data-label="メモ">ロゴ単体は別タスク優先。AI禁止・支給画像AI読込必須案件は除外。</td>
+            <td data-label="メモ">ロゴ単体は別タスク優先。HP/LP/PDF/資料は読んでOK。AI禁止・AI入力禁止素材必須案件だけ除外。</td>
           </tr>
         </tbody>
       </table>
@@ -257,11 +257,43 @@
             <li>APIではなく、プラン内のgpt-image2のみ。</li>
             <li>見える文字は原則gpt-image2生成パーツ。</li>
             <li>文字単体ではなく、帯・枠・バッジ・リボン・光彩・影・背景装飾込みで生成。</li>
-            <li>支給画像をAIに読ませる必要がある案件は除外。</li>
+            <li>HP/LP/PDF/ダウンロード資料/参考画像は要件確認のために読む。</li>
+            <li>AI読み込み禁止の支給素材をgpt-image2等に入れない。</li>
             <li>90点未満は提出候補にしない。</li>
           </ul>
         </div>
       </div>
+    </section>
+
+    <section class="section">
+      <h2>素材共有ルール</h2>
+      <table>
+        <thead>
+          <tr><th>項目</th><th>ルール</th><th>Mac側チェック</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="項目">ダウンロード素材</td>
+            <td data-label="ルール">Windowsが読んだPDF、画像、資料、ZIPは`source_refs/downloads/`へ保存。</td>
+            <td data-label="Mac側チェック">実ファイルを開き、要件理解に足りるか確認。</td>
+          </tr>
+          <tr>
+            <td data-label="項目">スクリーンショット</td>
+            <td data-label="ルール">募集ページ、HP、LP、参考画像のスクショは`source_refs/screenshots/`へ保存。</td>
+            <td data-label="Mac側チェック">表示内容と要件の矛盾がないか確認。</td>
+          </tr>
+          <tr>
+            <td data-label="項目">素材台帳</td>
+            <td data-label="ルール">全素材を`source_refs/ASSET_MANIFEST.json`へ記録。AI入力可否も素材ごとに書く。</td>
+            <td data-label="Mac側チェック">台帳と実ファイルが一致しない場合は後工程へ進めない。</td>
+          </tr>
+          <tr>
+            <td data-label="項目">素材まとめ</td>
+            <td data-label="ルール">人間が読む要約を`source_refs/SOURCE_MATERIALS.md`へ書く。</td>
+            <td data-label="Mac側チェック">不足があれば`materials_missing`または`needs_windows_materials`へ戻す。</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section class="section">
@@ -285,6 +317,11 @@
             <td data-label="項目">送信承認</td>
             <td data-label="状態"><span class="badge info">VIEWのみ</span></td>
             <td data-label="メモ">静的HTMLなので承認ボタンなし。今後ボタンを作っても自動送信はしない。</td>
+          </tr>
+          <tr>
+            <td data-label="項目">素材同期</td>
+            <td data-label="状態"><span class="badge info">必須化</span></td>
+            <td data-label="メモ">Windowsが読んだ・落とした素材は`source_refs/`へ保存し、Macが台帳と実ファイルを確認。</td>
           </tr>
         </tbody>
       </table>
@@ -335,6 +372,11 @@
             <td data-label="項目">score / risks</td>
             <td data-label="例">92/100、支給画像AI読込不要、余白率OK</td>
             <td data-label="表示先">確認待ちカードとQA欄。</td>
+          </tr>
+          <tr>
+            <td data-label="項目">source_refs</td>
+            <td data-label="例">downloadsあり / manifest一致 / Mac素材チェックOK</td>
+            <td data-label="表示先">素材共有ルールと作業ボード。</td>
           </tr>
         </tbody>
       </table>
