@@ -17,6 +17,8 @@
       --green: #126b3f;
       --amber: #9a5b00;
       --red: #a43120;
+      --violet: #5a3bb4;
+      --cyan: #0d7280;
     }
     * { box-sizing: border-box; }
     body {
@@ -31,7 +33,7 @@
       color: #fff;
       padding: 22px 18px 18px;
     }
-    .wrap { max-width: 1180px; margin: 0 auto; }
+    .wrap { max-width: 1220px; margin: 0 auto; }
     h1 { margin: 0 0 8px; font-size: clamp(22px, 4vw, 34px); line-height: 1.2; letter-spacing: 0; }
     h2 { margin: 28px 0 12px; font-size: 20px; letter-spacing: 0; }
     h3 { margin: 0 0 8px; font-size: 18px; letter-spacing: 0; }
@@ -49,7 +51,7 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 12px;
       margin-top: 16px;
     }
@@ -71,7 +73,7 @@
     .card { padding: 16px; }
     .row {
       display: grid;
-      grid-template-columns: 112px 1fr;
+      grid-template-columns: 124px 1fr;
       gap: 10px;
       padding: 7px 0;
       border-top: 1px solid #eef2f6;
@@ -88,9 +90,12 @@
       font-size: 12px;
       font-weight: 700;
       border: 1px solid transparent;
+      white-space: nowrap;
     }
-    .ok { color: var(--green); background: #eaf7ef; border-color: #bfe4cc; }
-    .warn { color: var(--amber); background: #fff4df; border-color: #f2d39a; }
+    .submitted { color: var(--green); background: #eaf7ef; border-color: #bfe4cc; }
+    .windows { color: var(--cyan); background: #e8f7f9; border-color: #b6dfe4; }
+    .mac { color: var(--violet); background: #f2efff; border-color: #d6ccff; }
+    .review { color: var(--amber); background: #fff4df; border-color: #f2d39a; }
     .risk { color: var(--red); background: #fff0ed; border-color: #f3c3bb; }
     .info { color: #234a8d; background: #edf4ff; border-color: #c9daf7; }
     .muted { color: var(--muted); }
@@ -116,16 +121,17 @@
     }
     th { background: #eef3f8; color: #344051; }
     tr:last-child td { border-bottom: 0; }
+    .small { font-size: 13px; color: var(--muted); }
     .footer {
       padding: 24px 18px 36px;
       color: var(--muted);
       font-size: 12px;
       text-align: center;
     }
-    @media (max-width: 860px) {
+    @media (max-width: 920px) {
       .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .cards { grid-template-columns: 1fr; }
-      .row { grid-template-columns: 92px 1fr; }
+      .row { grid-template-columns: 96px 1fr; }
       table, thead, tbody, tr, th, td { display: block; }
       thead { display: none; }
       tr { border-bottom: 1px solid var(--line); }
@@ -144,36 +150,115 @@
   <header>
     <div class="wrap">
       <h1>Competition Production View</h1>
-      <div class="meta">updated: 2026-05-21 11:05 JST / view only / noindex</div>
+      <div class="meta">updated: 2026-05-21 12:25 JST / view only / noindex</div>
       <div class="notice">
-        このページは外出中の確認用です。送信ボタンはありません。承認・提出はMac側の確認フローで行います。
+        このページは外出中の確認用です。送信ボタンはありません。状態は「Windows前工程」「Mac後工程」「確認待ち」「提案済み」で見ます。
       </div>
     </div>
   </header>
 
   <main class="wrap">
     <div class="grid">
-      <div class="stat"><strong>VIEW</strong><span>スマホ確認専用</span></div>
-      <div class="stat"><strong>1h</strong><span>候補探索の想定間隔</span></div>
-      <div class="stat"><strong>90+</strong><span>提出候補の最低点</span></div>
-      <div class="stat"><strong>AI OK</strong><span>AI使用可のみ対象</span></div>
+      <div class="stat"><strong>6</strong><span>提案済み</span></div>
+      <div class="stat"><strong>0</strong><span>Windows前工程</span></div>
+      <div class="stat"><strong>0</strong><span>Mac後工程</span></div>
+      <div class="stat"><strong>0</strong><span>確認待ち</span></div>
+      <div class="stat"><strong>2</strong><span>除外・停止</span></div>
     </div>
+
+    <section class="section">
+      <h2>工程ステータスの見方</h2>
+      <table>
+        <thead>
+          <tr><th>表示</th><th>担当</th><th>意味</th><th>次の動き</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="表示"><span class="badge windows">Windows前工程</span></td>
+            <td data-label="担当">Windows / 前工程</td>
+            <td data-label="意味">案件探索、要件読み取り、AI可否確認、生成パーツ準備、STATUS更新中。</td>
+            <td data-label="次の動き">`ready_for_mac_review`になったらMac側が合成・最終QAへ進める。</td>
+          </tr>
+          <tr>
+            <td data-label="表示"><span class="badge mac">Mac後工程</span></td>
+            <td data-label="担当">Mac / 後工程</td>
+            <td data-label="意味">Illustrator/Photoshopで配置、レイヤー整理、JPG/AI/PSD作成、90点QA中。</td>
+            <td data-label="次の動き">90点以上で`approvals/pending`へ。未満は修正または除外。</td>
+          </tr>
+          <tr>
+            <td data-label="表示"><span class="badge review">確認待ち</span></td>
+            <td data-label="担当">ユーザー確認</td>
+            <td data-label="意味">提出候補として見せられる状態。ユーザーはVIEWで確認するだけ。</td>
+            <td data-label="次の動き">OK後、Mac側の提出工程で送信。NGなら修正指示をMac/Windowsへ戻す。</td>
+          </tr>
+          <tr>
+            <td data-label="表示"><span class="badge submitted">提案済み</span></td>
+            <td data-label="担当">Mac提出工程</td>
+            <td data-label="意味">すでにCrowdWorks/Lancersへ送信済み。Windowsは同一IDを作らない。</td>
+            <td data-label="次の動き">重複防止リストに残し、再提案が必要な時だけ別管理にする。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>現在の作業ボード</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>状態</th>
+            <th>案件</th>
+            <th>更新元</th>
+            <th>最終更新</th>
+            <th>次アクション</th>
+            <th>メモ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="状態"><span class="badge submitted">提案済み</span></td>
+            <td data-label="案件">Lancers 5544971 / wiw Thai logo</td>
+            <td data-label="更新元">Mac提出工程</td>
+            <td data-label="最終更新">2026-05-21</td>
+            <td data-label="次アクション">なし。提出済みとして重複防止。</td>
+            <td data-label="メモ">現在ブラウザは提出完了ページ。</td>
+          </tr>
+          <tr>
+            <td data-label="状態"><span class="badge risk">重複停止</span></td>
+            <td data-label="案件">Lancers 5544489 / ROKUYA</td>
+            <td data-label="更新元">Windows前工程 → Mac確認</td>
+            <td data-label="最終更新">2026-05-21</td>
+            <td data-label="次アクション">Windows側は同一IDを作らない。</td>
+            <td data-label="メモ">Windowsが作成した候補は、Mac側で既提出と判定してrejected。</td>
+          </tr>
+          <tr>
+            <td data-label="状態"><span class="badge info">待機</span></td>
+            <td data-label="案件">新規パンフレット・チラシ・パッケージ・バナー・メニュー</td>
+            <td data-label="更新元">Windows前工程</td>
+            <td data-label="最終更新">次回オートメーション</td>
+            <td data-label="次アクション">候補化できたらこの表に「Windows前工程」として追加。</td>
+            <td data-label="メモ">ロゴ単体は別タスク優先。AI禁止・支給画像AI読込必須案件は除外。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
     <section class="section">
       <h2>現在の運用方針</h2>
       <div class="cards">
         <div class="card">
           <h3>優先ジャンル</h3>
-          <p><span class="badge ok">優先</span> パンフレット、チラシ、パッケージ、バナー、メニュー、資料系。</p>
-          <p><span class="badge warn">低優先</span> ロゴは別タスクで走らせるため、このダッシュボードでは基本的に新規候補にしません。</p>
+          <p><span class="badge submitted">優先</span> パンフレット、チラシ、パッケージ、バナー、メニュー、資料系。</p>
+          <p><span class="badge review">低優先</span> ロゴは別タスクで走らせるため、このダッシュボードでは基本的に新規候補にしません。</p>
         </div>
         <div class="card">
           <h3>生成ルール</h3>
           <ul class="list">
             <li>APIではなく、プラン内のgpt-image2のみ。</li>
             <li>見える文字は原則gpt-image2生成パーツ。</li>
-            <li>文字単体ではなく、帯・枠・バッジ・装飾込みで生成。</li>
+            <li>文字単体ではなく、帯・枠・バッジ・リボン・光彩・影・背景装飾込みで生成。</li>
             <li>支給画像をAIに読ませる必要がある案件は除外。</li>
+            <li>90点未満は提出候補にしない。</li>
           </ul>
         </div>
       </div>
@@ -188,12 +273,12 @@
         <tbody>
           <tr>
             <td data-label="項目">Dropbox双方向通信</td>
-            <td data-label="状態"><span class="badge ok">OK</span></td>
+            <td data-label="状態"><span class="badge submitted">OK</span></td>
             <td data-label="メモ">Windows側からWINDOWS_REPLY.md、Mac側からMAC_CONFIRM.mdを確認済み。</td>
           </tr>
           <tr>
             <td data-label="項目">重複防止</td>
-            <td data-label="状態"><span class="badge ok">共有済み</span></td>
+            <td data-label="状態"><span class="badge submitted">共有済み</span></td>
             <td data-label="メモ">DO_NOT_DUPLICATE_JOBS.md、JOB_REGISTRY.json、SUBMITTED_IDS.mdをWindows側が読む運用。</td>
           </tr>
           <tr>
@@ -206,50 +291,54 @@
     </section>
 
     <section class="section">
-      <h2>Windows側の初回候補</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>ROKUYA</h3>
-          <div class="row"><div class="label">案件ID</div><div>Lancers 5544489</div></div>
-          <div class="row"><div class="label">状態</div><div><span class="badge risk">重複停止</span></div></div>
-          <div class="row"><div class="label">理由</div><div>Mac側で既に提出済み。Windows側の重複フォルダはrejectedへ変更済み。</div></div>
-        </div>
-        <div class="card">
-          <h3>次に探すべき案件</h3>
-          <div class="row"><div class="label">狙い</div><div>パンフレット、チラシ、パッケージ、バナー、メニュー。</div></div>
-          <div class="row"><div class="label">条件</div><div>AI使用OK、支給素材AI読込不要、提案数が多すぎない、90点を狙える。</div></div>
-          <div class="row"><div class="label">除外</div><div>ロゴ単体、支給画像依存、QR/ロゴ/PDF読込必須、提出済みID。</div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>提出済み・除外済み</h2>
+      <h2>提案済み・除外済み</h2>
       <table>
         <thead>
-          <tr><th>平台</th><th>案件ID</th><th>案件</th><th>状態</th></tr>
+          <tr><th>媒体</th><th>案件ID</th><th>案件</th><th>状態</th><th>更新元</th></tr>
         </thead>
         <tbody>
-          <tr><td data-label="平台">CrowdWorks</td><td data-label="案件ID">13180856</td><td data-label="案件">天然だしパック</td><td data-label="状態"><span class="badge ok">submitted</span></td></tr>
-          <tr><td data-label="平台">CrowdWorks</td><td data-label="案件ID">13174652</td><td data-label="案件">相続無料相談チラシ</td><td data-label="状態"><span class="badge ok">submitted</span></td></tr>
-          <tr><td data-label="平台">Lancers</td><td data-label="案件ID">5545090</td><td data-label="案件">JUMP Do</td><td data-label="状態"><span class="badge ok">submitted</span></td></tr>
-          <tr><td data-label="平台">Lancers</td><td data-label="案件ID">5544968</td><td data-label="案件">HARUKA</td><td data-label="状態"><span class="badge ok">submitted</span></td></tr>
-          <tr><td data-label="平台">Lancers</td><td data-label="案件ID">5544489</td><td data-label="案件">ROKUYA</td><td data-label="状態"><span class="badge ok">submitted</span></td></tr>
-          <tr><td data-label="平台">Lancers</td><td data-label="案件ID">5544971</td><td data-label="案件">wiw Thai logo</td><td data-label="状態"><span class="badge ok">submitted</span></td></tr>
-          <tr><td data-label="平台">CrowdWorks</td><td data-label="案件ID">13182868</td><td data-label="案件">AS9100</td><td data-label="状態"><span class="badge risk">excluded 82点</span></td></tr>
+          <tr><td data-label="媒体">CrowdWorks</td><td data-label="案件ID">13180856</td><td data-label="案件">天然だしパック</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">Mac提出工程</td></tr>
+          <tr><td data-label="媒体">CrowdWorks</td><td data-label="案件ID">13174652</td><td data-label="案件">相続無料相談チラシ</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">Mac提出工程</td></tr>
+          <tr><td data-label="媒体">Lancers</td><td data-label="案件ID">5545090</td><td data-label="案件">JUMP Do</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">Mac提出工程</td></tr>
+          <tr><td data-label="媒体">Lancers</td><td data-label="案件ID">5544968</td><td data-label="案件">HARUKA</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">Mac提出工程</td></tr>
+          <tr><td data-label="媒体">Lancers</td><td data-label="案件ID">5544489</td><td data-label="案件">ROKUYA</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">Mac提出工程</td></tr>
+          <tr><td data-label="媒体">Lancers</td><td data-label="案件ID">5544971</td><td data-label="案件">wiw Thai logo</td><td data-label="状態"><span class="badge submitted">提案済み</span></td><td data-label="更新元">Mac提出工程</td></tr>
+          <tr><td data-label="媒体">CrowdWorks</td><td data-label="案件ID">13182868</td><td data-label="案件">AS9100</td><td data-label="状態"><span class="badge risk">除外 82点</span></td><td data-label="更新元">Mac QA</td></tr>
+          <tr><td data-label="媒体">Lancers</td><td data-label="案件ID">5544489</td><td data-label="案件">ROKUYA duplicate</td><td data-label="状態"><span class="badge risk">重複停止</span></td><td data-label="更新元">Windows前工程 / Mac確認</td></tr>
         </tbody>
       </table>
     </section>
 
     <section class="section">
-      <h2>次回更新で見る項目</h2>
-      <ul class="list">
-        <li>新規パンフレット・チラシ系候補が作られているか。</li>
-        <li>STATUS.mdが`ready_for_mac_review`になっているか。</li>
-        <li>gpt-image2生成パーツが実ファイルとして存在するか。</li>
-        <li>文字パーツが装飾込みで、単なるフォント配置になっていないか。</li>
-        <li>支給画像AI読込が必要な案件を除外しているか。</li>
-      </ul>
+      <h2>Windows/Macが更新する項目</h2>
+      <table>
+        <thead>
+          <tr><th>項目</th><th>例</th><th>表示先</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="項目">status_label</td>
+            <td data-label="例">Windows前工程 / Mac後工程 / 確認待ち / 提案済み / 除外</td>
+            <td data-label="表示先">カードの一番目立つバッジ。</td>
+          </tr>
+          <tr>
+            <td data-label="項目">status_source</td>
+            <td data-label="例">windows_preprocess / mac_postprocess / user_review / mac_submit</td>
+            <td data-label="表示先">更新元。</td>
+          </tr>
+          <tr>
+            <td data-label="項目">next_action</td>
+            <td data-label="例">Macで合成待ち / ユーザー確認待ち / 提出済みのため停止</td>
+            <td data-label="表示先">現在の作業ボード。</td>
+          </tr>
+          <tr>
+            <td data-label="項目">score / risks</td>
+            <td data-label="例">92/100、支給画像AI読込不要、余白率OK</td>
+            <td data-label="表示先">確認待ちカードとQA欄。</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="small">詳細スキーマはDropbox内のDASHBOARD_STATUS_SCHEMA.mdに記載。</p>
     </section>
   </main>
 
