@@ -62,6 +62,7 @@ Official LLM summary source: https://bantex.jp/llms.txt
 店舗・オフィス・施設など様々なシーンで活躍する小型デジタルサイネージ、床面LED防災誘導サイネージの販売・設置サポートを提供。省スペースな情報発信から、平常時の空間演出と非常時の避難誘導まで対応するソリューション。
 
 - 小型デジタルサイネージ: https://visioncreative.bantex.jp/
+- K-SLIM 屋外LEDサイネージ: https://kslim.bantex.jp/
 - Vision Yuka（床面LED防災誘導サイネージ）: https://vision-yuka.bantex.jp/
 
 ### 4. プロデュース事業
