@@ -317,7 +317,7 @@ button {
 .mobile-nav {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: 0;
   width: min(300px, 80vw);
   height: 100dvh;
   background: var(--color-primary);
@@ -326,12 +326,13 @@ button {
   flex-direction: column;
   justify-content: center;
   padding: var(--sp-lg);
-  transition: right var(--transition-base);
+  transform: translateX(100%);
+  transition: transform var(--transition-base);
   box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
 }
 
 #nav-toggle:checked ~ .mobile-nav {
-  right: 0;
+  transform: translateX(0);
 }
 
 .mobile-nav ul {
@@ -5101,6 +5102,7 @@ body {
 
 .os-hero-media {
   margin: 0;
+  overflow: hidden;
 }
 
 .os-hero-media::before {
@@ -6570,7 +6572,8 @@ body {
 
   .os-hero-media img {
     object-position: center center;
-    transform: scale(1.01);
+    transform: none;
+    animation: none;
   }
 
   .os-hero-media::before {
@@ -6590,18 +6593,35 @@ body {
   }
 
   .os-hero-inner {
+    overflow: hidden;
     min-height: calc(100svh - 44px);
     padding-top: calc(var(--header-h) + 42px);
     padding-bottom: 5.4rem;
   }
 
+  .os-hero-copy,
+  .os-hero-copy > *,
+  .os-hero h1,
+  .os-hero-lead,
+  .os-hero-actions,
+  .os-hero-facts,
+  .os-hero-services {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
   .os-logo-motion {
     display: block;
     top: calc(var(--header-h) + 5.6rem);
-    right: -34vw;
-    width: min(112vw, 460px);
+    right: 0;
+    width: min(86vw, 360px);
     opacity: 0.26;
     filter: saturate(0.9) contrast(1.15);
+  }
+
+  .os-logo-motion video {
+    transform: none;
   }
 
   .os-hero h1 > span:first-child {
@@ -6623,7 +6643,6 @@ body {
 
   .os-hero-services {
     grid-template-columns: 1fr;
-    max-width: 22rem;
   }
 
   .os-hero-services a {
@@ -6689,8 +6708,58 @@ body {
   }
 
   .os-featured-service {
+    grid-template-columns: minmax(0, 1fr);
     height: auto;
     min-height: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .os-featured-service,
+  .os-featured-service > *,
+  .os-featured-poster,
+  .os-featured-service-body,
+  .os-service-tags,
+  .os-featured-meta,
+  .os-featured-meta > *,
+  .os-featured-cta,
+  .os-signal-grid,
+  .os-signal-grid > *,
+  .ai-os-main .work-card,
+  .ai-os-main .work-card > *,
+  .work-card-visual,
+  .work-card-body,
+  .work-card-body > *,
+  .about-grid,
+  .about-grid > *,
+  .faq-grid,
+  .faq-grid > *,
+  .faq-item,
+  .faq-item > *,
+  .faq-item summary,
+  .faq-item p,
+  .contact-inner,
+  .contact-inner > *,
+  .contact-info-strip,
+  .contact-info-strip > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .os-featured-poster,
+  .work-card-visual {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .os-featured-poster img,
+  .work-card-visual img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
   }
 
   .os-ai-card {
@@ -6710,6 +6779,33 @@ body {
     font-size: 1.42rem;
   }
 
+  .work-card-body,
+  .faq-item,
+  .contact-inner,
+  .contact-info-strip {
+    overflow: hidden;
+  }
+
+  .contact-info-strip .contact-info-item:last-child span {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .work-card-type,
+  .work-card h3,
+  .work-card p,
+  .faq-item summary,
+  .faq-item p {
+    width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .work-card-type {
+    display: block;
+    letter-spacing: 0.04em;
+  }
+
   .os-featured-meta {
     grid-template-columns: 1fr;
   }
@@ -6719,10 +6815,59 @@ body {
     width: 100%;
   }
 
+  .ai-os-main .company-table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed;
+  }
+
+  .ai-os-main .company-table tbody,
+  .ai-os-main .company-table tr,
+  .ai-os-main .company-table th,
+  .ai-os-main .company-table td {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ai-os-main .company-table th,
+  .ai-os-main .company-table td {
+    padding: 0.74rem 0.86rem;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .ai-os-main .company-table th {
+    border-bottom: 0;
+    background: #f3f6f8;
+  }
+
+  .ai-os-main .company-table td {
+    border-top: 0;
+  }
+
   .os-field-card-ai {
     grid-column: span 1;
     grid-template-rows: auto 1fr;
     min-height: auto;
+  }
+
+  .os-field-card,
+  .os-field-card > *,
+  .os-field-body,
+  .os-field-body > *,
+  .os-field-links,
+  .os-field-links > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .os-field-links a {
+    flex: 1 1 min(100%, 8.8rem);
+    width: auto;
+    white-space: normal;
+    overflow-wrap: break-word;
   }
 
   .os-field-card-ai figure,
