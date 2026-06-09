@@ -5025,7 +5025,6 @@ body {
 .os-flow-card span,
 .os-pulse-log,
 .os-hero-facts dt,
-.os-signal-grid span,
 .os-ai-card-head span,
 .os-business-grid span,
 .work-card-type {
@@ -5157,13 +5156,11 @@ body {
 }
 
 .os-hero-copy[data-motion],
-.os-command[data-motion],
-.os-signal-grid [data-motion] {
+.os-command[data-motion] {
   opacity: 1;
 }
 
-.os-hero-copy[data-motion],
-.os-signal-grid [data-motion] {
+.os-hero-copy[data-motion] {
   transform: none;
   transition: none;
 }
@@ -5574,52 +5571,6 @@ body {
   font-weight: 800;
 }
 
-.os-signal-band {
-  position: relative;
-  z-index: 5;
-  padding: 2rem 0 4rem;
-  background: var(--os-bg);
-}
-
-.os-signal-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  overflow: hidden;
-  border: 1px solid var(--os-line);
-  border-radius: 8px;
-  background: var(--os-line);
-  box-shadow: var(--os-shadow);
-}
-
-.os-signal-grid article {
-  min-height: 168px;
-  padding: 1.2rem;
-  background: #ffffff;
-}
-
-.os-signal-grid b {
-  display: block;
-  color: var(--os-ink);
-  font-family: var(--font-brand);
-  font-size: 2.5rem;
-  line-height: 1;
-}
-
-.os-signal-grid span {
-  display: block;
-  margin-top: 0.55rem;
-  color: var(--os-blue);
-  font-size: 0.72rem;
-}
-
-.os-signal-grid p {
-  margin-top: 0.65rem;
-  color: var(--os-muted);
-  font-size: 0.9rem;
-  line-height: 1.75;
-}
-
 .os-fields,
 .os-featured,
 .os-service-bento,
@@ -5637,7 +5588,7 @@ body {
 }
 
 .os-fields {
-  padding-top: 3.2rem;
+  padding-top: 5.8rem;
   background: #ffffff;
 }
 
@@ -5723,6 +5674,7 @@ body {
 .os-field-body {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   padding: 1.2rem;
 }
 
@@ -5754,6 +5706,8 @@ body {
   color: var(--os-muted);
   font-size: 0.92rem;
   line-height: 1.78;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .os-field-card-ai .os-field-body p {
@@ -6662,7 +6616,6 @@ body {
   }
 
   .os-hero-facts,
-  .os-signal-grid,
   .os-field-grid,
   .os-ai-catalog,
   .os-business-grid {
@@ -6676,10 +6629,6 @@ body {
   .os-hero-ticker span {
     padding: 0.72rem 1rem;
     font-size: 0.72rem;
-  }
-
-  .os-signal-band {
-    padding: 1rem 0 3.2rem;
   }
 
   .os-featured,
@@ -6723,8 +6672,6 @@ body {
   .os-featured-meta,
   .os-featured-meta > *,
   .os-featured-cta,
-  .os-signal-grid,
-  .os-signal-grid > *,
   .ai-os-main .work-card,
   .ai-os-main .work-card > *,
   .work-card-visual,
