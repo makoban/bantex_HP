@@ -19,7 +19,7 @@
   <meta property="og:url" content="https://bantex.jp/">
   <meta property="og:title" content="株式会社バンテックス | 総合クリエイティブカンパニー">
   <meta property="og:description" content="AI、デジタルサイネージ、パイプベンダーの3部門で、企画・制作・導入を支援します。">
-  <meta property="og:image" content="https://bantex.jp/assets/generated/bantex-hero-ai-services-hub.jpg">
+  <meta property="og:image" content="https://bantex.jp/assets/generated/bantex-hero-command-desktop.jpg">
   <meta property="og:image:width" content="1672">
   <meta property="og:image:height" content="941">
   <meta property="og:site_name" content="株式会社バンテックス">
@@ -29,7 +29,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="株式会社バンテックス | 総合クリエイティブカンパニー">
   <meta name="twitter:description" content="AI、デジタルサイネージ、パイプベンダーの3部門で、企画・制作・導入を支援します。">
-  <meta name="twitter:image" content="https://bantex.jp/assets/generated/bantex-hero-ai-services-hub.jpg">
+  <meta name="twitter:image" content="https://bantex.jp/assets/generated/bantex-hero-command-desktop.jpg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +37,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="preload" as="image" href="assets/generated/bantex-hero-ai-services-hub.jpg">
+  <link rel="preload" as="image" href="assets/generated/bantex-hero-command-desktop.jpg" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="assets/generated/bantex-hero-command-mobile.jpg" media="(max-width: 767px)">
   <link rel="alternate" type="text/plain" href="https://bantex.jp/llms.txt" title="LLMs.txt">
   <link rel="stylesheet" href="style.css">
 
@@ -522,10 +523,11 @@
 
     <section class="os-hero" aria-label="BANTEX Creative Company">
       <picture class="os-hero-media" aria-hidden="true">
-        <img src="assets/generated/bantex-hero-ai-services-hub.jpg" alt="" width="1672" height="941" fetchpriority="high">
+        <source media="(max-width: 767px)" srcset="assets/generated/bantex-hero-command-mobile.jpg" width="844" height="1500">
+        <img src="assets/generated/bantex-hero-command-desktop.jpg" alt="" width="1672" height="941" fetchpriority="high">
       </picture>
       <div class="os-logo-motion" aria-hidden="true">
-        <video autoplay muted loop playsinline preload="none" poster="assets/video/bantex-logo-motion-poster.jpg" data-src="assets/video/bantex-logo-motion-muted.mp4"></video>
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/video/bantex-logo-motion-poster.jpg" data-src="assets/video/bantex-logo-motion-muted.mp4"></video>
       </div>
       <div class="os-hero-grid" aria-hidden="true"></div>
 
@@ -534,9 +536,9 @@
           <p class="os-kicker">CREATIVE COMPANY / NAGOYA</p>
           <h1>
             <span>BANTEX</span>
-            <span>事業を動かす、総合クリエイティブカンパニー。</span>
+            <span><span class="keep">事業を動かす、</span><span class="keep">総合クリエイティブカンパニー。</span></span>
           </h1>
-          <p class="os-hero-lead">AI、デジタルサイネージ、パイプベンダー。企画・制作・導入まで、事業の次の一手を形にします。</p>
+          <p class="os-hero-lead"><span class="keep">AI、デジタルサイネージ、パイプベンダー。</span><span class="keep">企画・制作・導入まで、</span><span class="keep">事業の次の一手を形にします。</span></p>
           <div class="os-hero-actions">
             <a class="os-btn os-btn-primary" href="#fields">3部門を見る</a>
             <a class="os-btn os-btn-ghost" href="#contact">相談する</a>
@@ -563,12 +565,12 @@
             </a>
             <a href="#fields">
               <span>02</span>
-              <strong>デジタルサイネージ</strong>
+              <strong><span class="keep">デジタルサイネージ</span></strong>
               <small>店舗・施設の情報表示</small>
             </a>
             <a href="#fields">
               <span>03</span>
-              <strong>パイプベンダー</strong>
+              <strong><span class="keep">パイプベンダー</span></strong>
               <small>加工機械・製造現場</small>
             </a>
           </div>
@@ -1213,7 +1215,7 @@
       }
 
       document.querySelectorAll('.os-logo-motion video[data-src]').forEach(function (video) {
-        if (reduceMotion.matches || !window.matchMedia('(min-width: 900px)').matches) {
+        if (reduceMotion.matches) {
           video.removeAttribute('autoplay');
           video.pause();
           return;
