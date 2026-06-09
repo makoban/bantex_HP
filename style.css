@@ -3175,8 +3175,9 @@ body {
     width: 100%;
     max-width: min(100%, 22rem);
     white-space: normal;
-    word-break: normal;
+    word-break: keep-all;
     overflow-wrap: break-word;
+    line-break: strict;
   }
 
   .ai-category-strip {
@@ -4970,12 +4971,20 @@ body {
 .ai-os-main h1,
 .ai-os-main h2,
 .ai-os-main h3,
+.ai-os-main h4,
+.ai-os-main h5,
 .ai-os-main p,
+.ai-os-main li,
 .ai-os-main a,
 .ai-os-main span,
 .ai-os-main strong,
+.ai-os-main small,
+.ai-os-main dt,
+.ai-os-main dd,
 .ai-os-main th,
 .ai-os-main td,
+.ai-os-main address,
+.ai-os-main button,
 .ai-os-main summary {
   word-break: keep-all;
   overflow-wrap: break-word;
@@ -4985,7 +4994,6 @@ body {
 .ai-os-main h1,
 .ai-os-main h2,
 .ai-os-main h3,
-.os-hero-services strong,
 .os-featured-catch,
 .os-ai-catch,
 .os-ai-card-meta strong,
@@ -5024,7 +5032,6 @@ body {
 .os-command-head span,
 .os-flow-card span,
 .os-pulse-log,
-.os-hero-facts dt,
 .os-ai-card-head span,
 .os-business-grid span,
 .work-card-type {
@@ -5248,92 +5255,6 @@ body {
   display: block;
   object-fit: cover;
   transform: scale(1.08);
-}
-
-.os-hero-facts {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  max-width: 650px;
-  margin-top: 2rem;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.os-hero-facts div {
-  min-height: 92px;
-  padding: 1rem;
-  background: rgba(8, 12, 18, 0.58);
-  backdrop-filter: blur(14px);
-}
-
-.os-hero-facts dt {
-  color: var(--os-blue);
-  font-size: 0.72rem;
-}
-
-.os-hero-facts dd {
-  margin-top: 0.35rem;
-  color: #ffffff;
-  font-weight: 800;
-  line-height: 1.4;
-}
-
-.os-hero-services {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.7rem;
-  max-width: 760px;
-  margin-top: 1rem;
-}
-
-.os-hero-services a {
-  display: grid;
-  gap: 0.28rem;
-  min-height: 112px;
-  padding: 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 8px;
-  color: #ffffff;
-  background: rgba(8, 12, 18, 0.62);
-  backdrop-filter: blur(14px);
-  transition: transform 0.26s ease, border-color 0.26s ease, background 0.26s ease;
-}
-
-.os-hero-services a::before {
-  content: '';
-  width: 32px;
-  height: 2px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--os-green), var(--os-blue));
-}
-
-.os-hero-services a:hover {
-  transform: translateY(-3px);
-  border-color: rgba(57, 213, 138, 0.42);
-  background: rgba(8, 12, 18, 0.78);
-}
-
-.os-hero-services span {
-  color: var(--os-green);
-  font-family: var(--font-brand);
-  font-size: 0.72rem;
-  font-weight: 900;
-}
-
-.os-hero-services strong {
-  font-size: 1rem;
-  line-height: 1.36;
-}
-
-.os-hero-services small {
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 0.78rem;
-  font-weight: 700;
-  line-height: 1.5;
-  overflow-wrap: break-word;
 }
 
 .os-command {
@@ -5706,8 +5627,9 @@ body {
   color: var(--os-muted);
   font-size: 0.92rem;
   line-height: 1.78;
-  word-break: normal;
+  word-break: keep-all;
   overflow-wrap: break-word;
+  line-break: strict;
 }
 
 .os-field-card-ai .os-field-body p {
@@ -6557,9 +6479,7 @@ body {
   .os-hero-copy > *,
   .os-hero h1,
   .os-hero-lead,
-  .os-hero-actions,
-  .os-hero-facts,
-  .os-hero-services {
+  .os-hero-actions {
     min-width: 0;
     width: 100%;
     max-width: 100%;
@@ -6595,14 +6515,6 @@ body {
     line-height: 1.78;
   }
 
-  .os-hero-services {
-    grid-template-columns: 1fr;
-  }
-
-  .os-hero-services a {
-    min-height: 96px;
-  }
-
   .os-hero-actions,
   .contact-btns {
     display: grid;
@@ -6615,15 +6527,10 @@ body {
     width: 100%;
   }
 
-  .os-hero-facts,
   .os-field-grid,
   .os-ai-catalog,
   .os-business-grid {
     grid-template-columns: 1fr;
-  }
-
-  .os-hero-facts div {
-    min-height: 76px;
   }
 
   .os-hero-ticker span {
@@ -6734,8 +6641,8 @@ body {
   }
 
   .contact-info-strip .contact-info-item:last-child span {
-    overflow-wrap: anywhere;
-    word-break: normal;
+    overflow-wrap: break-word;
+    word-break: keep-all;
   }
 
   .work-card-type,
@@ -6745,6 +6652,7 @@ body {
   .faq-item p {
     width: 100%;
     white-space: normal;
+    word-break: keep-all;
     overflow-wrap: break-word;
   }
 
@@ -6782,6 +6690,7 @@ body {
   .ai-os-main .company-table td {
     padding: 0.74rem 0.86rem;
     white-space: normal;
+    word-break: keep-all;
     overflow-wrap: break-word;
   }
 
@@ -6814,6 +6723,7 @@ body {
     flex: 1 1 min(100%, 8.8rem);
     width: auto;
     white-space: normal;
+    word-break: keep-all;
     overflow-wrap: break-word;
   }
 
