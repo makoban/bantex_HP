@@ -2896,6 +2896,115 @@ body {
     linear-gradient(180deg, #f8fafc 0%, #ffffff 38%, #f8fafc 100%);
 }
 
+.app-status-board {
+  scroll-margin-top: calc(var(--header-h) + 18px);
+  padding: clamp(2.6rem, 5vw, 4.5rem) 0 clamp(2.8rem, 5vw, 4.8rem);
+  background: #f8fafc;
+}
+
+.app-status-head {
+  max-width: 780px;
+  margin-bottom: clamp(1.25rem, 2.2vw, 1.75rem);
+}
+
+.app-status-head .section-heading {
+  scroll-margin-top: calc(var(--header-h) + 18px);
+  margin-bottom: 0.7rem;
+}
+
+.app-status-head p:last-child {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.app-status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+.app-status-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 176px;
+  padding: 1rem;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+}
+
+.app-status-card.is-live {
+  border-color: rgba(22, 163, 74, 0.25);
+}
+
+.app-status-pill,
+.app-status-note {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.app-status-pill {
+  color: #065f46;
+  background: rgba(16, 185, 129, 0.12);
+}
+
+.app-status-pill.is-pending {
+  color: #92400e;
+  background: rgba(245, 158, 11, 0.14);
+}
+
+.app-status-card h3 {
+  margin-top: 0.85rem;
+  color: #0f172a;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.app-status-card p {
+  margin-top: 0.45rem;
+  color: #475569;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.app-status-card a,
+.app-status-note {
+  margin-top: auto;
+}
+
+.app-status-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0.45rem 0.75rem;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #2563eb;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.app-status-card a::after {
+  content: '→';
+  margin-left: 0.42rem;
+}
+
+.app-status-note {
+  color: #475569;
+  background: #f1f5f9;
+}
+
 .ai-catalog-grid {
   gap: clamp(1.125rem, 2.2vw, 1.75rem);
 }
