@@ -17,7 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "seo" / "services"
 SITEMAP_PATH = ROOT / "sitemap.xml"
-TODAY = "2026-06-26"
+TODAY = "2026-06-27"
 BASE_URL = "https://bantex.jp/seo/services"
 
 
@@ -62,6 +62,8 @@ PAGES = [
         "links": [
             ("AIサービス一覧", "https://bantex.jp/ai-services.html"),
             ("AI社員 名古屋", "https://bantex.jp/seo/services/ai-staff-nagoya.html"),
+            ("AI映像制作 名古屋", "https://bantex.jp/seo/services/ai-video-nagoya.html"),
+            ("インスタ 自動投稿", "https://bantex.jp/seo/services/instagram-auto-posting.html"),
             ("AIフォーム営業", "https://ai-form.bantex.jp/"),
             ("X AI自動投稿", "https://tweet.bantex.jp/"),
         ],
@@ -112,6 +114,8 @@ PAGES = [
         "links": [
             ("AI社員サービス", "https://koala.bantex.jp/"),
             ("AI自動化 名古屋", "https://bantex.jp/seo/services/ai-automation-nagoya.html"),
+            ("AI映像制作 名古屋", "https://bantex.jp/seo/services/ai-video-nagoya.html"),
+            ("インスタ 自動投稿", "https://bantex.jp/seo/services/instagram-auto-posting.html"),
             ("AIサービス一覧", "https://bantex.jp/ai-services.html"),
             ("お問い合わせ", "https://bantex.jp/#contact"),
         ],
@@ -121,6 +125,106 @@ PAGES = [
             ("小さな会社でもAI社員を導入できますか？", "はい。最初は社内FAQ担当や問い合わせ一次対応など、1つの役割から始めることで、小規模な会社でも導入しやすくなります。"),
         ],
         "service_type": "AI社員サービス",
+    },
+    {
+        "slug": "ai-video-nagoya",
+        "title": "AI映像制作 名古屋 | AI動画・CM・SNS動画制作 | 株式会社バンテックス",
+        "h1": "名古屋のAI映像制作・AI動画制作",
+        "description": "名古屋でAI映像制作・AI動画制作を相談するなら株式会社バンテックス。CM、SNS動画、企業PV、LP用動画などをAI活用で短期間・低コストに制作します。",
+        "keywords": "AI映像制作,AI映像 名古屋,名古屋 AI映像,AI動画制作 名古屋,AI動画,AI CM制作,SNS動画制作,企業PV 名古屋",
+        "label": "AI Video",
+        "lead": "AI映像制作は、撮影、モデル、スタジオを毎回用意しなくても、商品やサービスの魅力を動画で伝えやすくする制作手法です。BANTEXは名古屋を拠点に、AI動画、CM、SNS動画、LP用ビジュアルの制作を支援します。",
+        "summary": [
+            "名古屋・愛知の会社や店舗向けに、広告、SNS、LP、営業資料で使えるAI映像を制作します。",
+            "画像1枚、商品写真、店舗写真、テキスト指示から、短尺動画や告知用ビジュアルを作れます。",
+            "AI生成だけで終わらせず、日本語テロップ、ロゴ、構成、投稿導線まで編集レイヤーで整えます。",
+        ],
+        "sections": [
+            {
+                "heading": "AI映像制作で作れるもの",
+                "body": "AI映像制作では、SNS広告、Instagramリール、YouTubeショート、店頭サイネージ用動画、LPのファーストビュー動画、企業PVの短尺版、サービス紹介動画などを作れます。従来の撮影では日程、出演者、ロケーション、スタジオ、編集の調整が必要でしたが、AIを使うことで企画から初稿までの時間を短縮できます。BANTEXでは、AI生成と編集を分け、最後に日本語テロップやロゴ、尺、画角を整えます。",
+            },
+            {
+                "heading": "名古屋の店舗・企業での使い方",
+                "body": "名古屋の店舗では、メニュー紹介、キャンペーン、求人、イベント告知、店頭サイネージ用の映像に活用できます。企業では、新サービス説明、展示会用動画、営業資料の冒頭動画、採用向けの短尺動画に使えます。AI映像は、毎回大規模な撮影を行うほどではないが、写真だけでは伝わりにくい内容を動きで見せたい場合に向いています。",
+            },
+            {
+                "heading": "BANTEXの制作範囲",
+                "body": "BANTEXでは、AI生成用の構成案、プロンプト設計、素材整理、映像生成、不要な文字や崩れの確認、日本語テロップ追加、ロゴ配置、SNS向け画角調整まで相談できます。必要に応じて、LP、Instagram投稿文、サイネージ表示、LINE配信用の案内文まで一緒に整えます。動画単体ではなく、見た人が問い合わせや来店につながる導線を重視します。",
+            },
+            {
+                "heading": "制作前に準備するもの",
+                "body": "制作前には、目的、使う場所、尺、縦型か横型か、入れたい文言、ロゴ、商品写真、店舗写真、参考イメージを整理します。素材が少ない場合でも制作はできますが、実際の商品や店舗の写真があるほど、伝えたい内容に近づけやすくなります。BANTEXでは、素材が十分でない場合も、最初に必要な内容を整理してから制作に進めます。",
+            },
+        ],
+        "fit": [
+            "名古屋・愛知でAI動画やAI映像制作を相談したい会社",
+            "InstagramやYouTubeショート向けの短尺動画を作りたい店舗",
+            "LPや広告に使う動画を短期間で用意したい事業者",
+            "撮影予算を抑えつつ、動きのある訴求を試したい会社",
+        ],
+        "links": [
+            ("AI映像制作サービス", "https://aimovie.bantex.jp/"),
+            ("AI自動化 名古屋", "https://bantex.jp/seo/services/ai-automation-nagoya.html"),
+            ("インスタ 自動投稿", "https://bantex.jp/seo/services/instagram-auto-posting.html"),
+            ("AIサービス一覧", "https://bantex.jp/ai-services.html"),
+        ],
+        "faqs": [
+            ("AI映像制作では何秒くらいの動画を作れますか？", "SNSや広告では15秒から30秒程度の短尺動画が使いやすいです。LPや企業PVでは用途に合わせて尺を調整します。"),
+            ("名古屋以外でもAI映像制作を依頼できますか？", "はい。BANTEXは名古屋市天白区を拠点にしていますが、素材共有とオンライン確認で全国対応できます。"),
+            ("AIで生成した動画に日本語テロップやロゴは入れられますか？", "はい。AI生成映像そのものに任せず、編集工程で日本語テロップ、ロゴ、問い合わせ導線、SNS用の画角を整えます。"),
+        ],
+        "service_type": "AI映像制作",
+    },
+    {
+        "slug": "instagram-auto-posting",
+        "title": "インスタ 自動投稿 | Instagram自動投稿・LINE連携 | 株式会社バンテックス",
+        "h1": "インスタ自動投稿・Instagram投稿自動化",
+        "description": "インスタ自動投稿・Instagram投稿自動化なら株式会社バンテックス。LINEで写真を送るだけで、AIが投稿文とハッシュタグを作り、Instagramへ予約投稿します。",
+        "keywords": "インスタ 自動投稿,Instagram自動投稿,インスタ 投稿 自動化,Instagram 投稿 自動化,LINE Instagram投稿,SNS自動化,店舗SNS運用,名古屋 インスタ 自動投稿",
+        "label": "Instagram Auto",
+        "lead": "インスタ運用は大切でも、写真選び、文章作成、ハッシュタグ、投稿時間の管理を毎日続けるのは負担です。BANTEXのココトモSNSは、LINEで写真を送るだけでInstagram投稿までつなげる店舗向けの自動投稿サービスです。",
+        "summary": [
+            "LINEで写真を送るだけで、AIがInstagram向けの投稿文とハッシュタグを作ります。",
+            "決めた時間に予約投稿できるため、店舗スタッフが毎日投稿作業を抱えにくくなります。",
+            "飲食店、美容室、サロン、整体院など、写真で魅力を伝える店舗の継続投稿に向いています。",
+        ],
+        "sections": [
+            {
+                "heading": "インスタ投稿が続かない理由",
+                "body": "店舗のInstagram運用では、写真はあるのに投稿文が浮かばない、ハッシュタグを考える時間がない、忙しい時間に投稿できない、担当者が変わると止まるといった課題がよくあります。インスタ自動投稿は、投稿作業の中でも負担になりやすい文章作成、ハッシュタグ作成、予約投稿を仕組み化し、投稿の継続を助けます。",
+            },
+            {
+                "heading": "LINEからInstagramへつなげる仕組み",
+                "body": "ココトモSNSでは、店舗スタッフがLINEで写真やメモを送ると、AIが内容を読み取り、Instagram向けの投稿文とハッシュタグ案を作成します。投稿時間をあらかじめ設定しておけば、決めた時間にInstagramへ投稿できます。普段から使っているLINEを入口にすることで、管理画面に毎回ログインする負担を減らせます。",
+            },
+            {
+                "heading": "店舗SNS運用での使い方",
+                "body": "飲食店では日替わりメニューや新商品、美容室やサロンでは施術事例や空き枠案内、整体院やクリニックではお知らせや季節の注意喚起などに使えます。投稿文をAIが作ることで、文章が苦手なスタッフでも発信しやすくなります。BANTEXでは、店舗ごとの言い回しや投稿ルールに合わせた運用も相談できます。",
+            },
+            {
+                "heading": "自動投稿で注意すること",
+                "body": "Instagram自動投稿は便利ですが、すべてを完全放置にするより、投稿前確認や投稿ルールを決める方が安全です。写真に写ってはいけないもの、価格表記、医療・美容系の表現、キャンペーン条件などは人の確認が必要になる場合があります。BANTEXでは、自動化する部分と人が見る部分を分けて設計します。",
+            },
+        ],
+        "fit": [
+            "Instagram投稿が止まりがちな飲食店・美容室・サロン",
+            "LINEから写真を送るだけで投稿準備を済ませたい店舗",
+            "投稿文やハッシュタグを考える時間を減らしたい事業者",
+            "名古屋・愛知で店舗SNS運用を相談したい会社",
+        ],
+        "links": [
+            ("ココトモSNS", "https://kokotomo-sns.bantex.jp/"),
+            ("AI映像制作 名古屋", "https://bantex.jp/seo/services/ai-video-nagoya.html"),
+            ("AI自動化 名古屋", "https://bantex.jp/seo/services/ai-automation-nagoya.html"),
+            ("AIサービス一覧", "https://bantex.jp/ai-services.html"),
+        ],
+        "faqs": [
+            ("インスタ自動投稿は何が自動になりますか？", "写真やメモをもとにした投稿文作成、ハッシュタグ作成、予約投稿を自動化できます。運用により投稿前確認を挟むこともできます。"),
+            ("LINEからInstagramに投稿できますか？", "はい。ココトモSNSでは、LINEで写真を送る運用を入口にして、AIが投稿文を作りInstagram投稿につなげます。"),
+            ("店舗ごとの文章の雰囲気は調整できますか？", "はい。丁寧、親しみやすい、短め、絵文字控えめなど、店舗の雰囲気に合わせた投稿ルールを相談できます。"),
+        ],
+        "service_type": "Instagram自動投稿",
     },
     {
         "slug": "small-digital-signage",
@@ -798,7 +902,7 @@ def render_index(all_pages: list[dict]) -> str:
   <meta charset=\"UTF-8\">
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
   <title>サービス別SEOページ | AI自動化・サイネージ・パイプベンダー | 株式会社バンテックス</title>
-  <meta name=\"description\" content=\"株式会社バンテックスのサービス別SEOページ一覧。AI自動化 名古屋、AI社員 名古屋、小型デジタルサイネージ、デジタルサイネージ 名古屋、床面LEDサイネージ、パイプベンダー 名古屋を整理しています。\">
+  <meta name=\"description\" content=\"株式会社バンテックスのサービス別SEOページ一覧。AI自動化 名古屋、AI社員 名古屋、AI映像制作 名古屋、インスタ 自動投稿、小型デジタルサイネージ、デジタルサイネージ 名古屋、床面LEDサイネージ、パイプベンダー 名古屋を整理しています。\">
   <meta name=\"robots\" content=\"index, follow\">
   <link rel=\"canonical\" href=\"{url}\">
   <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
@@ -825,7 +929,7 @@ def render_index(all_pages: list[dict]) -> str:
       <div class=\"container\">
         <span class=\"hero-label\">Keyword Guides</span>
         <h1>サービス別SEOページ</h1>
-        <p>株式会社バンテックスが扱うAI自動化、AI社員、デジタルサイネージ、床面LEDサイネージ、パイプベンダーについて、検索キーワード別に説明しています。</p>
+        <p>株式会社バンテックスが扱うAI自動化、AI社員、AI映像制作、インスタ自動投稿、デジタルサイネージ、床面LEDサイネージ、パイプベンダーについて、検索キーワード別に説明しています。</p>
       </div>
     </section>
     <section class=\"container summary-grid\" aria-label=\"サービス別ページ一覧\">
