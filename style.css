@@ -6865,3 +6865,78 @@ body {
     animation: none !important;
   }
 }
+
+/* ── AI service keyword guides ────────────────────────────── */
+.ai-keyword-links {
+  padding: var(--sp-lg) 0;
+  background: var(--color-bg);
+}
+
+.ai-keyword-panel {
+  background: var(--color-white);
+  border: 1px solid rgba(26, 35, 50, 0.08);
+  border-radius: var(--radius);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: var(--shadow-md);
+}
+
+.ai-keyword-panel > p {
+  max-width: 720px;
+  margin: -0.75rem 0 var(--sp-md);
+  color: rgba(44, 44, 44, 0.72);
+}
+
+.ai-keyword-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-sm);
+}
+
+.ai-keyword-card {
+  display: grid;
+  gap: 0.55rem;
+  min-height: 176px;
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(26, 35, 50, 0.96), rgba(42, 110, 187, 0.88));
+  color: var(--color-white);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.ai-keyword-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.ai-keyword-card span {
+  font-family: var(--font-brand);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.ai-keyword-card strong {
+  font-size: 1.08rem;
+  line-height: 1.5;
+  color: var(--color-white);
+}
+
+.ai-keyword-card small {
+  font-size: 0.86rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+@media (max-width: 720px) {
+  .ai-keyword-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-keyword-card:hover {
+    transform: none !important;
+  }
+}
