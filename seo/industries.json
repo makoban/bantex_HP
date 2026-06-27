@@ -115,6 +115,7 @@
     {"name": "パーソナルトレーナー", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
     {"name": "占い師", "relevant_services": ["hp", "sns", "line"], "search_volume": "low"},
     {"name": "カメラマン", "relevant_services": ["hp", "sns"], "search_volume": "medium"},
+    {"name": "ライター", "relevant_services": ["hp", "sns", "dm"], "search_volume": "low"},
     {"name": "コンサルタント", "relevant_services": ["hp", "sns", "dm", "jigyou"], "search_volume": "medium"},
     {"name": "理容室", "relevant_services": ["hp", "sns", "line"], "search_volume": "medium"},
     {"name": "音楽スタジオ", "relevant_services": ["hp", "sns"], "search_volume": "low"}

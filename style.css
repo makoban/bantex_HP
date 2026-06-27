@@ -5721,6 +5721,31 @@ body {
   margin-top: 0;
 }
 
+.os-field-seo-links {
+  display: flex;
+  flex: 1 0 100%;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.7rem;
+  margin-top: 0.1rem;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  opacity: 0.72;
+}
+
+.os-field-body .os-field-seo-links a,
+.os-field-card-ai .os-field-body .os-field-seo-links a {
+  flex: 0 1 auto;
+  width: auto;
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .os-two-col {
   display: grid;
   grid-template-columns: minmax(0, 0.78fr) minmax(0, 1fr);
@@ -6868,75 +6893,45 @@ body {
 
 /* ── AI service keyword guides ────────────────────────────── */
 .ai-keyword-links {
-  padding: var(--sp-lg) 0;
+  padding: var(--sp-xs) 0 var(--sp-md);
   background: var(--color-bg);
 }
 
 .ai-keyword-panel {
-  background: var(--color-white);
-  border: 1px solid rgba(26, 35, 50, 0.08);
-  border-radius: var(--radius);
-  padding: clamp(1.5rem, 4vw, 2.5rem);
-  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 0.9rem;
+  align-items: center;
+  border-top: 1px solid rgba(26, 35, 50, 0.08);
+  padding-top: 0.85rem;
+  color: rgba(44, 44, 44, 0.68);
 }
 
-.ai-keyword-panel > p {
-  max-width: 720px;
-  margin: -0.75rem 0 var(--sp-md);
-  color: rgba(44, 44, 44, 0.72);
+.ai-keyword-panel h2 {
+  margin: 0;
+  color: rgba(44, 44, 44, 0.62);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
 }
 
 .ai-keyword-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--sp-sm);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38rem 0.72rem;
 }
 
-.ai-keyword-card {
-  display: grid;
-  gap: 0.55rem;
-  min-height: 176px;
-  padding: 1.25rem;
-  border-radius: var(--radius);
-  background: linear-gradient(135deg, rgba(26, 35, 50, 0.96), rgba(42, 110, 187, 0.88));
-  color: var(--color-white);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
-}
-
-.ai-keyword-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
-}
-
-.ai-keyword-card span {
-  font-family: var(--font-brand);
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.64);
-}
-
-.ai-keyword-card strong {
-  font-size: 1.08rem;
-  line-height: 1.5;
-  color: var(--color-white);
-}
-
-.ai-keyword-card small {
-  font-size: 0.86rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.76);
+.ai-keyword-grid a {
+  color: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 @media (max-width: 720px) {
   .ai-keyword-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ai-keyword-card:hover {
-    transform: none !important;
+    gap: 0.28rem 0.62rem;
   }
 }
