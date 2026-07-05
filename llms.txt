@@ -13,7 +13,7 @@ Official LLM summary source: https://bantex.jp/llms.txt
 ## 主要ページ
 
 - 公式サイト: https://bantex.jp/
-- AIサービス一覧: https://bantex.jp/ai-services.html
+- AIサービス一覧（トップページ内）: https://bantex.jp/#services
 - サービス別SEOページ一覧: https://bantex.jp/seo/services/
 - AI自動化 名古屋: https://bantex.jp/seo/services/ai-automation-nagoya.html
 - AI社員 名古屋: https://bantex.jp/seo/services/ai-staff-nagoya.html
