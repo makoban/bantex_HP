@@ -55,7 +55,6 @@ body {
   line-height: 1.8;
   font-size: 15px;
   line-break: strict;
-  overflow-x: hidden;
 }
 
 img,
@@ -1210,12 +1209,6 @@ button {
    RESPONSIVE — MOBILE (max-width: 767px)
    ============================================================ */
 @media (max-width: 767px) {
-
-  /* Prevent horizontal scroll */
-  html, body {
-    overflow-x: hidden;
-    max-width: 100vw;
-  }
 
   /* Smaller base font */
   body {
