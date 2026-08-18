@@ -1545,8 +1545,12 @@
           </a>
 
           <a class="work-card" href="boatsim.html" data-motion="reveal" data-delay="800">
-            <figure class="work-card-visual">
-              <img src="assets/boatsim/boatsim-hero.jpg" alt="競艇AI分析シミュレーターBoatSimの6艇3Dレース画面" width="1600" height="900" loading="lazy">
+            <figure class="work-card-visual work-card-visual-boatsim">
+              <picture>
+                <source media="(max-width: 640px)" srcset="assets/boatsim/presenter-phone-720.jpg">
+                <img class="work-card-boatsim-cover" src="assets/boatsim/presenter-phone-1200.jpg" alt="女性ナビゲーターがBoatSimの3Dレースを紹介するイメージ" width="1200" height="800" loading="lazy" decoding="async">
+              </picture>
+              <img class="work-card-boatsim-title" src="assets/boatsim/boatsim-title-luxe-v2-alpha-720.png" alt="" width="720" height="270" loading="lazy" decoding="async">
             </figure>
             <div class="work-card-body">
               <span class="work-card-type">AI Analysis / 3D Simulation</span>
