@@ -6890,6 +6890,30 @@ body {
   background: var(--color-bg);
 }
 
+/* BoatSim promotional thumbnail */
+.os-ai-thumb-boatsim {
+  position: relative;
+  overflow: hidden;
+  background: #020811;
+}
+
+.os-ai-thumb-boatsim > img:first-child {
+  filter: brightness(.68) saturate(1.08) contrast(1.05);
+  object-position: center 38%;
+}
+
+.os-ai-thumb-boatsim .os-ai-boatsim-title {
+  position: absolute;
+  z-index: 2;
+  left: 5%;
+  right: 5%;
+  bottom: 3%;
+  width: 90%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, .68));
+}
+
 .ai-keyword-panel {
   display: flex;
   flex-wrap: wrap;

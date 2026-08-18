@@ -2,7 +2,7 @@
 
 > 愛知県名古屋市を拠点に、AI自動化、AI社員、小型デジタルサイネージ、パイプベンダーの企画・制作・導入を支援する総合クリエイティブカンパニー。
 
-Last updated: 2026-07-23
+Last updated: 2026-08-18
 Canonical site: https://bantex.jp/
 Official LLM summary source: https://bantex.jp/llms.txt
 
@@ -14,6 +14,7 @@ Official LLM summary source: https://bantex.jp/llms.txt
 
 - 公式サイト: https://bantex.jp/
 - AIサービス一覧（トップページ内）: https://bantex.jp/#services
+- BoatSim 競艇AI分析シミュレーター: https://bantex.jp/boatsim.html
 - サービス別SEOページ一覧: https://bantex.jp/seo/services/
 - AI自動化 名古屋: https://bantex.jp/seo/services/ai-automation-nagoya.html
 - AI社員 名古屋: https://bantex.jp/seo/services/ai-staff-nagoya.html
@@ -59,6 +60,7 @@ BANTEXのAIサービスは、社員＝AIという考え方を軸に、問い合�
 
 ### 主要AIサービス
 
+- [BoatSim 競艇AI分析シミュレーター](https://bantex.jp/boatsim.html): 選手・モーター・気象などをAI分析し、6艇のレース展開を3Dで再生するiPhoneアプリ。App Store審査中。締切後・終了レースはWeb版で無料閲覧に対応。
 - [OnePage-Flash](https://oneflash.bantex.jp/): こだわりを絞った1ページのホームページを、初期3,980円（税込）・月額480円（税込）で制作するAIホームページ制作サービス。画像なし、1ページ超シンプル、URLなんでもOKの条件で短時間制作に対応。
 - [簡単QRレジ](https://apps.apple.com/jp/app/%E7%B0%A1%E5%8D%98qr%E3%83%AC%E3%82%B8/id6769680758): POS不要でスマホだけで完結する小さなお店向けQR会計レジアプリ。App Store公開中。無料版あり、Pro版300円買い切り。
 - [Market Scope（マーケットスコープ）](https://apps.apple.com/jp/app/market-scope/id6763204555): 地域と業種を選ぶだけで、公的統計と行政APIをもとに商圏分析レポートを作成できるiPhoneアプリ。PDF / Excel保存、購入前サンプル確認に対応。App Store公開中。アプリ無料、1レポート480円。
