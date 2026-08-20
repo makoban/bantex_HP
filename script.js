@@ -221,65 +221,31 @@ worksMore?.addEventListener('click', () => {
   worksMore.querySelector('span').textContent = expanded ? '＋' : '−';
 });
 
-document.querySelectorAll('.library-card, .work-card').forEach((link) => {
+document.querySelectorAll('.library-card').forEach((link) => {
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
 });
 
 if (worksTrack) {
-  let dragStart = 0;
-  let dragScroll = 0;
-  let dragged = false;
-
-  const workStep = () => Math.min(540, worksTrack.clientWidth * .82);
+  const workStep = () => {
+    const card = worksTrack.querySelector('.work-card');
+    const styles = getComputedStyle(worksTrack);
+    const gap = Number.parseFloat(styles.columnGap || styles.gap) || 0;
+    return card ? card.getBoundingClientRect().width + gap : Math.min(540, worksTrack.clientWidth * .82);
+  };
   const updateWorksProgress = () => {
     const max = worksTrack.scrollWidth - worksTrack.clientWidth;
     const visibleRatio = Math.min(1, worksTrack.clientWidth / worksTrack.scrollWidth);
     const travelRatio = max > 0 ? worksTrack.scrollLeft / max : 0;
     const scale = visibleRatio + travelRatio * (1 - visibleRatio);
-    worksProgress.style.transform = `scaleX(${scale})`;
+    if (worksProgress) worksProgress.style.transform = `scaleX(${scale})`;
+    if (workPrev) workPrev.disabled = max <= 0 || worksTrack.scrollLeft <= 1;
+    if (workNext) workNext.disabled = max <= 0 || worksTrack.scrollLeft >= max - 1;
   };
 
   worksTrack.addEventListener('scroll', updateWorksProgress, { passive: true });
   window.addEventListener('resize', updateWorksProgress, { passive: true });
   updateWorksProgress();
-
-  worksTrack.addEventListener('pointerdown', (event) => {
-    if (event.button !== 0) return;
-    dragStart = event.clientX;
-    dragScroll = worksTrack.scrollLeft;
-    dragged = false;
-    worksTrack.classList.add('is-dragging');
-    worksTrack.setPointerCapture(event.pointerId);
-  });
-  worksTrack.addEventListener('pointermove', (event) => {
-    if (!worksTrack.hasPointerCapture(event.pointerId)) return;
-    const distance = event.clientX - dragStart;
-    if (Math.abs(distance) > 5) dragged = true;
-    worksTrack.scrollLeft = dragScroll - distance;
-  });
-  const endDrag = (event) => {
-    if (worksTrack.hasPointerCapture(event.pointerId)) worksTrack.releasePointerCapture(event.pointerId);
-    worksTrack.classList.remove('is-dragging');
-  };
-  worksTrack.addEventListener('pointerup', endDrag);
-  worksTrack.addEventListener('pointercancel', endDrag);
-  worksTrack.addEventListener('click', (event) => {
-    if (dragged) {
-      event.preventDefault();
-      event.stopPropagation();
-      dragged = false;
-    }
-  }, true);
-
-  worksTrack.addEventListener('wheel', (event) => {
-    if (!finePointer.matches || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
-    const max = worksTrack.scrollWidth - worksTrack.clientWidth;
-    const next = Math.max(0, Math.min(max, worksTrack.scrollLeft + event.deltaY));
-    if (next === worksTrack.scrollLeft) return;
-    event.preventDefault();
-    worksTrack.scrollLeft = next;
-  }, { passive: false });
 
   worksTrack.addEventListener('keydown', (event) => {
     if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
