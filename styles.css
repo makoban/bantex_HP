@@ -522,6 +522,30 @@ footer > div { padding-top: 18px; display: flex; justify-content: space-between;
 .support-links h3 { margin-top: 8px; font: 900 2.2rem/1 var(--display); letter-spacing: -.04em; }
 .support-links b { font-size: 25px; }
 
+@media (min-width: 768px) and (max-width: 1419px) {
+  .manifesto {
+    grid-template-columns: 145px minmax(0, 1fr);
+  }
+  .manifesto-copy, .services-intro, .support-main, .company-title, .company-data { min-width: 0; }
+  .manifesto-copy h2, .services h2, .company h2 { font-size: 6rem; }
+  .manifesto-note { display: none; }
+  .services,
+  .support {
+    grid-template-columns: 145px minmax(0, 1fr);
+  }
+  .support h2 { font-size: 5.8rem; }
+  .company {
+    grid-template-columns: 145px minmax(0, 1fr);
+  }
+  .company-data { grid-column: 2; }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .manifesto, .services, .support, .company { grid-template-columns: minmax(0, 1fr); gap: 52px; }
+  .manifesto-copy, .services-intro, .service-tabs, .service-stage, .support-main, .company-title, .company-data { grid-column: 1; }
+  .support h2 { font-size: 5.4rem; }
+}
+
 @media (max-width: 1200px) {
   .site-header { gap: 18px; }
   .desktop-nav { gap: 16px; }
@@ -533,8 +557,10 @@ footer > div { padding-top: 18px; display: flex; justify-content: space-between;
 
 @media (max-width: 1024px) {
   .chapter-indicator { display: none; }
-  .library-heading, .support { grid-template-columns: .28fr 2fr; }
-  .library-heading h2, .support h2 { font-size: 5.8rem; }
+  .library-heading { grid-template-columns: minmax(0, 1fr); gap: 52px; }
+  .library-heading h2 { font-size: 5.8rem; }
+  .manifesto-copy h2 { font-size: 4.5rem; }
+  .support h2 { font-size: 4.25rem; }
 }
 
 @media (max-width: 767px) {

@@ -50,6 +50,9 @@ soundToggle.addEventListener('click', async () => {
 
 const tabs = [...document.querySelectorAll('[role="tab"]')];
 const panels = [...document.querySelectorAll('[role="tabpanel"]')];
+const featuredArtSources = [...document.querySelectorAll('[data-featured-art-source]')];
+const featuredArtImage = document.querySelector('[data-featured-art-image]');
+const featuredArtLabel = document.querySelector('[data-featured-art-label]');
 
 const activateTab = (tab, focus = false) => {
   tabs.forEach((item) => {
@@ -58,6 +61,15 @@ const activateTab = (tab, focus = false) => {
     item.tabIndex = selected ? 0 : -1;
   });
   panels.forEach((panel) => { panel.hidden = panel.dataset.panel !== tab.dataset.tab; });
+  featuredArtSources.forEach((source) => {
+    source.srcset = source.dataset.featuredArtSource === 'webp' ? tab.dataset.artWebp : tab.dataset.artJpeg;
+  });
+  if (featuredArtImage) {
+    featuredArtImage.srcset = tab.dataset.artJpeg;
+    featuredArtImage.src = tab.dataset.artSrc;
+    featuredArtImage.alt = tab.dataset.artAlt;
+  }
+  if (featuredArtLabel) featuredArtLabel.textContent = `SELECTED / ${String(tabs.indexOf(tab) + 1).padStart(2, '0')}`;
   if (focus) tab.focus();
 };
 

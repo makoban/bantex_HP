@@ -284,25 +284,29 @@
         </div>
 
         <div class="service-tabs" role="tablist" aria-label="おすすめAIサービス">
-          <button id="tab-sns" role="tab" aria-selected="true" aria-controls="panel-sns" data-tab="sns"><span>01</span> 店舗SNS</button>
-          <button id="tab-movie" role="tab" aria-selected="false" aria-controls="panel-movie" data-tab="movie"><span>02</span> AI映像制作</button>
-          <button id="tab-web" role="tab" aria-selected="false" aria-controls="panel-web" data-tab="web"><span>03</span> HP制作</button>
+          <button id="tab-sns" role="tab" aria-selected="true" aria-controls="panel-sns" data-tab="sns" data-art-webp="assets/featured/kokotomo-sns-v1-480.webp 480w, assets/featured/kokotomo-sns-v1-960.webp 960w" data-art-jpeg="assets/featured/kokotomo-sns-v1-480.jpg 480w, assets/featured/kokotomo-sns-v1-960.jpg 960w" data-art-src="assets/featured/kokotomo-sns-v1-960.jpg" data-art-alt="店舗スタッフがLINEに商品写真を送り、AIがInstagram投稿を作成するイメージ"><span>01</span> 店舗SNS</button>
+          <button id="tab-movie" role="tab" aria-selected="false" aria-controls="panel-movie" data-tab="movie" data-art-webp="assets/featured/ai-movie-v1-480.webp 480w, assets/featured/ai-movie-v1-960.webp 960w" data-art-jpeg="assets/featured/ai-movie-v1-480.jpg 480w, assets/featured/ai-movie-v1-960.jpg 960w" data-art-src="assets/featured/ai-movie-v1-960.jpg" data-art-alt="1枚の商品画像からAI映像の複数カットを制作する編集作業のイメージ"><span>02</span> AI映像制作</button>
+          <button id="tab-web" role="tab" aria-selected="false" aria-controls="panel-web" data-tab="web" data-art-webp="assets/featured/onepage-flash-v1-480.webp 480w, assets/featured/onepage-flash-v1-960.webp 960w" data-art-jpeg="assets/featured/onepage-flash-v1-480.jpg 480w, assets/featured/onepage-flash-v1-960.jpg 960w" data-art-src="assets/featured/onepage-flash-v1-960.jpg" data-art-alt="店舗オーナーがAIで作成した1ページホームページをパソコンとスマートフォンで確認するイメージ"><span>03</span> HP制作</button>
         </div>
 
         <div class="service-stage">
           <div class="service-art media-frame">
             <picture>
-            <source type="image/jpeg" srcset="assets/creative-collage-480.jpg 480w, assets/creative-collage-768.jpg 768w, assets/creative-collage-1280.jpg 1280w" sizes="(max-width: 767px) calc(100vw - 36px), 42vw" />
+            <source type="image/webp" data-featured-art-source="webp" srcset="assets/featured/kokotomo-sns-v1-480.webp 480w, assets/featured/kokotomo-sns-v1-960.webp 960w" sizes="(max-width: 767px) calc(100vw - 36px), (max-width: 1279px) 45vw, (max-width: 1399px) 35vw, 520px" />
+            <source type="image/jpeg" data-featured-art-source="jpeg" srcset="assets/featured/kokotomo-sns-v1-480.jpg 480w, assets/featured/kokotomo-sns-v1-960.jpg 960w" sizes="(max-width: 767px) calc(100vw - 36px), (max-width: 1279px) 45vw, (max-width: 1399px) 35vw, 520px" />
             <img
-              src="assets/creative-collage-768.jpg"
-              width="1672"
-              height="941"
+              src="assets/featured/kokotomo-sns-v1-960.jpg"
+              srcset="assets/featured/kokotomo-sns-v1-480.jpg 480w, assets/featured/kokotomo-sns-v1-960.jpg 960w"
+              sizes="(max-width: 767px) calc(100vw - 36px), (max-width: 1279px) 45vw, (max-width: 1399px) 35vw, 520px"
+              width="960"
+              height="640"
               loading="lazy"
               decoding="async"
-              alt="AI、映像、SNS、ウェブ制作を横断するBANTEXのクリエイティブコラージュ"
+              data-featured-art-image
+              alt="店舗スタッフがLINEに商品写真を送り、AIがInstagram投稿を作成するイメージ"
             />
             </picture>
-            <span class="service-art-label">SELECTED / 03</span>
+            <span class="service-art-label" data-featured-art-label>SELECTED / 01</span>
           </div>
           <div class="service-panels">
             <article id="panel-sns" role="tabpanel" aria-labelledby="tab-sns" data-panel="sns">
