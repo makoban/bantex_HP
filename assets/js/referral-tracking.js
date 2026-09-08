@@ -105,6 +105,8 @@
   if (Object.keys(attribution).length) {
     document.querySelectorAll('a[href]').forEach(function (link) {
       try {
+        // Keep in-page navigation on the current URL, even with saved attribution.
+        if ((link.getAttribute('href') || '').trim().charAt(0) === '#') return;
         var url = new URL(link.href, window.location.href);
         if (!/^https?:$/.test(url.protocol) || !shouldCarryAttribution(link, url)) return;
         Object.keys(attribution).forEach(function (key) {
