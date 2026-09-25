@@ -210,6 +210,7 @@ h1, h2, h3 { margin: 0; line-height: .94; text-wrap: balance; line-break: strict
 .company-data dt { color: rgb(255 255 255 / 50%); font-size: 11px; font-weight: 700; }
 .company-data dd { margin: 0; font-size: 13px; font-weight: 650; }
 .company-data dd span { color: rgb(255 255 255 / 47%); }
+.company-data dd .keep { color: inherit; }
 .company-data a { text-decoration: underline; text-underline-offset: 4px; }
 
 .faq { padding-block: clamp(90px, 10vw, 150px); display: grid; grid-template-columns: .4fr 2.2fr; gap: 6vw; color: var(--black); background: var(--paper); }
