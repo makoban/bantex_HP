@@ -202,8 +202,7 @@ h1, h2, h3 { margin: 0; line-height: .94; text-wrap: balance; line-break: strict
 .process-grid p { margin: 0; font-size: 12px; font-weight: 800; }
 
 .company { padding-block: clamp(100px, 12vw, 180px); display: grid; grid-template-columns: .4fr 1fr 1.1fr; gap: 6vw; }
-.company-title h2 span { display: block; }
-.company-title > p:last-child { margin: 34px 0 0; color: rgb(255 255 255 / 64%); }
+.company-title > p:last-child { margin: 18px 0 0; color: rgb(255 255 255 / 64%); }
 .company-data { margin: 28px 0 0; }
 .company-data div { padding: 17px 0; display: grid; grid-template-columns: 115px 1fr; gap: 20px; border-top: 1px solid var(--line-dark); }
 .company-data div:last-child { border-bottom: 1px solid var(--line-dark); }
@@ -800,7 +799,7 @@ footer > div { padding-top: 18px; display: flex; justify-content: space-between;
   .support-links h3 { margin-top: 4px; font-size: 19px; }
 
   .company { padding-block: 62px; display: block; }
-  .company-title > p:last-child { margin-top: 18px; font-size: 13px; }
+  .company-title > p:last-child { margin-top: 14px; font-size: 13px; }
   .company-data { margin-top: 28px; }
   .company-data div { padding-block: 12px; grid-template-columns: 78px minmax(0, 1fr); gap: 10px; }
   .company-data dt { font-size: 9px; }
