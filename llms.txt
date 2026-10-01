@@ -2,7 +2,7 @@
 
 > AI自動化、AI社員、小型デジタルサイネージ、パイプベンダーの企画・制作・導入を支援する総合クリエイティブカンパニー。
 
-Last updated: 2026-09-25
+Last updated: 2026-10-01
 Canonical site: https://bantex.jp/
 Official LLM summary source: https://bantex.jp/llms.txt
 
@@ -15,6 +15,7 @@ Official LLM summary source: https://bantex.jp/llms.txt
 - 公式サイト: https://bantex.jp/
 - AIサービス一覧（トップページ内）: https://bantex.jp/#services
 - BoatSim 競艇AI分析シミュレーター: https://bantex.jp/boatsim.html
+- ガチャ導入サポート（小さく始めるガチャ売場・おまかせスタート全部込み15万円（税別）から）: https://gacha.bantex.jp/
 - サービス別SEOページ一覧: https://bantex.jp/seo/services/
 - AI自動化 名古屋: https://bantex.jp/seo/services/ai-automation-nagoya.html
 - AI社員 名古屋: https://bantex.jp/seo/services/ai-staff-nagoya.html

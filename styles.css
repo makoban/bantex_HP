@@ -836,3 +836,25 @@ footer > div { padding-top: 18px; display: flex; justify-content: space-between;
   .service-panels h3.service-name--compact { font-size: 35px; }
   .library-card h3, .library-card--priority h3 { font-size: 17px; }
 }
+
+/* おすすめ：ガチャ導入サポート（チラシ掲載） */
+.pickup { grid-column: 2; display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); min-width: 0; color: var(--black); background: var(--paper); border-top: 4px solid var(--acid); }
+.pickup-flyer { display: grid; place-items: center; padding: clamp(18px, 2.6vw, 36px); background: #fff8ef; }
+.pickup-flyer img { width: 100%; max-width: 380px; height: auto; box-shadow: 0 18px 44px rgb(5 7 11 / 22%); transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+.pickup-flyer:hover img { transform: translateY(-4px); }
+.pickup-copy { min-width: 0; padding: clamp(30px, 4.4vw, 64px); }
+.pickup-copy h3 { margin: 0; font: 900 clamp(2rem, 1.2rem + 1.8vw, 3.1rem)/1.15 var(--body); letter-spacing: -.03em; }
+.pickup-copy > p:not(.service-type, .service-catch) { color: rgb(5 7 11 / 64%); font-size: 14px; }
+.pickup dl { margin: 22px 0 26px; border-top: 1px solid var(--line-light); }
+.pickup dl div { padding: 12px 0; display: grid; grid-template-columns: 70px 1fr; border-bottom: 1px solid var(--line-light); }
+.pickup dt { color: rgb(5 7 11 / 50%); font-size: 11px; font-weight: 700; }
+.pickup dd { margin: 0; font-size: 12px; font-weight: 700; }
+.pickup strong { color: var(--blue); }
+.pickup-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; }
+@media (min-width: 768px) and (max-width: 1279px) { .pickup { grid-column: 1; } }
+@media (max-width: 767px) {
+  .pickup { grid-template-columns: minmax(0, 1fr); margin-top: 28px; }
+  .pickup-copy h3 { font-size: 2rem; }
+}
+@media (prefers-reduced-motion: reduce) { .pickup-flyer img { transition: none; } .pickup-flyer:hover img { transform: none; } }
+
