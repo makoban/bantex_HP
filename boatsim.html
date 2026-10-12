@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>競艇AI分析シミュレーター BoatSim | 株式会社バンテックス</title>
-  <meta name="description" content="BoatSimは、レース情報・選手・モーター・気象を分析し、6艇のレース展開を3Dで再生する競艇AI分析アプリです。締切後のレースは無料で振り返り可能。舟券購入・投票・入出金機能はありません。">
+  <title>BoatSim｜競艇AI予想を3Dで見る・noteの本日全レースパス | BANTEX</title>
+  <meta name="description" content="競艇予想を3Dで見るBoatSim。無料体験期間は10月13日〜19日。その後、10月20日〜11月19日は1日480円のリリースキャンペーン。noteの4桁コードで当日分を楽しむWebサービスです。">
   <meta name="keywords" content="競艇AI,ボートレースAI,競艇予想,3Dシミュレーション,レース分析,出走表,気象,BoatSim,競艇AI分析シミュレーター,BANTEX">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://bantex.jp/boatsim.html">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bantex.jp/boatsim.html">
-  <meta property="og:title" content="競艇AI分析シミュレーター BoatSim | 株式会社バンテックス">
-  <meta property="og:description" content="AI分析を、6艇の3Dレースで見る。選手・モーター・気象を一画面で比較し、締切後のレースは無料で振り返れます。">
+  <meta property="og:title" content="BoatSim｜本日全レースを、3Dで。">
+  <meta property="og:description" content="本日全レース予想を3Dで。10月13日〜19日は無料体験期間。その後1日480円のリリースキャンペーン。noteの4桁コードで使うBoatSim。">
   <meta property="og:image" content="https://bantex.jp/assets/boatsim/boatsim-hero.jpg">
   <meta property="og:image:width" content="1600">
   <meta property="og:image:height" content="900">
@@ -19,7 +19,7 @@
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="競艇AI分析シミュレーター BoatSim">
-  <meta name="twitter:description" content="AI分析を、6艇の3Dレースで見る。">
+  <meta name="twitter:description" content="本日全レースを、3Dで。無料体験期間は10月13日〜19日。その後1日480円のリリースキャンペーン。">
   <meta name="twitter:image" content="https://bantex.jp/assets/boatsim/boatsim-hero.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2307101f'/%3E%3Cpath d='M5 22c5-7 9-7 14 0 3 4 5 4 8 0' fill='none' stroke='%23f6dc8d' stroke-width='2.3' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,15 +33,9 @@
     "name": "競艇AI分析シミュレーター",
     "alternateName": "BoatSim",
     "applicationCategory": "SportsApplication",
-    "operatingSystem": "iOS",
+    "operatingSystem": "Web browser",
     "description": "レース情報、選手、モーター、気象を分析し、6艇のレース展開を3Dで再生する情報・エンターテインメントアプリ。舟券購入、投票、入出金機能はありません。",
     "url": "https://bantex.jp/boatsim.html",
-    "offers": {
-      "@type": "Offer",
-      "price": "100",
-      "priceCurrency": "JPY",
-      "description": "締切前レースのAI分析・3Dシミュレーションを1レース単位で解放。締切後のレースは無料で閲覧可能。"
-    },
     "publisher": {
       "@type": "Organization",
       "name": "株式会社バンテックス",
@@ -50,42 +44,47 @@
   }
   </script>
 </head>
-<body>
+<body data-sales-api="https://boatsim-worker.onrender.com/api/daypass/status" data-app-config="https://boatsim-app.onrender.com/config.json">
   <a class="skip-link" href="#main-content">本文へ移動</a>
 
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="株式会社バンテックスのトップページへ">BANTEX</a>
     <nav aria-label="ページ内ナビゲーション">
       <a href="#features">できること</a>
-      <a href="#screens">画面を見る</a>
-      <a href="#availability">公開状況</a>
+      <a href="#results">結果の記事</a>
+      <a href="#availability">本日パス</a>
     </nav>
   </header>
 
   <main id="main-content">
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-image" src="assets/boatsim/boatsim-hero.jpg" alt="ナイター水面を旋回する白・黒・赤・青・黄・緑の6艇" width="1600" height="900" fetchpriority="high" decoding="async">
+      <img class="hero-image" src="assets/boatsim/boatsim-hero-1600.webp" srcset="assets/boatsim/boatsim-hero-800.webp 800w, assets/boatsim/boatsim-hero-1600.webp 1600w" sizes="(max-width: 640px) 160vw, 100vw" alt="ナイター水面を旋回する白・黒・赤・青・黄・緑の6艇" width="1600" height="900" fetchpriority="high" decoding="async">
       <div class="hero-shade" aria-hidden="true"></div>
       <picture class="hero-presenter">
+        <source type="image/webp" srcset="assets/boatsim/presenter-hero-alpha-620.webp 413w, assets/boatsim/presenter-hero-alpha-960.webp 640w" sizes="(max-width: 640px) 66vw, (max-width: 900px) 42vw, 32vw">
         <source media="(max-width: 640px)" srcset="assets/boatsim/presenter-hero-alpha-620.png">
         <img src="assets/boatsim/presenter-hero-alpha-960.png" alt="BoatSimの女性ナビゲーター" width="640" height="960" decoding="async">
       </picture>
       <div class="hero-inner">
-        <p class="eyebrow"><span aria-hidden="true">●</span> iPhone app / App Store審査中</p>
+        <p class="eyebrow"><span aria-hidden="true">●</span> WEB / NOTE DAILY PASS</p>
         <picture class="hero-title-art">
+          <source type="image/webp" srcset="assets/boatsim/boatsim-title-luxe-v2-alpha-720.webp 720w, assets/boatsim/boatsim-title-luxe-v2-alpha-1200.webp 1200w" sizes="(max-width: 640px) calc(100vw - 50px), 680px">
           <source media="(max-width: 640px)" srcset="assets/boatsim/boatsim-title-luxe-v2-alpha-720.png">
           <img src="assets/boatsim/boatsim-title-luxe-v2-alpha-1200.png" alt="BoatSim 競艇AI分析シミュレーター" width="1200" height="450" decoding="async">
         </picture>
-        <h1 id="hero-title"><span class="phrase">AI分析を、</span><span class="phrase accent">3Dレースで見る。</span></h1>
-        <p class="hero-lead">レース情報、選手、モーター、気象を読み解き、6艇の攻防をスタートから決着まで立体的に再生する競艇AI分析アプリです。</p>
+        <h1 id="hero-title"><span class="phrase">本日全レースを、</span><span class="phrase accent">3Dで。</span></h1>
+        <p class="hero-lead">6艇がどう走るかを、スタートからゴールまで3Dで。noteの記事に載る4桁コードを入れて、その日のレースをまとめて楽しむWebサービスです。</p>
+        <p class="hero-offer"><span class="keep">本日全レース予想</span><strong class="keep" data-offer-price>1週間無料</strong><span class="offer-status" data-pass-status>無料体験準備中</span></p>
+        <p class="campaign-line"><span class="keep" data-campaign-period>10/13〜10/19 無料体験予定</span><span class="keep" data-campaign-follow>その後1日480円のリリース価格</span></p>
         <div class="hero-actions">
-          <a class="button button-primary" href="https://boatsim-app.onrender.com/" target="_blank" rel="noopener noreferrer">終了レースをWeb版で見る <span aria-hidden="true">↗</span></a>
-          <a class="button button-ghost" href="#features">できることを見る <span aria-hidden="true">↓</span></a>
+          <a class="button button-primary" data-note-sales href="https://note.com/bnnmkt" target="_blank" rel="noopener noreferrer">noteで記事・結果を見る <span aria-hidden="true">↗</span></a>
+          <a class="button button-ghost" href="https://boatsim-app.onrender.com/" target="_blank" rel="noopener noreferrer">終了レースを無料で試す <span aria-hidden="true">↗</span></a>
         </div>
+        <a class="pass-entry" data-pass-entry href="https://boatsim-app.onrender.com/#daypass" target="_blank" rel="noopener noreferrer" hidden>本日の4桁コードを入力 <span aria-hidden="true">↗</span></a>
         <ul class="hero-points" aria-label="BoatSimの概要">
-          <li><strong>20年分</strong><span>レースデータを分析基盤に</span></li>
-          <li><strong>3D再生</strong><span>6艇の展開を視覚化</span></li>
-          <li><strong>ログイン不要</strong><span>情報閲覧から開始</span></li>
+          <li><strong>日替わり</strong><span>対象日の全開催場をまとめて</span></li>
+          <li><strong>3D再生</strong><span>予想をレース展開で確認</span></li>
+          <li><strong>結果公開</strong><span>noteで日々の検証を読む</span></li>
         </ul>
       </div>
     </section>
@@ -134,13 +133,14 @@
     <section class="presenter-showcase section-shell" aria-labelledby="presenter-title">
       <div class="presenter-intro">
         <p class="section-kicker">YOUR BOATSIM NAVIGATOR</p>
-        <h2 id="presenter-title"><span class="phrase">ナビゲーターと一緒に、</span><span class="phrase">レースをもっと身近に。</span></h2>
+        <h2 id="presenter-title"><span class="phrase">ナビゲーターと、</span><span class="phrase">レースを身近に。</span></h2>
         <p>はじめて見るデータも、複雑なレース展開も。BoatSimのナビゲーターが、楽しみ方と見どころをわかりやすく案内します。</p>
       </div>
 
       <article class="presenter-story">
         <figure class="presenter-media">
           <picture>
+            <source type="image/webp" srcset="assets/boatsim/presenter-phone-720.webp 720w, assets/boatsim/presenter-phone-1200.webp 1200w" sizes="(max-width: 640px) calc(100vw - 28px), (max-width: 900px) 50vw, 52vw">
             <source media="(max-width: 640px)" srcset="assets/boatsim/presenter-phone-720.jpg">
             <img src="assets/boatsim/presenter-phone-1200.jpg" alt="BoatSimの女性ナビゲーターがスマートフォンの3Dレース画面を案内する様子" width="1200" height="800" loading="lazy" decoding="async">
           </picture>
@@ -148,7 +148,7 @@
         </figure>
         <div class="presenter-copy">
           <span class="presenter-number">01 / RACE EXPERIENCE</span>
-          <h3>スマホの中に、<br>ナイターレースの臨場感。</h3>
+          <h3><span class="phrase">スマホの中に、</span><span class="phrase">レースの臨場感。</span></h3>
           <p>6艇のスタートからターン、順位の変化までを3Dで再生。数字だけでは想像しにくい展開を、自分のペースで楽しめます。</p>
           <a href="#screens">実際のアプリ画面を見る <span aria-hidden="true">↓</span></a>
         </div>
@@ -157,6 +157,7 @@
       <article class="presenter-story presenter-story-reverse">
         <figure class="presenter-media">
           <picture>
+            <source type="image/webp" srcset="assets/boatsim/presenter-analysis-720.webp 720w, assets/boatsim/presenter-analysis-1200.webp 1200w" sizes="(max-width: 640px) calc(100vw - 28px), (max-width: 900px) 50vw, 52vw">
             <source media="(max-width: 640px)" srcset="assets/boatsim/presenter-analysis-720.jpg">
             <img src="assets/boatsim/presenter-analysis-1200.jpg" alt="BoatSimの女性ナビゲーターが選手・モーター・気象のAI分析を説明する様子" width="1200" height="800" loading="lazy" decoding="async">
           </picture>
@@ -164,7 +165,7 @@
         </figure>
         <div class="presenter-copy">
           <span class="presenter-number">02 / AI ANALYSIS</span>
-          <h3>データの見どころを、<br>ひと目でわかりやすく。</h3>
+          <h3><span class="phrase">データの要点を</span><span class="phrase">ひと目で。</span></h3>
           <p>選手実績、モーター、コース、気象をレースごとに整理。AIが組み立てた展開を、見て確かめられる体験へつなげます。</p>
           <a href="#availability">利用方法を見る <span aria-hidden="true">↓</span></a>
         </div>
@@ -174,13 +175,14 @@
     <section class="flow-band" aria-labelledby="flow-title">
       <div class="section-shell">
         <div class="section-heading-block on-dark">
-          <p class="section-kicker">FROM DATA TO RACE</p>
-          <h2 id="flow-title"><span class="phrase">数字だけでは見えない</span><span class="phrase">展開を、3Dで。</span></h2>
+          <p class="section-kicker">NOTE → PASSCODE → BOATSIM</p>
+          <h2 id="flow-title"><span class="phrase">noteでコードを確認。</span><span class="phrase">4桁を入れて、</span><span class="phrase">本日のレースへ。</span></h2>
+          <p class="flow-intro">無料体験中も、同じ3ステップで利用できます。本日分の受付状況をご確認ください。</p>
         </div>
         <ol class="flow-list">
-          <li><span class="flow-step">STEP 01</span><strong>レース情報を整理</strong><p>出走表、選手、モーター、気象、直前情報をレースごとに照合。</p></li>
-          <li><span class="flow-step">STEP 02</span><strong>AIが展開を分析</strong><p>予想時点の条件をもとに、艇ごとの勝率と買い目を組み立てます。</p></li>
-          <li><span class="flow-step">STEP 03</span><strong>3Dレースで再生</strong><p>固定したレースシナリオを、だれが見ても同じ流れで振り返れます。</p></li>
+          <li><span class="flow-step">STEP 01</span><strong>本日の記事で4桁を確認</strong><p>無料体験中は無料記事でコードを確認。セール期間は1日480円の記事の有料部分に掲載します。対象日をお確かめください。</p></li>
+          <li><span class="flow-step">STEP 02</span><strong>SIMに4桁コードを入力</strong><p>記事に載ったリンクからBoatSimを開き、4桁の数字を入力。同じ端末・ブラウザでは、当日の再入力は不要です。</p></li>
+          <li><span class="flow-step">STEP 03</span><strong>本日の全レースを閲覧</strong><p>予想が公開されたレースから順に、AI分析と3D再生を確認できます。有効期限は対象日の23:59までです。</p></li>
         </ol>
       </div>
     </section>
@@ -196,28 +198,28 @@
       <div class="screen-grid" aria-label="BoatSimの実アプリ画面">
         <figure class="screen-card">
           <button type="button" class="screen-open" data-full="assets/boatsim/shot-analysis-900.jpg" data-caption="選手・モーター・気象を艇ごとに比較する出走表画面">
-            <img src="assets/boatsim/shot-analysis-560.jpg" srcset="assets/boatsim/shot-analysis-560.jpg 560w, assets/boatsim/shot-analysis-900.jpg 900w" sizes="(min-width: 760px) 22vw, 46vw" alt="選手・モーター・気象を艇ごとに比較する出走表画面" width="560" height="1216" loading="lazy" decoding="async">
+            <img src="assets/boatsim/shot-analysis-560.jpg" srcset="assets/boatsim/shot-analysis-560.jpg 257w, assets/boatsim/shot-analysis-900.jpg 414w" sizes="(min-width: 760px) 22vw, 46vw" alt="選手・モーター・気象を艇ごとに比較する出走表画面" width="560" height="1216" loading="lazy" decoding="async">
             <span class="zoom-mark" aria-hidden="true">＋</span>
           </button>
           <figcaption><strong>出走表を一画面で</strong><span>選手・モーター・気象を比較</span></figcaption>
         </figure>
         <figure class="screen-card">
           <button type="button" class="screen-open" data-full="assets/boatsim/shot-race-900.jpg" data-caption="6艇の順位とタイムラインを表示しながら3Dレースを再生する画面">
-            <img src="assets/boatsim/shot-race-560.jpg" srcset="assets/boatsim/shot-race-560.jpg 560w, assets/boatsim/shot-race-900.jpg 900w" sizes="(min-width: 760px) 22vw, 46vw" alt="6艇の順位とタイムラインを表示しながら3Dレースを再生する画面" width="560" height="1216" loading="lazy" decoding="async">
+            <img src="assets/boatsim/shot-race-560.jpg" srcset="assets/boatsim/shot-race-560.jpg 257w, assets/boatsim/shot-race-900.jpg 414w" sizes="(min-width: 760px) 22vw, 46vw" alt="6艇の順位とタイムラインを表示しながら3Dレースを再生する画面" width="560" height="1216" loading="lazy" decoding="async">
             <span class="zoom-mark" aria-hidden="true">＋</span>
           </button>
           <figcaption><strong>6艇の展開を3Dで</strong><span>順位と視点を切り替えながら再生</span></figcaption>
         </figure>
         <figure class="screen-card">
           <button type="button" class="screen-open" data-full="assets/boatsim/shot-review-900.jpg" data-caption="AI予測と公式結果、券種ごとの照合を確認する結果画面">
-            <img src="assets/boatsim/shot-review-560.jpg" srcset="assets/boatsim/shot-review-560.jpg 560w, assets/boatsim/shot-review-900.jpg 900w" sizes="(min-width: 760px) 22vw, 46vw" alt="AI予測と公式結果、券種ごとの照合を確認する結果画面" width="560" height="1216" loading="lazy" decoding="async">
+            <img src="assets/boatsim/shot-review-560.jpg" srcset="assets/boatsim/shot-review-560.jpg 257w, assets/boatsim/shot-review-900.jpg 414w" sizes="(min-width: 760px) 22vw, 46vw" alt="AI予測と公式結果、券種ごとの照合を確認する結果画面" width="560" height="1216" loading="lazy" decoding="async">
             <span class="zoom-mark" aria-hidden="true">＋</span>
           </button>
           <figcaption><strong>予想と結果を照合</strong><span>レースごとの振り返りに対応</span></figcaption>
         </figure>
         <figure class="screen-card">
           <button type="button" class="screen-open" data-full="assets/boatsim/shot-data-900.jpg" data-caption="開催レースの一覧を確認するデータ画面">
-            <img src="assets/boatsim/shot-data-560.jpg" srcset="assets/boatsim/shot-data-560.jpg 560w, assets/boatsim/shot-data-900.jpg 900w" sizes="(min-width: 760px) 22vw, 46vw" alt="開催レースの一覧を確認するデータ画面" width="560" height="1216" loading="lazy" decoding="async">
+            <img src="assets/boatsim/shot-data-560.jpg" srcset="assets/boatsim/shot-data-560.jpg 257w, assets/boatsim/shot-data-900.jpg 414w" sizes="(min-width: 760px) 22vw, 46vw" alt="開催レースの一覧を確認するデータ画面" width="560" height="1216" loading="lazy" decoding="async">
             <span class="zoom-mark" aria-hidden="true">＋</span>
           </button>
           <figcaption><strong>レース一覧から選ぶ</strong><span>開催中・終了後の状態をひと目で確認</span></figcaption>
@@ -225,18 +227,57 @@
       </div>
     </section>
 
+    <section class="results section-shell" id="results" aria-labelledby="results-title">
+      <div class="section-heading-block">
+        <p class="section-kicker">DAILY RESULTS / WEEKLY REVIEW</p>
+        <h2 id="results-title"><span class="phrase">日々の結果を、</span><span class="phrase">noteで読む。</span></h2>
+      </div>
+      <div class="results-layout">
+        <div class="results-copy">
+          <p>日々の競艇記事と結果をnoteに掲載しています。予想と公式結果を照らし合わせ、次に見るレースの判断材料にしてください。</p>
+          <p>日次の記事には、直近7日の高配当的中例を券種・買い目・公式払戻とともに掲載します。同じ期間の全体成績も併記し、的中例はその中からの抜粋であることを明示します。</p>
+          <p><strong class="keep">10/6 戸田4Rの的中例</strong>：<span class="keep">3連単4-5-6</span>、<strong class="keep">公式払戻7,210円</strong>（100円あたり）。締切前の配信記録と、公式結果を照合しています。<a href="https://www.boatrace.jp/owpc/pc/race/raceresult?hd=20261006&amp;jcd=02&amp;rno=4" target="_blank" rel="noopener noreferrer">公式結果を確認</a></p>
+          <p><strong class="keep">10/6〜10/12の限定集計</strong>：締切前の配信と結果を確認できた472レースで、3連単は29件的中（6.1%）。各レース1点100円の試算回収率は69.2%です。対象期間の全1,068レースを含む成績ではありません。</p>
+          <p class="results-caption">締切前に配信されていた予想473件のうち、結果が取得できた472件を集計しています。事前配信を確認できない予想、公開後に変わった予想などは除外。払戻額は100円の的中券に対する公式金額で、利用者の利益や実際の購入実績を示すものではありません。</p>
+          <a class="text-link" href="https://note.com/bnnmkt" target="_blank" rel="noopener noreferrer">公開中のnote記事を見る <span aria-hidden="true">↗</span></a>
+        </div>
+        <ul class="results-checklist" aria-label="日次記事の直近7日集計で確認する内容">
+          <li><strong>対象日・レース・券種</strong><span>どの予想が、どの結果になったか</span></li>
+          <li><strong>的中・不的中と対象件数</strong><span>集計期間全体の結果を確認</span></li>
+          <li><strong>払戻と回収率の計算条件</strong><span>買い目数・購入額・試算条件を明記</span></li>
+          <li><strong>公開時刻と予想の記録</strong><span>事前の予想と事後の分析を区別</span></li>
+        </ul>
+      </div>
+    </section>
+
     <section class="availability section-shell" id="availability" aria-labelledby="availability-title">
       <div class="availability-main">
-        <p class="section-kicker">AVAILABILITY</p>
-        <h2 id="availability-title"><span class="phrase">iPhoneアプリは</span><span class="phrase">App Store審査中です。</span></h2>
-        <p>アプリはApp Store公開に向けて審査申請済みです。公開後は、このページからApp Storeへの案内を追加します。いまはWeb版で締切後のレースを無料で確認できます。</p>
-        <a class="button button-primary" href="https://boatsim-app.onrender.com/" target="_blank" rel="noopener noreferrer">Web版で終了レースを試す <span aria-hidden="true">↗</span></a>
+        <p class="section-kicker">ONE DAY / ALL RACES</p>
+        <h2 id="availability-title"><span class="phrase">本日の全レースを、</span><span class="phrase">1日パスで。</span></h2>
+        <p>当日に開催される全レースの予想・分析・3D再生を見るための1日パスです。無料体験期間は10月13日〜19日です。朝5時に更新される4桁コードで当日分を利用します。自動継続課金はありません。</p>
+        <p class="sales-notice" data-sales-notice aria-live="polite"><strong>本日分の無料体験を準備中です。</strong>記事とSIMの準備が揃い次第、本日分の案内を表示します。現在は終了レースの無料お試しと、公開中の記事をご覧いただけます。</p>
+        <a class="button button-primary" data-note-sales href="https://note.com/bnnmkt" target="_blank" rel="noopener noreferrer">noteの記事・結果を確認 <span aria-hidden="true">↗</span></a>
+        <a class="pass-entry pass-entry-on-light" data-pass-entry href="https://boatsim-app.onrender.com/#daypass" target="_blank" rel="noopener noreferrer" hidden>本日の4桁コードを入力 <span aria-hidden="true">↗</span></a>
       </div>
       <aside class="price-card" aria-label="利用方法">
-        <p class="price-label">利用方法</p>
-        <p class="price"><span>締切前のAI分析・3D再生</span><strong>1レース ¥100</strong></p>
-        <p class="price-note">締切後・終了レースのAI予想と3Dシミュレーションは無料で閲覧できます。価格はApp Store公開時点の表示に従います。</p>
+        <p class="price-label">NOTE 本日全レースパス</p>
+        <p class="price"><span data-price-period>10/13〜10/19・本日全レース</span><strong class="keep" data-card-price>無料体験予定</strong></p>
+        <p class="campaign-price"><span><span class="keep">10/20〜11/19</span> リリースキャンペーン</span><strong class="keep">1日 ¥480 <small>税込</small></strong><span>通常予定価格1,980円から1,500円引き</span></p>
+        <ul class="pass-details"><li>AI予想・分析・3Dレース再生</li><li>対象日の23:59まで有効（日本時間）</li><li>予想は生成でき次第、順次公開</li><li>終了レースは無料で体験可能</li></ul>
+        <p class="price-note">対象日は購入時刻から24時間ではありません。日付・閲覧可能な範囲・欠損や開催中止・返金の条件を、購入前にnote記事でご確認ください。</p>
       </aside>
+    </section>
+
+    <section class="faq section-shell" aria-labelledby="faq-title">
+      <div class="section-heading-block"><p class="section-kicker">TRY BOATSIM</p><h2 id="faq-title">無料体験と本日パス。</h2></div>
+      <div class="faq-list">
+        <details><summary>1レースごとに購入する必要はありますか？</summary><p>ありません。本日パス1件で、対象日の全開催場・全レースが対象になります。予想は生成後に順次公開します。提供できないレースや障害がある場合の条件は、対象日のnote記事に表示します。</p></details>
+        <details><summary>夜に購入すると、翌日の夜まで使えますか？</summary><p>利用期限は、対象日の23:59までです。購入から24時間ではありません。日付と残りの開催レースをご確認のうえでお選びください。翌日分には、翌日の記事とコードが必要です。</p></details>
+        <details><summary>コードは毎回入力しますか？</summary><p>コードは朝5時に決まる4桁の数字です。当日、同じ端末・ブラウザで利用する間は再入力不要です。翌日は翌日のコードを確認してください。朝5時より前は、本日分の準備中です。別の端末や保存情報を削除した後は、改めて入力が必要になる場合があります。</p></details>
+        <details><summary>先に無料で試せますか？</summary><p>10月13日〜19日が、当日全レースの無料体験期間です。無料記事に掲載する本日のコードで利用できます。10月20日〜11月19日は1日480円の予定です。通常時も、予定締切から約10〜30分後と前日分のレースは無料で振り返れます。</p></details>
+        <details><summary>480円は1か月分の料金ですか？</summary><p>1日分の料金です。10月20日〜11月19日のキャンペーン中、本日全レースを1日480円で利用する予定です。通常予定価格は1日1,980円です。11月20日以降の販売条件は、決まり次第お知らせします。</p></details>
+        <details><summary>的中や利益を保証するサービスですか？</summary><p>保証しません。AI予想と3D再生は分析に基づくシミュレーションです。高配当の的中例があっても、対象期間全体の回収率が100%を超えるとは限りません。券種や買い目数を含めた全体の検証をご確認ください。</p></details>
+      </div>
     </section>
 
     <section class="notes section-shell" aria-labelledby="notes-title">
@@ -247,7 +288,7 @@
       <div class="note-grid">
         <article><span aria-hidden="true">01</span><h3>舟券の購入・投票機能はありません</h3><p>BoatSimは情報・エンターテインメント用途のアプリです。アプリ内で舟券の購入、投票、入出金はできません。</p></article>
         <article><span aria-hidden="true">02</span><h3>予想結果や利益を保証しません</h3><p>表示内容はレース情報をもとにした分析・シミュレーションであり、実際のレース結果や利益を保証するものではありません。</p></article>
-        <article><span aria-hidden="true">03</span><h3>レース後は無料で振り返り</h3><p>締切後・終了レースは無料で閲覧できます。分析と結果の違いを、自分のペースで確かめられます。</p></article>
+        <article><span aria-hidden="true">03</span><h3>レース後は無料で振り返り</h3><p>予定締切から約10〜30分後に無料公開します。前日分も無料で閲覧でき、分析と結果の違いを、自分のペースで確かめられます。</p></article>
       </div>
     </section>
 
@@ -255,8 +296,9 @@
       <div class="final-cta-inner">
         <p class="section-kicker">BOATSIM</p>
         <h2 id="final-cta-title"><span class="phrase">次のレースを、</span><span class="phrase accent">もっと立体的に。</span></h2>
-        <p>数字、展開、結果をひとつのレース体験にまとめる競艇AI分析シミュレーター。</p>
-        <a class="button button-primary" href="https://boatsim-app.onrender.com/" target="_blank" rel="noopener noreferrer">Web版で終了レースを見る <span aria-hidden="true">↗</span></a>
+        <p>noteで日々の結果を読み、Web版で3Dレースを体験。本日の予想をまとめて見る、BoatSimの本日全レースパス。</p>
+        <div class="final-actions"><a class="button button-primary" data-note-sales href="https://note.com/bnnmkt" target="_blank" rel="noopener noreferrer">noteで記事・結果を見る <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="https://boatsim-app.onrender.com/" target="_blank" rel="noopener noreferrer">終了レースを無料で試す <span aria-hidden="true">↗</span></a></div>
+        <p class="final-status" data-pass-status>1週間無料体験と、その後1日480円のリリースキャンペーンを準備中です。</p>
       </div>
     </section>
   </main>
@@ -301,6 +343,96 @@
       dialog.addEventListener('close', () => {
         dialogImage.removeAttribute('src');
       });
+    })();
+  </script>
+  <script>
+    (() => {
+      const notes = [...document.querySelectorAll('[data-note-sales]')];
+      const statuses = [...document.querySelectorAll('[data-pass-status]')];
+      const entries = [...document.querySelectorAll('[data-pass-entry]')];
+      const notice = document.querySelector('[data-sales-notice]');
+      const originalNotice = notice.cloneNode(true);
+      const initial = new Map([...notes, ...statuses].map(el => [el, {text: el.textContent, href: el.getAttribute('href')}]));
+      const plan = {freeFrom: '20261013', freeUntil: '20261019', saleFrom: '20261020', saleUntil: '20261119', salePrice: 480};
+      const currentJapanDate = () => new Intl.DateTimeFormat('en-CA', {timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit'}).format(new Date()).replaceAll('-', '');
+      const currentPhase = () => {
+        const day = currentJapanDate();
+        return day >= plan.freeFrom && day <= plan.freeUntil ? 'free' : day >= plan.saleFrom && day <= plan.saleUntil ? 'campaign' : 'closed';
+      };
+      let expiryTimer;
+      let loading = false;
+      const reset = () => {
+        clearTimeout(expiryTimer);
+        for (const [el, original] of initial) {
+          el.textContent = original.text;
+          if (original.href) el.href = original.href;
+        }
+        notice.replaceChildren(...[...originalNotice.cloneNode(true).childNodes]);
+        entries.forEach(el => {el.hidden = true;});
+        const phase = currentPhase();
+        document.querySelector('[data-offer-price]').textContent = phase === 'free' ? '1週間無料' : phase === 'campaign' ? '1日 ¥480' : '次回案内待ち';
+        document.querySelector('[data-card-price]').textContent = phase === 'free' ? '無料体験予定' : phase === 'campaign' ? '¥480（税込）' : '販売案内待ち';
+        document.querySelector('[data-price-period]').textContent = phase === 'free' ? '10/13〜10/19・本日全レース' : phase === 'campaign' ? '10/20〜11/19・対象日1日分' : 'キャンペーン終了・次回条件は未定';
+        document.querySelector('[data-campaign-period]').textContent = phase === 'free' ? '10/13〜10/19 無料体験予定' : phase === 'campaign' ? '10/20〜11/19 期間限定' : 'リリースキャンペーンは終了';
+        document.querySelector('[data-campaign-follow]').textContent = phase === 'free' ? 'その後1日480円のリリース価格' : phase === 'campaign' ? '1,500円引きのリリース価格' : 'noteで次回のお知らせを確認';
+        if (phase === 'campaign') {
+          statuses.forEach(el => {el.textContent = '本日分の販売準備中';});
+          notice.textContent = '本日分の記事とSIMを準備中です。準備が揃い次第、1日480円の購入案内を表示します。';
+        } else if (phase === 'closed') {
+          statuses.forEach(el => {el.textContent = '次回の販売条件は案内待ち';});
+          notice.textContent = 'キャンペーン期間外です。次回の販売条件は決まり次第、noteでお知らせします。';
+        }
+      };
+      const validNote = value => {
+        if (typeof value !== 'string' || !value.startsWith('https://note.com/')) return null;
+        try {
+          const url = new URL(value);
+          return url.protocol === 'https:' && url.hostname === 'note.com' && /^\/bnnmkt\/n\/n[a-z0-9]+\/?$/i.test(url.pathname) ? url.href : null;
+        } catch { return null; }
+      };
+      const refresh = async () => {
+        if (loading) return;
+        loading = true;
+        notice.setAttribute('aria-busy', 'true');
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 8000);
+        try {
+          const urls = [document.body.dataset.salesApi, document.body.dataset.appConfig];
+          const [status, config] = await Promise.all(urls.map(async url => {
+            const response = await fetch(url, {cache: 'no-store', credentials: 'omit', signal: controller.signal});
+            if (!response.ok) throw new Error('unavailable');
+            return response.json();
+          }));
+          const sale = status.sale;
+          const noteURL = validNote(sale?.note_url);
+          const until = Date.parse(sale?.valid_until);
+          const from = Math.max(Date.parse(sale?.valid_from), Date.parse(status.code?.ready_from));
+          const now = Date.now();
+          const phase = currentPhase();
+          const expectedPrice = phase === 'free' ? 0 : plan.salePrice;
+          const expectedKind = phase === 'free' ? 'free' : 'paid';
+          const matchesCampaign = status.campaign?.phase === (phase === 'free' ? 'free' : 'sale') && status.campaign?.price === expectedPrice && status.campaign?.note_kind === expectedKind;
+          const active = phase !== 'closed' && matchesCampaign && status.enabled === true && status.code?.ready === true && status.code?.digits === 4 && config.daypass?.active === true && status.date === currentJapanDate() && sale?.price === expectedPrice && sale?.currency === 'JPY' && from <= now && now < until;
+          reset();
+          if (active && status.entry_url === 'https://boatsim-app.onrender.com/#daypass') entries.forEach(el => {el.hidden = false;});
+          if (!active || !sale?.open || status.note?.kind !== expectedKind || status.premium?.ready !== true || !noteURL) return;
+          const day = `${+status.date.slice(4, 6)}月${+status.date.slice(6)}日`;
+          notes.forEach(el => {
+            el.href = noteURL;
+            el.textContent = phase === 'free' ? 'noteで本日の無料コードを見る ↗' : '本日全レース・480円で購入 ↗';
+          });
+          document.querySelector('[data-card-price]').textContent = phase === 'free' ? '本日分 ¥0' : '¥480（税込）';
+          if (phase === 'free') document.querySelector('[data-campaign-period]').textContent = '10/13〜10/19 無料体験中';
+          statuses.forEach(el => {el.textContent = phase === 'free' ? `${day}の無料体験 受付中` : `${day}の480円パス 販売中`;});
+          notice.textContent = phase === 'free' ? `${day}の無料体験を利用できます。noteの無料記事で本日の4桁コードを確認してください。当日の23:59まで有効です。` : `${day}の全レースパスを480円で販売中です。noteの有料部分に本日の4桁コードを掲載しています。当日の23:59まで有効です。`;
+          expiryTimer = setTimeout(reset, until - now);
+        } catch { reset(); }
+        finally { clearTimeout(timeout); loading = false; notice.setAttribute('aria-busy', 'false'); }
+      };
+      reset();
+      refresh();
+      setInterval(() => {if (document.visibilityState === 'visible') refresh();}, 60000);
+      document.addEventListener('visibilitychange', () => {if (document.visibilityState === 'visible') refresh();});
     })();
   </script>
 </body>
