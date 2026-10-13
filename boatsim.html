@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BoatSim｜競艇AI予想を3Dで見る・noteの本日全レースパス | BANTEX</title>
-  <meta name="description" content="競艇予想を3Dで見るBoatSim。無料体験期間は10月13日〜19日。その後、10月20日〜11月19日は1日480円のリリースキャンペーン。noteの4桁コードで当日分を楽しむWebサービスです。">
+  <title>BoatSim｜公開済みの競艇AI予想を何度でも3Dで | BANTEX</title>
+  <meta name="description" content="BoatSimは公開済みの対象レースを利用期間中何度でも3Dでシミュレーション。2026年10/14〜10/20はコード不要の無料7日間、10/21〜11/19は1日480円（税込・通常予定1日1,980円）。月額ではありません。11/20以降は販売停止。最新の利用状況はページ内でご確認ください。">
   <meta name="keywords" content="競艇AI,ボートレースAI,競艇予想,3Dシミュレーション,レース分析,出走表,気象,BoatSim,競艇AI分析シミュレーター,BANTEX">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://bantex.jp/boatsim.html">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bantex.jp/boatsim.html">
-  <meta property="og:title" content="BoatSim｜本日全レースを、3Dで。">
-  <meta property="og:description" content="本日全レース予想を3Dで。10月13日〜19日は無料体験期間。その後1日480円のリリースキャンペーン。noteの4桁コードで使うBoatSim。">
+  <meta property="og:title" content="BoatSim｜公開レースを、何度でも3Dで。">
+  <meta property="og:description" content="公開済みの対象レースを利用期間中何度でも3Dで。2026年10/14〜10/20はコード不要の無料7日間。10/21〜11/19の30日間は日額480円（税込・通常予定1日1,980円）。月額ではありません。11/20以降は販売停止。最新の利用状況をご確認ください。">
   <meta property="og:image" content="https://bantex.jp/assets/boatsim/boatsim-hero.jpg">
   <meta property="og:image:width" content="1600">
   <meta property="og:image:height" content="900">
@@ -19,13 +19,17 @@
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="競艇AI分析シミュレーター BoatSim">
-  <meta name="twitter:description" content="本日全レースを、3Dで。無料体験期間は10月13日〜19日。その後1日480円のリリースキャンペーン。">
+  <meta name="twitter:description" content="公開済みの対象レースを利用期間中何度でも3Dで。2026年10/14〜10/20はコード不要の無料7日間。10/21〜11/19は日額480円（税込・通常予定1日1,980円）、月額ではありません。11/20以降は販売停止。最新の利用状況をご確認ください。">
   <meta name="twitter:image" content="https://bantex.jp/assets/boatsim/boatsim-hero.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2307101f'/%3E%3Cpath d='M5 22c5-7 9-7 14 0 3 4 5 4 8 0' fill='none' stroke='%23f6dc8d' stroke-width='2.3' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="boatsim.css">
+  <style>
+    .price [data-card-price] { font-size: clamp(26px, 5vw, 34px); white-space: normal; overflow-wrap: anywhere; }
+    .hero-offer .offer-status { white-space: normal; }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,7 +48,7 @@
   }
   </script>
 </head>
-<body data-sales-api="https://boatsim-worker.onrender.com/api/daypass/status" data-app-config="https://boatsim-app.onrender.com/config.json">
+<body data-sales-api="https://boatsim-worker.onrender.com/api/daypass/status">
   <a class="skip-link" href="#main-content">本文へ移動</a>
 
   <header class="site-header">
@@ -72,17 +76,17 @@
           <source media="(max-width: 640px)" srcset="assets/boatsim/boatsim-title-luxe-v2-alpha-720.png">
           <img src="assets/boatsim/boatsim-title-luxe-v2-alpha-1200.png" alt="BoatSim 競艇AI分析シミュレーター" width="1200" height="450" decoding="async">
         </picture>
-        <h1 id="hero-title"><span class="phrase">本日全レースを、</span><span class="phrase accent">3Dで。</span></h1>
-        <p class="hero-lead">6艇がどう走るかを、スタートからゴールまで3Dで。noteの記事に載る4桁コードを入れて、その日のレースをまとめて楽しむWebサービスです。</p>
-        <p class="hero-offer"><span class="keep">本日全レース予想</span><strong class="keep" data-offer-price>1週間無料</strong><span class="offer-status" data-pass-status>無料体験準備中</span></p>
-        <p class="campaign-line"><span class="keep" data-campaign-period>10/13〜10/19 無料体験予定</span><span class="keep" data-campaign-follow>その後1日480円のリリース価格</span></p>
+        <h1 id="hero-title"><span class="phrase">公開レースを、</span><span class="phrase accent">何度でも3Dで。</span></h1>
+        <p class="hero-lead">公開済みの対象レースを、利用できる期間中は何度でもシミュレーション。AI予想を6艇の動きで確かめるWebサービスです。提供レースは公開状況により異なります。</p>
+        <p class="hero-offer"><span class="keep">本日の利用状況</span><strong class="keep" data-offer-price>確認待ち</strong><span class="offer-status" data-pass-status>最新の受付状況をご確認ください</span></p>
+        <p class="campaign-line"><span>2026年10/14〜10/20 無料7日間・コード不要</span><span>10/21〜11/19 日額480円（税込）・11/20以降販売停止</span></p>
         <div class="hero-actions">
-          <a class="button button-primary" data-note-sales href="https://note.com/bnnmkt" target="_blank" rel="noopener noreferrer">noteで記事・結果を見る <span aria-hidden="true">↗</span></a>
-          <a class="button button-ghost" href="https://boatsim-app.onrender.com/" target="_blank" rel="noopener noreferrer">終了レースを無料で試す <span aria-hidden="true">↗</span></a>
+          <a class="button button-primary" data-primary-cta href="https://boatsim-app.onrender.com/" target="_blank" rel="noopener noreferrer">アプリで公開状況を確認 <span aria-hidden="true">↗</span></a>
+          <a class="button button-ghost" href="https://note.com/bnnmkt" target="_blank" rel="noopener noreferrer">noteで記事・結果を見る <span aria-hidden="true">↗</span></a>
         </div>
         <a class="pass-entry" data-pass-entry href="https://boatsim-app.onrender.com/#daypass" target="_blank" rel="noopener noreferrer" hidden>本日の4桁コードを入力 <span aria-hidden="true">↗</span></a>
         <ul class="hero-points" aria-label="BoatSimの概要">
-          <li><strong>日替わり</strong><span>対象日の全開催場をまとめて</span></li>
+          <li><strong>日替わり</strong><span>公開済みの対象レースから</span></li>
           <li><strong>3D再生</strong><span>予想をレース展開で確認</span></li>
           <li><strong>結果公開</strong><span>noteで日々の検証を読む</span></li>
         </ul>
@@ -125,7 +129,7 @@
             <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="9" width="32" height="30" rx="5" stroke="currentColor" stroke-width="2.4"/><path d="M15 18H33M15 25H25M15 32H21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M31 28L34 31L39 24" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <h3>予想と結果をあとから検証</h3>
-          <p>終了レースでは、AI予想・シミュレーション・結果・払戻を同じ流れで確認。過去レースは無料で、まず体験から始められます。</p>
+          <p>公開済みの終了レースでは、AI予想やシミュレーションと、取得済みの結果・払戻を確認できます。利用できるレースはアプリの一覧でお確かめください。</p>
         </article>
       </div>
     </section>
@@ -134,7 +138,7 @@
       <div class="presenter-intro">
         <p class="section-kicker">YOUR BOATSIM NAVIGATOR</p>
         <h2 id="presenter-title"><span class="phrase">ナビゲーターと、</span><span class="phrase">レースを身近に。</span></h2>
-        <p>はじめて見るデータも、複雑なレース展開も。BoatSimのナビゲーターが、楽しみ方と見どころをわかりやすく案内します。</p>
+        <p>データと3Dで楽しむBoatSimの世界を、ナビゲーターのプロモーションイメージで紹介します。実際の画面は下のアプリ画像をご覧ください。</p>
       </div>
 
       <article class="presenter-story">
@@ -175,14 +179,14 @@
     <section class="flow-band" aria-labelledby="flow-title">
       <div class="section-shell">
         <div class="section-heading-block on-dark">
-          <p class="section-kicker">NOTE → PASSCODE → BOATSIM</p>
-          <h2 id="flow-title"><span class="phrase">noteでコードを確認。</span><span class="phrase">4桁を入れて、</span><span class="phrase">本日のレースへ。</span></h2>
-          <p class="flow-intro">無料体験中も、同じ3ステップで利用できます。本日分の受付状況をご確認ください。</p>
+          <p class="section-kicker">OPEN BOATSIM / CHOOSE A RACE</p>
+          <h2 id="flow-title"><span class="phrase">無料期間は、</span><span class="phrase">コードなしで</span><span class="phrase">レースへ。</span></h2>
+          <p class="flow-intro">10/13の開始前開放と、10/14〜10/20の無料体験はコード不要です。有料期間だけ、対象日のnote記事にある4桁コードを使います。</p>
         </div>
         <ol class="flow-list">
-          <li><span class="flow-step">STEP 01</span><strong>本日の記事で4桁を確認</strong><p>無料体験中は無料記事でコードを確認。セール期間は1日480円の記事の有料部分に掲載します。対象日をお確かめください。</p></li>
-          <li><span class="flow-step">STEP 02</span><strong>SIMに4桁コードを入力</strong><p>記事に載ったリンクからBoatSimを開き、4桁の数字を入力。同じ端末・ブラウザでは、当日の再入力は不要です。</p></li>
-          <li><span class="flow-step">STEP 03</span><strong>本日の全レースを閲覧</strong><p>予想が公開されたレースから順に、AI分析と3D再生を確認できます。有効期限は対象日の23:59までです。</p></li>
+          <li><span class="flow-step">STEP 01</span><strong>本日の利用状況を確認</strong><p>このページの最新案内をご確認ください。無料期間はnote記事やコードを待つ必要がありません。予想は準備できた対象レースから順次公開します。</p></li>
+          <li><span class="flow-step">STEP 02</span><strong>BoatSimを開く</strong><p>無料期間はそのままアプリへ。有料期間は販売中の対象日を確認し、1日480円（税込）のnote記事にある4桁コードをアプリに入力します。</p></li>
+          <li><span class="flow-step">STEP 03</span><strong>公開済みのレースを何度でも</strong><p>利用できる期間中は、対象レースの予想・分析・3D再生を繰り返し楽しめます。有料パスは対象日の23:59まで有効です。未公開・欠損レースは利用できません。</p></li>
         </ol>
       </div>
     </section>
@@ -252,18 +256,19 @@
 
     <section class="availability section-shell" id="availability" aria-labelledby="availability-title">
       <div class="availability-main">
-        <p class="section-kicker">ONE DAY / ALL RACES</p>
-        <h2 id="availability-title"><span class="phrase">本日の全レースを、</span><span class="phrase">1日パスで。</span></h2>
-        <p>当日に開催される全レースの予想・分析・3D再生を見るための1日パスです。無料体験期間は10月13日〜19日です。朝5時に更新される4桁コードで当日分を利用します。自動継続課金はありません。</p>
-        <p class="sales-notice" data-sales-notice aria-live="polite"><strong>本日分の無料体験を準備中です。</strong>記事とSIMの準備が揃い次第、本日分の案内を表示します。現在は終了レースの無料お試しと、公開中の記事をご覧いただけます。</p>
-        <a class="button button-primary" data-note-sales href="https://note.com/bnnmkt" target="_blank" rel="noopener noreferrer">noteの記事・結果を確認 <span aria-hidden="true">↗</span></a>
+        <p class="section-kicker">ONE DAY / PUBLISHED RACES</p>
+        <h2 id="availability-title"><span class="phrase">公開済みの予想を、</span><span class="phrase">1日パスで。</span></h2>
+        <p>本日パスは、対象日に公開済みのレースの予想・分析・3D再生を繰り返し楽しむための1日利用権です。提供できないレースもあり、開催レースすべての予想公開を保証するものではありません。自動継続課金はありません。</p>
+        <p class="sales-notice" data-sales-notice aria-live="polite">本日の利用・販売状況はまだ確認できていません。日程だけでは受付中と判断できません。アプリの公開状況をご確認ください。</p>
+        <noscript><p>最新の受付状況を表示するにはJavaScriptを有効にしてください。無料利用・購入の可否はアプリでご確認ください。</p></noscript>
+        <a class="button button-primary" data-primary-cta href="https://boatsim-app.onrender.com/" target="_blank" rel="noopener noreferrer">アプリで公開状況を確認 <span aria-hidden="true">↗</span></a>
         <a class="pass-entry pass-entry-on-light" data-pass-entry href="https://boatsim-app.onrender.com/#daypass" target="_blank" rel="noopener noreferrer" hidden>本日の4桁コードを入力 <span aria-hidden="true">↗</span></a>
       </div>
       <aside class="price-card" aria-label="利用方法">
-        <p class="price-label">NOTE 本日全レースパス</p>
-        <p class="price"><span data-price-period>10/13〜10/19・本日全レース</span><strong class="keep" data-card-price>無料体験予定</strong></p>
-        <p class="campaign-price"><span><span class="keep">10/20〜11/19</span> リリースキャンペーン</span><strong class="keep">1日 ¥480 <small>税込</small></strong><span>通常予定価格1,980円から1,500円引き</span></p>
-        <ul class="pass-details"><li>AI予想・分析・3Dレース再生</li><li>対象日の23:59まで有効（日本時間）</li><li>予想は生成でき次第、順次公開</li><li>終了レースは無料で体験可能</li></ul>
+        <p class="price-label">本日パス / 公開済み対象レース</p>
+        <p class="price"><span data-price-period>本日の利用・販売状況</span><strong class="keep" data-card-price>確認待ち</strong></p>
+        <p class="campaign-price"><span>キャンペーン日程（2026年・日本時間）</span><span>10/13 開始前の継続開放・コード不要</span><span>10/14〜10/20 無料7日間・コード不要</span><span>10/21〜11/19 有料キャンペーン30日間</span><strong class="keep">1日 ¥480 <small>税込</small></strong><span>通常予定1日1,980円から1,500円引き。月額・30日分の料金ではありません。</span><span>11/20以降は販売停止。通常価格へ自動移行しません。</span></p>
+        <ul class="pass-details"><li>公開済みの対象レースを期間中何度でも</li><li>有料パスは対象日の23:59まで（日本時間）</li><li>予想は準備できたレースから順次公開</li><li>未公開・欠損レースは対象外</li></ul>
         <p class="price-note">対象日は購入時刻から24時間ではありません。日付・閲覧可能な範囲・欠損や開催中止・返金の条件を、購入前にnote記事でご確認ください。</p>
       </aside>
     </section>
@@ -271,11 +276,11 @@
     <section class="faq section-shell" aria-labelledby="faq-title">
       <div class="section-heading-block"><p class="section-kicker">TRY BOATSIM</p><h2 id="faq-title">無料体験と本日パス。</h2></div>
       <div class="faq-list">
-        <details><summary>1レースごとに購入する必要はありますか？</summary><p>ありません。本日パス1件で、対象日の全開催場・全レースが対象になります。予想は生成後に順次公開します。提供できないレースや障害がある場合の条件は、対象日のnote記事に表示します。</p></details>
-        <details><summary>夜に購入すると、翌日の夜まで使えますか？</summary><p>利用期限は、対象日の23:59までです。購入から24時間ではありません。日付と残りの開催レースをご確認のうえでお選びください。翌日分には、翌日の記事とコードが必要です。</p></details>
-        <details><summary>コードは毎回入力しますか？</summary><p>コードは朝5時に決まる4桁の数字です。当日、同じ端末・ブラウザで利用する間は再入力不要です。翌日は翌日のコードを確認してください。朝5時より前は、本日分の準備中です。別の端末や保存情報を削除した後は、改めて入力が必要になる場合があります。</p></details>
-        <details><summary>先に無料で試せますか？</summary><p>10月13日〜19日が、当日全レースの無料体験期間です。無料記事に掲載する本日のコードで利用できます。10月20日〜11月19日は1日480円の予定です。通常時も、予定締切から約10〜30分後と前日分のレースは無料で振り返れます。</p></details>
-        <details><summary>480円は1か月分の料金ですか？</summary><p>1日分の料金です。10月20日〜11月19日のキャンペーン中、本日全レースを1日480円で利用する予定です。通常予定価格は1日1,980円です。11月20日以降の販売条件は、決まり次第お知らせします。</p></details>
+        <details><summary>1レースごとに購入する必要はありますか？</summary><p>ありません。有料期間の本日パス1件で、対象日に公開済みのレースを利用期限まで何度でもシミュレーションできます。予想は準備できたものから順次公開し、すべての開催レースの提供は保証しません。未公開・欠損・開催中止や返金の条件は、購入前に対象日のnote記事をご確認ください。</p></details>
+        <details><summary>夜に購入すると、翌日の夜まで使えますか？</summary><p>有料パスの利用期限は、対象日の23:59まで（日本時間）です。購入から24時間ではありません。日付と公開状況をご確認のうえでお選びください。有料期間の翌日分には、翌日の記事とコードが必要です。</p></details>
+        <details><summary>無料期間にもコードは必要ですか？</summary><p>10/13の開始前開放と10/14〜10/20の無料7日間はコード不要です。note記事の登録や朝5時のコード発行を待たず、公開済みの対象レースを利用できます。有料期間だけ、朝5時以降に用意される対象日の4桁コードを使います。受付状況はこのページの最新案内をご確認ください。</p></details>
+        <details><summary>先に無料で試せますか？</summary><p>2026年10月14日〜20日が無料体験の7日間です。10月13日は開始前の継続開放で、この7日間には含みません。いずれもコード不要ですが、予想がまだ公開されていないレースは利用できません。終了レースの無料回顧は、アプリで公開されている対象レースをご確認ください。</p></details>
+        <details><summary>480円は1か月分の料金ですか？</summary><p>1日分の料金（税込）です。10月21日〜11月19日の30日間がキャンペーン期間で、1日480円です。月額でも30日分の一括料金でもありません。通常予定価格は1日1,980円。11月20日以降は販売を停止し、通常価格へ自動移行しません。</p></details>
         <details><summary>的中や利益を保証するサービスですか？</summary><p>保証しません。AI予想と3D再生は分析に基づくシミュレーションです。高配当の的中例があっても、対象期間全体の回収率が100%を超えるとは限りません。券種や買い目数を含めた全体の検証をご確認ください。</p></details>
       </div>
     </section>
@@ -288,7 +293,7 @@
       <div class="note-grid">
         <article><span aria-hidden="true">01</span><h3>舟券の購入・投票機能はありません</h3><p>BoatSimは情報・エンターテインメント用途のアプリです。アプリ内で舟券の購入、投票、入出金はできません。</p></article>
         <article><span aria-hidden="true">02</span><h3>予想結果や利益を保証しません</h3><p>表示内容はレース情報をもとにした分析・シミュレーションであり、実際のレース結果や利益を保証するものではありません。</p></article>
-        <article><span aria-hidden="true">03</span><h3>レース後は無料で振り返り</h3><p>予定締切から約10〜30分後に無料公開します。前日分も無料で閲覧でき、分析と結果の違いを、自分のペースで確かめられます。</p></article>
+        <article><span aria-hidden="true">03</span><h3>公開済みの終了レースを振り返り</h3><p>アプリで無料公開されている終了レースでは、予想と取得済みの結果を振り返れます。公開時刻や提供範囲はレースの状況・データの取得状況により異なります。</p></article>
       </div>
     </section>
 
@@ -296,9 +301,9 @@
       <div class="final-cta-inner">
         <p class="section-kicker">BOATSIM</p>
         <h2 id="final-cta-title"><span class="phrase">次のレースを、</span><span class="phrase accent">もっと立体的に。</span></h2>
-        <p>noteで日々の結果を読み、Web版で3Dレースを体験。本日の予想をまとめて見る、BoatSimの本日全レースパス。</p>
-        <div class="final-actions"><a class="button button-primary" data-note-sales href="https://note.com/bnnmkt" target="_blank" rel="noopener noreferrer">noteで記事・結果を見る <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="https://boatsim-app.onrender.com/" target="_blank" rel="noopener noreferrer">終了レースを無料で試す <span aria-hidden="true">↗</span></a></div>
-        <p class="final-status" data-pass-status>1週間無料体験と、その後1日480円のリリースキャンペーンを準備中です。</p>
+        <p>noteで日々の結果を読み、Web版で公開済みの対象レースを3Dで体験。利用できる期間中は、何度でもシミュレーションを楽しめます。</p>
+        <div class="final-actions"><a class="button button-primary" data-primary-cta href="https://boatsim-app.onrender.com/" target="_blank" rel="noopener noreferrer">アプリで公開状況を確認 <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="https://note.com/bnnmkt" target="_blank" rel="noopener noreferrer">noteで記事・結果を見る <span aria-hidden="true">↗</span></a></div>
+        <p class="final-status" data-pass-status>最新の受付状況をご確認ください。</p>
       </div>
     </section>
   </main>
@@ -347,92 +352,161 @@
   </script>
   <script>
     (() => {
-      const notes = [...document.querySelectorAll('[data-note-sales]')];
-      const statuses = [...document.querySelectorAll('[data-pass-status]')];
+      const APP_URL = 'https://boatsim-app.onrender.com/';
+      const ENTRY_URL = `${APP_URL}#daypass`;
+      const primary = [...document.querySelectorAll('[data-primary-cta]')];
       const entries = [...document.querySelectorAll('[data-pass-entry]')];
       const notice = document.querySelector('[data-sales-notice]');
-      const originalNotice = notice.cloneNode(true);
-      const initial = new Map([...notes, ...statuses].map(el => [el, {text: el.textContent, href: el.getAttribute('href')}]));
-      const plan = {freeFrom: '20261013', freeUntil: '20261019', saleFrom: '20261020', saleUntil: '20261119', salePrice: 480};
-      const currentJapanDate = () => new Intl.DateTimeFormat('en-CA', {timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit'}).format(new Date()).replaceAll('-', '');
-      const currentPhase = () => {
-        const day = currentJapanDate();
-        return day >= plan.freeFrom && day <= plan.freeUntil ? 'free' : day >= plan.saleFrom && day <= plan.saleUntil ? 'campaign' : 'closed';
-      };
+      // Reviewed against worker PR #10. Do not advertise terms from a mismatched deployment.
+      const expectedPhases = [
+        {phase: 'prelaunch', from: '20261013', to: '20261013', price: 0, note: 'free'},
+        {phase: 'free', from: '20261014', to: '20261020', price: 0, note: 'free'},
+        {phase: 'sale', from: '20261021', to: '20261119', price: 480, note: 'paid'}
+      ];
+      const REFRESH_MS = 60000;
+      const MAX_AGE_MS = 90000;
+      const japanDate = time => new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit'
+      }).formatToParts(new Date(time)).filter(p => p.type !== 'literal')
+        .sort((a, b) => ['year', 'month', 'day'].indexOf(a.type) - ['year', 'month', 'day'].indexOf(b.type))
+        .map(p => p.value).join('');
+      const dayStart = date => Date.parse(`${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6)}T00:00:00+09:00`);
+      const setText = (selector, text) => document.querySelectorAll(selector).forEach(el => { el.textContent = text; });
+      const setPrimary = (text, href = APP_URL) => primary.forEach(el => { el.textContent = `${text} ↗`; el.href = href; });
       let expiryTimer;
-      let loading = false;
-      const reset = () => {
+      let controller;
+      let requestId = 0;
+      const neutral = (checking = false) => {
         clearTimeout(expiryTimer);
-        for (const [el, original] of initial) {
-          el.textContent = original.text;
-          if (original.href) el.href = original.href;
-        }
-        notice.replaceChildren(...[...originalNotice.cloneNode(true).childNodes]);
-        entries.forEach(el => {el.hidden = true;});
-        const phase = currentPhase();
-        document.querySelector('[data-offer-price]').textContent = phase === 'free' ? '1週間無料' : phase === 'campaign' ? '1日 ¥480' : '次回案内待ち';
-        document.querySelector('[data-card-price]').textContent = phase === 'free' ? '無料体験予定' : phase === 'campaign' ? '¥480（税込）' : '販売案内待ち';
-        document.querySelector('[data-price-period]').textContent = phase === 'free' ? '10/13〜10/19・本日全レース' : phase === 'campaign' ? '10/20〜11/19・対象日1日分' : 'キャンペーン終了・次回条件は未定';
-        document.querySelector('[data-campaign-period]').textContent = phase === 'free' ? '10/13〜10/19 無料体験予定' : phase === 'campaign' ? '10/20〜11/19 期間限定' : 'リリースキャンペーンは終了';
-        document.querySelector('[data-campaign-follow]').textContent = phase === 'free' ? 'その後1日480円のリリース価格' : phase === 'campaign' ? '1,500円引きのリリース価格' : 'noteで次回のお知らせを確認';
-        if (phase === 'campaign') {
-          statuses.forEach(el => {el.textContent = '本日分の販売準備中';});
-          notice.textContent = '本日分の記事とSIMを準備中です。準備が揃い次第、1日480円の購入案内を表示します。';
-        } else if (phase === 'closed') {
-          statuses.forEach(el => {el.textContent = '次回の販売条件は案内待ち';});
-          notice.textContent = 'キャンペーン期間外です。次回の販売条件は決まり次第、noteでお知らせします。';
-        }
+        document.body.dataset.passState = checking ? 'checking' : 'unknown';
+        setText('[data-offer-price]', checking ? '確認中' : '確認できません');
+        setText('[data-card-price]', checking ? '確認中' : '確認できません');
+        setText('[data-price-period]', '本日の利用・販売状況');
+        setText('[data-pass-status]', checking ? '最新の受付状況を確認中' : '最新状況を取得できません');
+        notice.textContent = checking
+          ? '本日の利用・販売状況を確認しています。日程だけでは受付中と判断できません。'
+          : '現在の利用・販売状況を確認できません。無料利用や購入の可否は案内できないため、時間をおいて再読み込みするか、アプリの公開状況をご確認ください。';
+        setPrimary('アプリで公開状況を確認');
+        entries.forEach(el => { el.hidden = true; });
       };
       const validNote = value => {
-        if (typeof value !== 'string' || !value.startsWith('https://note.com/')) return null;
+        if (typeof value !== 'string') return null;
         try {
           const url = new URL(value);
-          return url.protocol === 'https:' && url.hostname === 'note.com' && /^\/bnnmkt\/n\/n[a-z0-9]+\/?$/i.test(url.pathname) ? url.href : null;
+          return url.origin === 'https://note.com' && !url.username && !url.password && !url.search && !url.hash
+            && /^\/bnnmkt\/n\/n[a-z0-9]+\/?$/i.test(url.pathname) ? url.href : null;
         } catch { return null; }
       };
-      const refresh = async () => {
-        if (loading) return;
-        loading = true;
-        notice.setAttribute('aria-busy', 'true');
-        const controller = new AbortController();
-        const timeout = setTimeout(() => controller.abort(), 8000);
-        try {
-          const urls = [document.body.dataset.salesApi, document.body.dataset.appConfig];
-          const [status, config] = await Promise.all(urls.map(async url => {
-            const response = await fetch(url, {cache: 'no-store', credentials: 'omit', signal: controller.signal});
-            if (!response.ok) throw new Error('unavailable');
-            return response.json();
-          }));
-          const sale = status.sale;
-          const noteURL = validNote(sale?.note_url);
-          const until = Date.parse(sale?.valid_until);
-          const from = Math.max(Date.parse(sale?.valid_from), Date.parse(status.code?.ready_from));
-          const now = Date.now();
-          const phase = currentPhase();
-          const expectedPrice = phase === 'free' ? 0 : plan.salePrice;
-          const expectedKind = phase === 'free' ? 'free' : 'paid';
-          const matchesCampaign = status.campaign?.phase === (phase === 'free' ? 'free' : 'sale') && status.campaign?.price === expectedPrice && status.campaign?.note_kind === expectedKind;
-          const active = phase !== 'closed' && matchesCampaign && status.enabled === true && status.code?.ready === true && status.code?.digits === 4 && config.daypass?.active === true && status.date === currentJapanDate() && sale?.price === expectedPrice && sale?.currency === 'JPY' && from <= now && now < until;
-          reset();
-          if (active && status.entry_url === 'https://boatsim-app.onrender.com/#daypass') entries.forEach(el => {el.hidden = false;});
-          if (!active || !sale?.open || status.note?.kind !== expectedKind || status.premium?.ready !== true || !noteURL) return;
-          const day = `${+status.date.slice(4, 6)}月${+status.date.slice(6)}日`;
-          notes.forEach(el => {
-            el.href = noteURL;
-            el.textContent = phase === 'free' ? 'noteで本日の無料コードを見る ↗' : '本日全レース・480円で購入 ↗';
-          });
-          document.querySelector('[data-card-price]').textContent = phase === 'free' ? '本日分 ¥0' : '¥480（税込）';
-          if (phase === 'free') document.querySelector('[data-campaign-period]').textContent = '10/13〜10/19 無料体験中';
-          statuses.forEach(el => {el.textContent = phase === 'free' ? `${day}の無料体験 受付中` : `${day}の480円パス 販売中`;});
-          notice.textContent = phase === 'free' ? `${day}の無料体験を利用できます。noteの無料記事で本日の4桁コードを確認してください。当日の23:59まで有効です。` : `${day}の全レースパスを480円で販売中です。noteの有料部分に本日の4桁コードを掲載しています。当日の23:59まで有効です。`;
-          expiryTimer = setTimeout(reset, until - now);
-        } catch { reset(); }
-        finally { clearTimeout(timeout); loading = false; notice.setAttribute('aria-busy', 'false'); }
+      const checkedStatus = (status, now) => {
+        const schedule = status?.schedule;
+        const campaign = status?.campaign;
+        const serverNow = Date.parse(status?.now);
+        if (status?.version !== 2 || !/^[a-f0-9]{40}$/i.test(status.revision || '')
+          || !Number.isFinite(serverNow) || Math.abs(now - serverNow) > MAX_AGE_MS
+          || status.date !== japanDate(now) || status.date !== japanDate(serverNow)
+          || schedule?.billing_unit !== 'day' || schedule.tax_included !== true
+          || schedule.list_price !== 1980 || schedule.sales_stop_from !== '20261120'
+          || !Array.isArray(schedule.phases) || schedule.phases.length !== expectedPhases.length
+          || !expectedPhases.every((expected, i) => Object.entries(expected).every(([key, value]) => schedule.phases[i]?.[key] === value))) {
+          throw new Error('Unconfirmed schedule');
+        }
+        // Date/phase are checked against the public schedule, never inferred as availability.
+        const phase = schedule.phases.find(p => p.from <= status.date && status.date <= p.to);
+        const name = phase?.phase || 'paused';
+        const start = dayStart(status.date);
+        const end = start + 86400000;
+        if (campaign?.phase !== name || campaign.price !== (phase?.price ?? null)
+          || campaign.from !== (phase?.from ?? null) || campaign.to !== (phase?.to ?? null)
+          || campaign.note_kind !== (phase?.note ?? null) || campaign.currency !== 'JPY'
+          || campaign.billing_unit !== 'day' || campaign.tax_included !== true
+          || campaign.list_price !== schedule.list_price || campaign.sales_stop_from !== schedule.sales_stop_from
+          || status.access !== (name === 'sale' ? 'code' : name === 'paused' ? 'closed' : 'open')
+          || status.entry_url !== ENTRY_URL || status.lp_url !== 'https://bantex.jp/boatsim.html'
+          || status.sale?.price !== campaign.price || status.sale?.currency !== 'JPY'
+          || Date.parse(status.sale?.valid_from) !== start || Date.parse(status.sale?.valid_until) !== end - 1000
+          || typeof status.premium?.ready !== 'boolean' || !Number.isInteger(status.premium.races) || status.premium.races < 0) {
+          throw new Error('Unconfirmed access');
+        }
+        const generated = Date.parse(status.premium.generated);
+        if (status.premium.ready && (status.premium.races === 0 || !Number.isFinite(generated)
+          || japanDate(generated) !== status.date || generated > serverNow)) throw new Error('Unconfirmed data');
+        return {name, end, serverNow, day: `${+status.date.slice(4, 6)}月${+status.date.slice(6)}日`};
       };
-      reset();
+      const render = (status, checked) => {
+        const {name, day} = checked;
+        document.body.dataset.passState = name;
+        setText('[data-price-period]', `${day}・公開済み対象レース`);
+        if (name === 'paused') {
+          const before = status.date < status.schedule.phases[0].from;
+          setText('[data-offer-price], [data-card-price]', before ? '開始前' : '販売停止');
+          setText('[data-pass-status]', before ? 'キャンペーン開始前です' : 'キャンペーン終了・販売停止');
+          notice.textContent = before
+            ? 'キャンペーン開始前です。無料体験は10月14日からの予定です。受付開始後、最新の利用状況をご確認ください。'
+            : '有料パスの販売は終了しています。通常予定価格への自動移行はありません。終了レースの回顧は、アプリで公開されている対象レースをご確認ください。';
+          return;
+        }
+        if (name === 'prelaunch' || name === 'free') {
+          const ready = status.premium.ready;
+          setText('[data-offer-price]', ready ? 'コード不要' : '公開準備中');
+          setText('[data-card-price]', ready ? '本日 ¥0' : '公開準備中');
+          setText('[data-pass-status]', `${day}・${name === 'prelaunch' ? '開始前の継続開放' : '無料体験期間'}${ready ? '' : '／公開準備中'}`);
+          notice.textContent = ready
+            ? `${day}はコードなしで利用できます。公開済みの対象レースを、利用できる期間中は何度でもシミュレーションできます。${name === 'prelaunch' ? '本日は開始前の継続開放で、10月14日〜20日の無料7日間には含みません。' : '無料体験は10月20日までです。'}未公開・欠損レースは利用できません。`
+            : `${day}は${name === 'prelaunch' ? '開始前の継続開放日' : '無料体験期間'}ですが、本日分の予想データは公開準備中です。公開済みの対象レースから利用できます。コードやnote記事を待つ必要はありません。`;
+          if (ready) setPrimary('コードなしでBoatSimを開く');
+          return;
+        }
+        const readyFrom = Date.parse(status.code?.ready_from);
+        const readyAt = Date.parse(status.code?.ready_at);
+        const noteURL = validNote(status.sale.note_url);
+        const ready = status.enabled === true && status.code?.ready === true && status.code.digits === 4
+          && readyFrom === dayStart(status.date) + 5 * 3600000 && readyFrom <= checked.serverNow
+          && readyAt >= readyFrom && readyAt <= checked.serverNow
+          && Date.parse(status.code.valid_until) === checked.end - 1000 && status.premium.ready
+          && status.sale.open === true && status.note?.kind === 'paid' && noteURL && validNote(status.note.url) === noteURL;
+        setText('[data-offer-price], [data-card-price]', ready ? '1日 ¥480（税込）' : '販売準備中');
+        setText('[data-pass-status]', ready ? `${day}の1日パス販売中` : `${day}の販売を確認できません`);
+        notice.textContent = ready
+          ? `${day}の1日パスを480円（税込）で販売中です。note記事の対象日・公開状況・条件をご確認ください。有料部分の4桁コードで、公開済みの対象レースを本日23:59まで何度でも利用できます。月額ではありません。`
+          : `${day}は有料キャンペーン期間ですが、販売に必要な準備が揃っていることを確認できません。購入案内は準備完了後に表示します。アプリで公開状況をご確認ください。`;
+        if (ready) {
+          setPrimary('本日パス・480円の記事を確認', noteURL);
+          entries.forEach(el => { el.hidden = false; });
+        }
+      };
+      const refresh = async () => {
+        const id = ++requestId;
+        controller?.abort();
+        controller = new AbortController();
+        const requestController = controller;
+        neutral(true);
+        notice.setAttribute('aria-busy', 'true');
+        const timeout = setTimeout(() => requestController.abort(), 8000);
+        try {
+          const response = await fetch(document.body.dataset.salesApi, {
+            cache: 'no-store', credentials: 'omit', signal: requestController.signal
+          });
+          if (!response.ok) throw new Error('Unavailable');
+          const status = await response.json();
+          if (id !== requestId) return;
+          const now = Date.now();
+          const checked = checkedStatus(status, now);
+          render(status, checked);
+          // Drop stale claims at JST midnight or when this status becomes too old.
+          expiryTimer = setTimeout(() => { neutral(); refresh(); }, Math.max(0, Math.min(checked.end, checked.serverNow + MAX_AGE_MS) - now));
+        } catch { if (id === requestId) neutral(); }
+        finally {
+          clearTimeout(timeout);
+          if (id === requestId) notice.setAttribute('aria-busy', 'false');
+        }
+      };
       refresh();
-      setInterval(() => {if (document.visibilityState === 'visible') refresh();}, 60000);
-      document.addEventListener('visibilitychange', () => {if (document.visibilityState === 'visible') refresh();});
+      setInterval(() => { if (document.visibilityState === 'visible') refresh(); }, REFRESH_MS);
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') refresh();
+        else { ++requestId; controller?.abort(); neutral(); notice.setAttribute('aria-busy', 'false'); }
+      });
+      window.addEventListener('pageshow', event => { if (event.persisted) refresh(); });
     })();
   </script>
 </body>
