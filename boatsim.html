@@ -458,7 +458,8 @@
         // Free results links never become paid-pass destinations, even on a malformed response.
         const resultURL = validNote(status.results_note?.url);
         const separateResult = status.results_note?.kind === 'free' && resultURL
-          && resultURL !== validNote(status.note?.url) && resultURL !== validNote(status.sale?.note_url);
+          && (resultURL !== validNote(status.note?.url) || (status.note?.kind === 'free' && status.campaign.note_kind === 'free'))
+          && resultURL !== validNote(status.sale?.note_url);
         setResultsLinks(status.date, separateResult ? resultURL : null);
         document.body.dataset.passState = name;
         setText('[data-price-period]', `${day}の1日パス`);
