@@ -63,7 +63,7 @@ async function render(time, patch, unavailable=false) {
 test('static dates, reviewed result population, exclusions and sources stay consistent',()=>{
   const text = html.replace(/<script>[\s\S]*?<\/script>/g,'').replace(/<[^>]+>/g,'');
   assert.match(text,/10月15日〜11月3日の無料体験/);
-  assert.doesNotMatch(text,/10月14日〜20日|10\/6〜10\/12|472レース|7,210円|69\.2%/);
+  assert.doesNotMatch(text,/11月3日までは無料提供中|10月14日〜20日|10\/6〜10\/12|472レース|7,210円|69\.2%/);
   for (const expected of ['10/8〜10/14','489レース','25件的中（5.1%）','外れ464件','48,900円','23,500円','48.1%','532件','33件','予想なし1件','異常1件','567件','2,590円']) assert.ok(text.includes(expected),expected);
   for (const expected of ['github.com/makoban/boatsim-app','b261014.lzh','k261014.lzh','hd=20261014&amp;jcd=20&amp;rno=8']) assert.ok(html.includes(expected),expected);
   assert.equal((html.match(/data-results-cta href=/g)||[]).length,3);
