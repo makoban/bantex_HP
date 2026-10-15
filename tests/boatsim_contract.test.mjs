@@ -105,3 +105,36 @@ test('network failure hides purchase and preserves a free results search',async(
   assert.ok(page.get('[data-purchase-cta]').every(x=>x.hidden));
   assert.ok(page.get('[data-results-cta]').every(x=>decodeURIComponent(x.href).includes('BoatSim 結果')));
 });
+
+// Regression: public worker exposes the free result in its legacy note field too.
+test('free results legacy alias remains a direct free link', async()=>{
+ const page=await render('2026-10-15T13:46:00+09:00',s=>{s.note={url:resultURL,kind:'free'};});
+ assert.equal(page.state,'free');
+ for(const el of page.get('[data-results-cta]')) assert.equal(el.href,resultURL);
+ assert.ok(page.get('[data-purchase-cta]').every(x=>x.hidden));
+});
+test('unknown alias kind still fails closed', async()=>{
+ const page=await render('2026-10-15T13:46:00+09:00',s=>{s.note={url:resultURL,kind:null};});
+ for(const el of page.get('[data-results-cta]')) assert.notEqual(el.href,resultURL);
+});
+test('verified free phase alias stays direct through the final free second', async()=>{
+ const page=await render('2026-11-03T23:59:59+09:00',s=>{s.note={url:resultURL,kind:'free'};});
+ assert.equal(page.state,'free');
+ assert.equal(page.get('[data-results-cta]').length,3);
+ for(const el of page.get('[data-results-cta]')) assert.equal(el.href,resultURL);
+ assert.ok(page.get('[data-purchase-cta]').every(x=>x.hidden));
+});
+test('sale phase rejects a falsely free alias when sale note URL is null', async()=>{
+ const page=await render('2026-11-04T06:10:00+09:00',s=>{
+  s.note={url:paidURL,kind:'free'};
+  s.results_note={url:paidURL,kind:'free'};
+  s.sale.note_url=null;
+ });
+ assert.equal(page.state,'sale');
+ assert.equal(page.get('[data-results-cta]').length,3);
+ for(const el of page.get('[data-results-cta]')){
+  assert.notEqual(el.href,paidURL);
+  assert.match(decodeURIComponent(el.href),/BoatSim 結果/);
+ }
+ assert.ok(page.get('[data-purchase-cta]').every(x=>x.hidden));
+});
